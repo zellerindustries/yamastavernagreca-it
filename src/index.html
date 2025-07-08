@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>YAMAS - Taverna Greca | Cucina Greca Autentica a Nola</title>
+
+  <!-- Meta SEO -->
+  <meta name="description"
+    content="YAMAS, taverna greca a Nola. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente." />
+  <meta name="keywords"
+    content="taverna greca, ristorante greco, cucina greca Nola, moussaka, souvlaki, taverna YAMAS" />
+  <meta name="author" content="YAMAS - Taverna Greca" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.yamas.it/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a Nola" />
+  <meta property="og:description"
+    content="Scopri la vera cucina greca nel cuore di Nola. Piatti tradizionali e atmosfera tipica della Grecia." />
+  <meta property="og:type" content="restaurant.restaurant" />
+  <meta property="og:url" content="https://www.yamas.it/" />
+  <meta property="og:image" content="https://www.yamas.it/images/og-image.jpg" />
+  <meta property="og:locale" content="it_IT" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a Nola" />
+  <meta name="twitter:description" content="Piatti tradizionali greci nel cuore di Nola. Prenota ora da YAMAS." />
+  <meta name="twitter:image" content="https://www.yamas.it/images/twitter-card.jpg" />
+  <meta name="twitter:site" content="@YAMAS_Taverna" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "YAMAS - Taverna Greca",
+    "image": "https://www.yamas.it/images/og-image.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via Nazionale delle Puglie 69",
+      "addressLocality": "Nola",
+      "addressCountry": "IT"
+    },
+    "telephone": "+39 06 1234 5678",
+    "url": "https://www.yamas.it",
+    "openingHours": "Mo-Su 19:00-23:00",
+    "servesCuisine": "Greek"
+  }
+  </script>
+
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+
+  <header>
+    <nav role="navigation" aria-label="Navigazione principale">
+      <div class="logo-wrapper">
+        <img src="../public/assets/logo_top.svg" id="logo-top" width="200" alt="YAMAS Taverna Greca logo" />
+        <img src="../public/assets/logo_bottom.svg" id="logo-bottom" width="200" alt="YAMAS Taverna Greca logo"
+          aria-hidden="true" />
+        <span class="sr-only">YAMAS Taverna Greca</span>
+
+      </div>
+
+      <!-- Hamburger button per mobile -->
+      <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
+        aria-label="Apri/Chiudi menu principale" type="button">
+        <i class="bi bi-list" aria-hidden="true"></i>
+      </button>
+
+      <ul id="primary-menu" class="reset menu" hidden>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#gallery">Galleria</a></li>
+        <li><a href="#contact">Contatti</a></li>
+        <li><a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" target="_blank" rel="noopener noreferrer">Indicazioni
+            Maps</a></li>
+        <li><a href="https://wa.me/+393284861697" target="_blank" rel="noopener noreferrer">Prenota</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main>
+
+    <section class="hero" aria-label="Benvenuti da YAMAS">
+      <h1>Benvenuti da YAMAS</h1>
+      <p>Autentica cucina greca nel cuore della città</p>
+      <div class="button-wrapper">
+        <a href="https://wa.me/+393284861697" class="cta-button"><i class="bi bi-calendar-event"></i> <b>Prenota</b></a>
+        <a href="#menu" class="cta-button cta-button-secondary"><b>Scopri il Menu</b></a>
+      </div>
+    </section>
+
+    <section id="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">Chi Siamo</h2>
+      <article class="about-text">
+        <p>
+          Benvenuti da <strong>YAMAS - Taverna Greca</strong>, il punto di riferimento a <strong>Nola</strong> per chi
+          cerca la vera cucina greca autentica. Da anni portiamo nel cuore della Campania i sapori tradizionali della
+          Grecia, preparati con passione e ingredienti freschissimi scelti con cura. La nostra missione è farvi vivere
+          un’esperienza culinaria indimenticabile, tra profumi mediterranei e atmosfere calde e accoglienti.
+        </p>
+        <p>
+          La nostra cucina si basa su ricette tramandate da generazioni, come la <em>moussaka</em>, il <em>souvlaki</em>
+          e i <em>dolmadakia</em>, preparate secondo metodi tradizionali ma con un tocco di creatività contemporanea.
+          Offriamo un’ampia selezione di piatti vegetariani e vegani, senza mai rinunciare alla qualità e
+          all’autenticità.
+        </p>
+        <p>
+          Situato nel cuore di Nola, <strong>YAMAS</strong> è molto più di un semplice ristorante: è un luogo dove
+          famiglia e amici si incontrano per condividere momenti speciali e gustare la cultura greca. Il nostro staff,
+          cordiale e preparato, vi accoglierà con il calore tipico dell’ospitalità ellenica, garantendo un servizio
+          attento e personalizzato.
+        </p>
+        <p>
+          Siamo orgogliosi di utilizzare solo ingredienti di prima scelta, molti dei quali importati direttamente dalla
+          Grecia, per assicurarvi il gusto autentico di ogni piatto. La nostra taverna è il posto ideale per una cena
+          romantica, una festa di gruppo o semplicemente per scoprire i sapori mediterranei in un ambiente familiare e
+          rilassato.
+        </p>
+        <p>
+          Venite a trovarci e lasciatevi conquistare dalla magia di YAMAS - Taverna Greca, dove ogni piatto racconta una
+          storia di tradizione, passione e autenticità.
+        </p>
+      </article>
+      <ul class="reset flex values-list">
+        <li>
+          <i class="bi bi-egg-fried" aria-hidden="true"></i>
+          <span>Ingredienti freschi e autentici</span>
+        </li>
+        <li>
+          <i class="bi bi-people" aria-hidden="true"></i>
+          <span>Accoglienza familiare</span>
+        </li>
+        <li>
+          <i class="bi bi-geo-alt" aria-hidden="true"></i>
+          <span>Locale nel cuore di Nola</span>
+        </li>
+        <li>
+          <i class="bi bi-leaf" aria-hidden="true"></i>
+          <span>Piatti tradizionali e vegetariani</span>
+        </li>
+        <li>
+          <i class="bi bi-clock-history" aria-hidden="true"></i>
+          <span>Orari comodi per tutti</span>
+        </li>
+      </ul>
+    </section>
+
+
+    <section id="menu" aria-labelledby="menu-heading">
+      <h2 id="menu-heading">Menu</h2>
+      <div class="menu-items">
+        <article class="menu-item">
+          <img src="../public/assets/menu/moussaka.jpg" alt="Moussaka - piatto tradizionale greco" loading="lazy" />
+          <div class="menu-item-content">
+            <h3>Moussaka</h3>
+            <p>Strati di melanzane, carne macinata e besciamella.</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <img src="../public/assets/menu/souvlaki.jpg" alt="Souvlaki - spiedini di carne grigliata con pita e tzatziki"
+            loading="lazy" />
+          <div class="menu-item-content">
+            <h3>Souvlaki</h3>
+            <p>Spiedini di carne grigliata serviti con pita e tzatziki.</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <img src="../public/assets/menu/gyros.jpg"
+            alt="Gyros - carne arrostita su pita con pomodori, cipolla e salsa tzatziki" loading="lazy" />
+          <div class="menu-item-content">
+            <h3>Gyros</h3>
+            <p>Carne arrostita su pita con pomodori, cipolla e salsa tzatziki.</p>
+          </div>
+        </article>
+        <article class="menu-item">
+          <img src="../public/assets/menu/dolmadakia.webp"
+            alt="Dolmadakia - involtini di foglie di vite ripieni di riso e erbe aromatiche" loading="lazy" />
+          <div class="menu-item-content">
+            <h3>Dolmadakia</h3>
+            <p>Involtini di foglie di vite ripieni di riso e erbe aromatiche.</p>
+            <div class="notes">Vegetariano</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="gallery" aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Galleria</h2>
+      <ul class="gallery-grid">
+        <li>
+          <figure>
+            <img src="../public/assets/placeholder.jpg"
+              alt="Piatti tradizionali greci preparati da YAMAS, taverna greca a Nola" />
+            <figcaption>Piatti tradizionali greci preparati da YAMAS</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../public/assets/placeholder.jpg"
+              alt="Interno accogliente della taverna YAMAS con decorazioni tradizionali greche" />
+            <figcaption>Interno accogliente con decorazioni greche</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../public/assets/placeholder.jpg"
+              alt="Atmosfera calda e familiare all'interno di YAMAS, taverna greca a Nola" />
+            <figcaption>Atmosfera calda e familiare</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../public/assets/placeholder.jpg"
+              alt="Dettagli delle decorazioni e degli arredi tipici greci della taverna YAMAS" />
+            <figcaption>Dettagli delle decorazioni tipiche greche</figcaption>
+          </figure>
+        </li>
+      </ul>
+    </section>
+
+
+    <section id="reviews" aria-labelledby="reviews-heading">
+      <h2 id="reviews-heading">Cosa dicono i nostri clienti</h2>
+      <ul class="reviews-list" role="list">
+        <li class="review" tabindex="0">
+          <div class="review-header" aria-label="Valutazione 5 stelle">
+            <span class="stars" aria-hidden="true">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </span>
+            <span class="sr-only">5 stelle</span>
+          </div>
+          <blockquote>
+            <p>“Un posto veramente carino, con dell'ottimo cibo e con un'atmosfera molto caratteristica. Ho gradito
+              molto quel che ho ordinato e son rimasto piacevolmente soddisfatto, anche dell'abbondanza delle porzioni.
+              Sembra davvero un angolo di Grecia.”</p>
+          </blockquote>
+          <cite><b>Vincenzo C.</b></cite>
+        </li>
+        <li class="review" tabindex="0">
+          <div class="review-header" aria-label="Valutazione 5 stelle">
+            <span class="stars" aria-hidden="true">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </span>
+            <span class="sr-only">5 stelle</span>
+          </div>
+          <blockquote>
+            <p>“Stasera ci siamo stati per la prima volta e siamo stati piacevolmente colpiti. La location è curata in
+              ogni minimo dettaglio, il bicchiere con le onde, i colori, le foto, anche la carta ti riporta alla Grecia!
+              Abbiamo mangiato molto bene e la cameriera un sacco gentile soprattutto a spiegare i singoli piatti. Ci
+              ritorneremo sicuramente e consigliamo l'esperienza a tutti! Credetemi c'è differenza tra chi porta i
+              valori autentici di una nazione e chi prova a farne una misera imitazione.”</p>
+          </blockquote>
+          <cite><b>Roberto L.</b></cite>
+        </li>
+        <li class="review" tabindex="0">
+          <div class="review-header" aria-label="Valutazione 4 stelle">
+            <span class="stars" aria-hidden="true">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+            </span>
+            <span class="sr-only">4 stelle</span>
+          </div>
+          <blockquote>
+            <p>“Atmosfera della classica taverna Greca, con due sale interne ed un piccolo spazio esterno. Prodotti di
+              qualità e frittura leggerissima. Personale gentile e disponibile, con prezzi molto modici. Parcheggio
+              comodo, proprio davanti il locale.”</p>
+          </blockquote>
+          <cite><b>Gianluca M.</b></cite>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contatti</h2>
+      <div class="flex">
+        <div>
+          <h3>Orari di Apertura</h3>
+          <ul class="reset" role="list">
+            <li>
+              <i class="bi bi-clock" aria-hidden="true"></i>
+              <span class="sr-only">Orari:</span>
+              Lunedì - Domenica: <strong>19:00 - 23:00</strong>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Dove Siamo</h3>
+          <address>
+            <p>
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+              <span id="restaurant-address">
+                Via Nazionale delle Puglie 69<br />80030 San Vitaliano NA
+              </span>
+
+            </p>
+
+          </address>
+          <span class="button-wrapper">
+            <button type="button" onclick="copyAddress()" class="button"
+              aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti">
+              <i class="bi bi-clipboard" aria-hidden="true"></i> Copia indirizzo
+            </button>
+
+            <a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" class="button" target="_blank" rel="noopener noreferrer"
+              aria-label="Apri le indicazioni su Google Maps per Via Nazionale delle Puglie 69, San Vitaliano">
+              <i class="bi bi-map" aria-hidden="true"></i> Indicazioni Google Maps
+            </a>
+          </span>
+          <div id="copy-feedback" role="status" aria-live="polite" class="sr-only"></div>
+        </div>
+
+        <div>
+          <h3>Contattaci</h3>
+          <p>
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span class="sr-only">Telefono:</span>
+            <a href="tel:+390813445057" rel="noopener" aria-label="Chiama +39 081 344 50 57">+39 081 344
+              50 57</a>
+          </p>
+          <p>
+            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <span class="sr-only">Whatsapp:</span>
+            <a href="https://wa.me/393284861697" target="_blank" rel="noopener noreferrer"
+              aria-label="Scrivici su WhatsApp al numero +39 328 48 61 697">+39 328 48 61 697</a>
+          </p>
+
+          <span class="button-wrapper">
+            <a href="tel:+390813445057" class="button">
+              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              Chiama
+            </a>
+            <a href="https://wa.me/393284861697" target="_blank" rel="noopener noreferrer" class="button"
+              aria-label="Scrivici su WhatsApp al numero +39 328 48 61 697">
+              <i class="bi bi-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
+            </a>
+
+          </span>
+
+        </div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer role="contentinfo">
+    <p>&copy; 2025 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
