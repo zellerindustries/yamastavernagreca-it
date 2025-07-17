@@ -4,55 +4,201 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YAMAS - Taverna Greca | Cucina Greca Autentica a Nola</title>
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; img-src 'self' https://fonts.gstatic.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+  <meta name="theme-color" content="#253873">
+  <meta name="format-detection" content="telephone=no">
+
+  <link rel="canonical" href="https://yamastavernagreca.it" />
+  <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
 
   <!-- Meta SEO -->
   <meta name="description"
-    content="YAMAS, taverna greca a Nola. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente." />
+    content="YAMAS, taverna greca a San Vitaliano. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente." />
   <meta name="keywords"
-    content="taverna greca, ristorante greco, cucina greca Nola, moussaka, souvlaki, taverna YAMAS" />
+    content="taverna greca, ristorante greco, cucina greca San Vitaliano, moussaka, souvlaki, taverna YAMAS" />
   <meta name="author" content="YAMAS - Taverna Greca" />
   <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.yamas.it/" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a Nola" />
+  <meta property="og:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a San Vitaliano" />
   <meta property="og:description"
-    content="Scopri la vera cucina greca nel cuore di Nola. Piatti tradizionali e atmosfera tipica della Grecia." />
+    content="Scopri la vera cucina greca nel cuore di San Vitaliano. Piatti tradizionali e atmosfera tipica della Grecia." />
   <meta property="og:type" content="restaurant.restaurant" />
-  <meta property="og:url" content="https://www.yamas.it/" />
-  <meta property="og:image" content="https://www.yamas.it/images/og-image.jpg" />
+  <meta property="og:url" content="https://yamastavernagreca.it" />
+  <meta property="og:image" content="https://yamastavernagreca.it/public/assets/twitter-card.jpg" />
   <meta property="og:locale" content="it_IT" />
+  <meta property="og:site_name" content="YAMAS - Taverna Greca" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a Nola" />
-  <meta name="twitter:description" content="Piatti tradizionali greci nel cuore di Nola. Prenota ora da YAMAS." />
-  <meta name="twitter:image" content="https://www.yamas.it/images/twitter-card.jpg" />
-  <meta name="twitter:site" content="@YAMAS_Taverna" />
+  <meta name="twitter:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a San Vitaliano" />
+  <meta name="twitter:description"
+    content="Piatti tradizionali greci nel cuore di San Vitaliano. Prenota ora da YAMAS." />
+  <meta name="twitter:image" content="https://www.yamastavernagreca.it/public/assets/twitter-card.jpg" />
 
-  <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
-  {
+{
     "@context": "https://schema.org",
     "@type": "Restaurant",
     "name": "YAMAS - Taverna Greca",
-    "image": "https://www.yamas.it/images/og-image.jpg",
+    "image": "https://www.yamastavernagreca.it/public/assets/twitter-card.jpg",
+    "url": "https://www.yamastavernagreca.it",
+    "telephone": "+39 081 344 50 57",
+    "servesCuisine": "Greek",
+    "priceRange": "€€",
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Via Nazionale delle Puglie 69",
-      "addressLocality": "Nola",
-      "addressCountry": "IT"
+        "@type": "PostalAddress",
+        "streetAddress": "Via Nazionale delle Puglie 69",
+        "addressLocality": "San Vitaliano",
+        "postalCode": "80030",
+        "addressRegion": "NA",
+        "addressCountry": "IT"
     },
-    "telephone": "+39 06 1234 5678",
-    "url": "https://www.yamas.it",
-    "openingHours": "Mo-Su 19:00-23:00",
-    "servesCuisine": "Greek"
-  }
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.9265,
+        "longitude": 14.4771
+    },
+    "openingHoursSpecification": [
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "19:00",
+            "closes": "23:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "19:00",
+            "closes": "23:00"
+        },
+        {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Sunday",
+            "opens": "19:00",
+            "closes": "23:00"
+        }
+    ],
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "reviewCount": "132"
+    },
+    "hasMenu": {
+        "@type": "Menu",
+        "name": "Menu YAMAS",
+        "url": "https://www.yamastavernagreca.it/#menu",
+        "hasMenuSection": [
+            {
+                "@type": "MenuSection",
+                "name": "Antipasti",
+                "hasMenuItem": [
+                    {
+                        "@type": "MenuItem",
+                        "name": "Dolmadakia",
+                        "description": "Involtini di foglie di vite ripieni di riso e erbe aromatiche",
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "EUR",
+                            "price": "5.00"
+                        }
+                    }
+                ]
+            },
+            {
+                "@type": "MenuSection",
+                "name": "Piatti principali",
+                "hasMenuItem": [
+                    {
+                        "@type": "MenuItem",
+                        "name": "Moussaka",
+                        "description": "Strati di melanzane, carne macinata e besciamella",
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "EUR",
+                            "price": "8.00"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "Souvlaki",
+                        "description": "Spiedini di carne grigliata serviti con pita e tzatziki",
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "EUR",
+                            "price": "7.00"
+                        }
+                    },
+                    {
+                        "@type": "MenuItem",
+                        "name": "Gyros",
+                        "description": "Carne arrostita su pita con pomodori, cipolla e salsa tzatziki",
+                        "offers": {
+                            "@type": "Offer",
+                            "priceCurrency": "EUR",
+                            "price": "6.50"
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
   </script>
+
+  <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Dove si trova YAMAS - Taverna Greca?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ci troviamo in Via Nazionale delle Puglie 69, 80030 San Vitaliano (NA), facilmente raggiungibile da San Vitaliano."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Quali sono gli orari di apertura?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Siamo aperti tutti i giorni dalle 19:00 alle 23:00."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Offrite opzioni vegetariane o vegane?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì, il nostro menu include numerosi piatti vegetariani e opzioni vegane preparate con ingredienti freschi e autentici."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "È necessario prenotare?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Consigliamo sempre la prenotazione per garantirti un tavolo, specialmente nei weekend. Puoi prenotare tramite WhatsApp o chiamandoci."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Offrite servizio da asporto?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp."
+            }
+        }
+    ]
+}
+  </script>
+
+  <script src="script.js" defer></script>
+
+  <title>YAMAS - Taverna Greca | Cucina Greca Autentica a San Vitaliano</title>
 
 
   <!-- Stylesheet -->
@@ -112,7 +258,8 @@
       <h2 id="about-heading">Chi Siamo</h2>
       <article class="about-text">
         <p>
-          Benvenuti da <strong>YAMAS - Taverna Greca</strong>, il punto di riferimento a <strong>Nola</strong> per chi
+          Benvenuti da <strong>YAMAS - Taverna Greca</strong>, il punto di riferimento a <strong>San Vitaliano</strong>
+          per chi
           cerca la vera cucina greca autentica. Da anni portiamo nel cuore della Campania i sapori tradizionali della
           Grecia, preparati con passione e ingredienti freschissimi scelti con cura. La nostra missione è farvi vivere
           un’esperienza culinaria indimenticabile, tra profumi mediterranei e atmosfere calde e accoglienti.
@@ -124,7 +271,8 @@
           all’autenticità.
         </p>
         <p>
-          Situato nel cuore di Nola, <strong>YAMAS</strong> è molto più di un semplice ristorante: è un luogo dove
+          Situato nel cuore di San Vitaliano, <strong>YAMAS</strong> è molto più di un semplice ristorante: è un luogo
+          dove
           famiglia e amici si incontrano per condividere momenti speciali e gustare la cultura greca. Il nostro staff,
           cordiale e preparato, vi accoglierà con il calore tipico dell’ospitalità ellenica, garantendo un servizio
           attento e personalizzato.
@@ -151,7 +299,7 @@
         </li>
         <li>
           <i class="bi bi-geo-alt" aria-hidden="true"></i>
-          <span>Locale nel cuore di Nola</span>
+          <span>Locale nel cuore di San Vitaliano</span>
         </li>
         <li>
           <i class="bi bi-leaf" aria-hidden="true"></i>
@@ -169,22 +317,22 @@
       <h2 id="menu-heading">Menu</h2>
       <div class="menu-items">
         <article class="menu-item">
-          <img src="../public/assets/menu/moussaka.jpg" alt="Moussaka - piatto tradizionale greco" loading="lazy" />
+          <img src="../public/assets/menu/moussaka.webp" alt="Moussaka - piatto tradizionale greco" loading="lazy" />
           <div class="menu-item-content">
             <h3>Moussaka</h3>
             <p>Strati di melanzane, carne macinata e besciamella.</p>
           </div>
         </article>
         <article class="menu-item">
-          <img src="../public/assets/menu/souvlaki.jpg" alt="Souvlaki - spiedini di carne grigliata con pita e tzatziki"
-            loading="lazy" />
+          <img src="../public/assets/menu/souvlaki.webp"
+            alt="Souvlaki - spiedini di carne grigliata con pita e tzatziki" loading="lazy" />
           <div class="menu-item-content">
             <h3>Souvlaki</h3>
             <p>Spiedini di carne grigliata serviti con pita e tzatziki.</p>
           </div>
         </article>
         <article class="menu-item">
-          <img src="../public/assets/menu/gyros.jpg"
+          <img src="../public/assets/menu/gyros.webp"
             alt="Gyros - carne arrostita su pita con pomodori, cipolla e salsa tzatziki" loading="lazy" />
           <div class="menu-item-content">
             <h3>Gyros</h3>
@@ -208,28 +356,35 @@
       <ul class="gallery-grid">
         <li>
           <figure>
-            <img src="../public/assets/placeholder.jpg"
-              alt="Piatti tradizionali greci preparati da YAMAS, taverna greca a Nola" />
+            <img src="../public/assets/galleria/1.webp"
+              alt="Piatti tradizionali greci preparati da YAMAS, taverna greca a San Vitaliano" />
             <figcaption>Piatti tradizionali greci preparati da YAMAS</figcaption>
           </figure>
         </li>
         <li>
           <figure>
-            <img src="../public/assets/placeholder.jpg"
+            <img src="../public/assets/galleria/2.webp"
               alt="Interno accogliente della taverna YAMAS con decorazioni tradizionali greche" />
             <figcaption>Interno accogliente con decorazioni greche</figcaption>
           </figure>
         </li>
         <li>
           <figure>
-            <img src="../public/assets/placeholder.jpg"
-              alt="Atmosfera calda e familiare all'interno di YAMAS, taverna greca a Nola" />
+            <img src="../public/assets/galleria/3.webp"
+              alt="Atmosfera calda e familiare all'interno di YAMAS, taverna greca a San Vitaliano" />
             <figcaption>Atmosfera calda e familiare</figcaption>
           </figure>
         </li>
         <li>
           <figure>
-            <img src="../public/assets/placeholder.jpg"
+            <img src="../public/assets/galleria/4.webp"
+              alt="Dettagli delle decorazioni e degli arredi tipici greci della taverna YAMAS" />
+            <figcaption>Dettagli delle decorazioni tipiche greche</figcaption>
+          </figure>
+        </li>
+        <li>
+          <figure>
+            <img src="../public/assets/galleria/5.webp"
               alt="Dettagli delle decorazioni e degli arredi tipici greci della taverna YAMAS" />
             <figcaption>Dettagli delle decorazioni tipiche greche</figcaption>
           </figure>
@@ -322,16 +477,13 @@
               <span id="restaurant-address">
                 Via Nazionale delle Puglie 69<br />80030 San Vitaliano NA
               </span>
-
             </p>
-
           </address>
           <span class="button-wrapper">
             <button type="button" onclick="copyAddress()" class="button"
               aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti">
               <i class="bi bi-clipboard" aria-hidden="true"></i> Copia indirizzo
             </button>
-
             <a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" class="button" target="_blank" rel="noopener noreferrer"
               aria-label="Apri le indicazioni su Google Maps per Via Nazionale delle Puglie 69, San Vitaliano">
               <i class="bi bi-map" aria-hidden="true"></i> Indicazioni Google Maps
@@ -339,7 +491,6 @@
           </span>
           <div id="copy-feedback" role="status" aria-live="polite" class="sr-only"></div>
         </div>
-
         <div>
           <h3>Contattaci</h3>
           <p>
@@ -354,7 +505,6 @@
             <a href="https://wa.me/393284861697" target="_blank" rel="noopener noreferrer"
               aria-label="Scrivici su WhatsApp al numero +39 328 48 61 697">+39 328 48 61 697</a>
           </p>
-
           <span class="button-wrapper">
             <a href="tel:+390813445057" class="button">
               <i class="bi bi-telephone-fill" aria-hidden="true"></i>
@@ -366,10 +516,8 @@
             </a>
 
           </span>
-
         </div>
       </div>
-
     </section>
 
 
@@ -378,8 +526,6 @@
   <footer role="contentinfo">
     <p>&copy; 2025 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 
 </html>

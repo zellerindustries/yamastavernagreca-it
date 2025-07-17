@@ -1,40 +1,39 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Riferimenti elementi
+  // Element references
   const header = document.querySelector('header')
   const nav = document.querySelector('nav')
   const menuToggle = document.getElementById('menu-toggle')
   const primaryMenu = document.getElementById('primary-menu')
   const navMenu = document.querySelector('nav ul.menu')
 
-  // --- Gestione scroll: aggiunge/rimuove classe "scrolled" ---
+  // --- Scroll handling: toggle "scrolled" class ---
   const onScroll = () => {
     const scrolled = window.scrollY > 50
     header.classList.toggle('scrolled', scrolled)
     nav.classList.toggle('scrolled', scrolled)
   }
   window.addEventListener('scroll', onScroll)
-  onScroll() // stato iniziale
+  onScroll() // Initial state
 
-  // --- Smooth scroll per link interni ---
+  // --- Smooth scroll for internal links ---
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const target = document.querySelector(link.hash)
       if (target) {
         e.preventDefault()
+        target.setAttribute('tabindex', '-1') // accessibility focusable
         target.scrollIntoView({ behavior: 'smooth' })
+        target.focus({ preventScroll: true })
 
-        // Chiude il menu mobile se aperto
+        // Close mobile menu if open
         if (navMenu.classList.contains('active')) {
-          navMenu.classList.remove('active')
-          menuToggle.classList.remove('open')
-          menuToggle.setAttribute('aria-expanded', 'false')
-          primaryMenu.setAttribute('hidden', '')
+          toggleMenu(false)
         }
       }
     })
   })
 
-  // --- Fade-in sezioni con IntersectionObserver ---
+  // --- IntersectionObserver for fade-in ---
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -46,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.querySelectorAll('section').forEach(section => observer.observe(section))
 
-  // --- Accessibilità: attiva click per Space e Enter su elementi role=button ---
+  // --- Accessibility: enable click for Space/Enter on role=button links ---
   document.querySelectorAll('a[role="button"]').forEach(link => {
     link.addEventListener('keydown', e => {
       if (e.key === ' ' || e.key === 'Enter') {
@@ -56,49 +55,72 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  // --- Toggle menu hamburger ---
-  menuToggle.addEventListener('click', () => {
-    const expanded = menuToggle.getAttribute('aria-expanded') === 'true'
-    menuToggle.setAttribute('aria-expanded', String(!expanded))
+  // --- Toggle hamburger menu ---
+  const toggleMenu = (force) => {
+    const expanded = typeof force === 'boolean' ? !force : menuToggle.getAttribute('aria-expanded') === 'true'
+    const shouldOpen = typeof force === 'boolean' ? force : !expanded
 
-    if (expanded) {
-      primaryMenu.setAttribute('hidden', '')
-      navMenu.classList.remove('active')
-      menuToggle.classList.remove('open')
+    menuToggle.setAttribute('aria-expanded', String(shouldOpen))
+    primaryMenu.toggleAttribute('hidden', !shouldOpen)
+    navMenu.classList.toggle('active', shouldOpen)
+    menuToggle.classList.toggle('open', shouldOpen)
+
+    if (shouldOpen) {
+      document.addEventListener('click', outsideClickListener)
     } else {
-      primaryMenu.removeAttribute('hidden')
-      navMenu.classList.add('active')
-      menuToggle.classList.add('open')
+      document.removeEventListener('click', outsideClickListener)
     }
-  })
+  }
 
-  // --- Chiudi menu cliccando fuori ---
-  document.addEventListener('click', e => {
-    if (!navMenu.classList.contains('active')) return
+  menuToggle.addEventListener('click', () => toggleMenu())
 
+  // --- Close menu when clicking outside ---
+  const outsideClickListener = e => {
     if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-      navMenu.classList.remove('active')
-      menuToggle.classList.remove('open')
-      menuToggle.setAttribute('aria-expanded', 'false')
-      primaryMenu.setAttribute('hidden', '')
+      toggleMenu(false)
     }
-  })
+  }
 })
 
-// --- Funzione per copiare indirizzo negli appunti ---
+// --- Copy address to clipboard ---
 function copyAddress() {
   const addressText = document.getElementById('restaurant-address').innerText
   const feedbackEl = document.getElementById('copy-feedback')
 
-  navigator.clipboard.writeText(addressText)
-    .then(() => showCopyFeedback(feedbackEl, 'Indirizzo copiato negli appunti.'))
-    .catch(err => {
-      console.error('Copy failed', err)
-      showCopyFeedback(feedbackEl, 'Impossibile copiare l\'indirizzo.')
-    })
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(addressText)
+      .then(() => showCopyFeedback(feedbackEl, 'Indirizzo copiato negli appunti.'))
+      .catch(err => {
+        console.error('Copy failed', err)
+        fallbackCopy(addressText, feedbackEl)
+      })
+  } else {
+    fallbackCopy(addressText, feedbackEl)
+  }
 }
 
-// --- Funzione helper per mostrare feedback copia ---
+// --- Fallback copy method for unsupported browsers ---
+function fallbackCopy(text, feedbackEl) {
+  const textarea = document.createElement('textarea')
+  textarea.value = text
+  textarea.setAttribute('readonly', '')
+  textarea.style.position = 'absolute'
+  textarea.style.left = '-9999px'
+  document.body.appendChild(textarea)
+  textarea.select()
+
+  try {
+    document.execCommand('copy')
+    showCopyFeedback(feedbackEl, 'Indirizzo copiato.')
+  } catch (err) {
+    console.error('Fallback copy failed', err)
+    alert('Copia non supportata. Copia manualmente: ' + text)
+  }
+
+  document.body.removeChild(textarea)
+}
+
+// --- Show copy feedback ---
 function showCopyFeedback(el, message) {
   if (!el) return
   el.textContent = message
