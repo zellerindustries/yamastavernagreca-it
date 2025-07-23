@@ -10,6 +10,12 @@
 
   --font-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-secondary: 'Playfair Display', serif;
+  --font-size-base: clamp(1rem, 2vw + 0.5rem, 1.25rem); /* ~16-20px */
+
+  --font-size-sm: calc(var(--font-size-base) * 0.875); /* ~14-17.5px */
+  --font-size-lg: calc(var(--font-size-base) * 1.25);   /* ~24-30px */
+  --font-size-xl: calc(var(--font-size-base) * 1.5);     /* ~32-40px */
+  --font-size-xxl: calc(var(--font-size-base) * 2);    /* ~48-60px */
 
   --transition-speed: 0.35s;
   --spacing: 1.25rem;
@@ -50,6 +56,7 @@
 
 /* ==== BASE TYPOGRAPHY & LAYOUT ==== */
 html {
+  scroll-behavior: smooth;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
 }
@@ -57,7 +64,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: var(--font-primary);
-  font-size: 17px;
+  font-size: var(--font-size-base);
   line-height: 1.65;
   background-color: var(--color-secondary);
   color: var(--color-text);
@@ -141,7 +148,7 @@ nav ul {
 
 nav ul li a {
   font-weight: 700;
-  font-size: 1.15rem;
+  font-size: var(--font-size-lg);
   color: var(--color-primary);
   padding: 0.5rem 0;
   position: relative;
@@ -187,18 +194,18 @@ main h2 {
 }
 
 .hero h1 {
-  font-size: 3.75rem;
+  font-size: var(--font-size-xxl);
   margin-bottom: 0.75rem;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 .hero p {
-  font-size: 1.5rem;
+  font-size: var(--font-size-lg);
   font-weight: 500;
   margin: 0 auto 2rem;
   max-width: 600px;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.6);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
 }
 
 /* ==== BUTTONS ==== */
@@ -231,7 +238,8 @@ main h2 {
   box-shadow: 0 8px 25px rgba(36, 17, 87, 0.5);
 }
 
-.cta-button:focus {
+.cta-button:focus,
+.button-focus {
   color: var(--color-secondary);
   outline: 2px solid var(--color-text-light);
   outline-offset: 3px;
@@ -254,7 +262,7 @@ main h2 {
 
 /* ==== HEADINGS ==== */
 main h2 {
-  font-size: 3rem;
+  font-size: var(--font-size-xxl);
   margin-bottom: 1.5rem;
   color: var(--color-primary);
 }
@@ -307,19 +315,19 @@ main h2 {
 .menu-item h3 {
   font-family: var(--font-secondary);
   color: var(--color-primary);
-  font-size: 1.8rem;
+  font-size: var(--font-size-xl);
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .menu-item p {
-  font-size: 1.1rem;
+  font-size: var(--font-size-base);
   color: var(--color-text-light);
   line-height: 1.4;
 }
 
 .menu-item .notes {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   font-style: italic;
   color: var(--color-accent-dark);
 }
@@ -378,7 +386,7 @@ footer {
   display: none;
   background: none;
   border: none;
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   color: var(--color-primary);
   cursor: pointer;
   align-items: center;
@@ -406,7 +414,7 @@ nav ul.menu {
 /* ==== ABOUT, VALUES, REVIEW, CONTACT ==== */
 #about p {
   max-width: 720px;
-  margin: auto;
+  margin: auto auto 1rem;
   line-height: 1.6;
 }
 
@@ -430,7 +438,7 @@ nav ul.menu {
 }
 
 .values-list i {
-  font-size: 2rem;
+  font-size: var(--font-size-xl);
   color: var(--color-primary);
 }
 
@@ -440,7 +448,7 @@ nav ul.menu {
   position: absolute;
   left: 0;
   top: 0;
-  font-size: 3rem;
+  font-size: var(--font-size-xxl);
   color: var(--color-accent);
   line-height: 1;
   font-weight: 700;
@@ -491,7 +499,7 @@ nav ul.menu {
   color: white;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: var(--font-size-base);
   line-height: 1;
 
   display: flex;
@@ -556,7 +564,6 @@ nav ul.menu {
     gap: 1.25rem;
     padding: 1rem 2rem;
     box-shadow: var(--shadow-strong);
-    width: 210px;
 
     opacity: 0;
     visibility: hidden;
@@ -578,7 +585,7 @@ nav ul.menu {
   nav ul.menu li a {
     color: var(--color-secondary);
     font-weight: 600;
-    font-size: 1.25rem;
+    font-size: var(--font-size-lg);
   }
 
   nav ul.menu li a:hover,
@@ -604,11 +611,6 @@ nav ul.menu {
     height: auto;
   }
 
-  /* Responsive hero text */
-  .hero h1 {
-    font-size: 2.5rem;
-  }
-
   /* Responsive values list & contact */
   .values-list li,
   #contact .flex>div {
@@ -628,11 +630,17 @@ nav ul.menu {
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 2rem;
+
+  .button-wrapper {
+    flex-direction: column;
   }
 
-  main h2 {
-    font-size: 2.25rem;
+  .button-wrapper .cta-button,
+  .button-wrapper .button {
+    width: 100%;
+  }
+
+  .button-wrapper .cta-button-secondary {
+    width: unset;
   }
 }
