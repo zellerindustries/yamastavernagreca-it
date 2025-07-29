@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.getElementById('menu-toggle')
   const primaryMenu = document.getElementById('primary-menu')
   const navMenu = document.querySelector('nav ul.menu')
+  const copyBtn = document.getElementById('copy-address-btn')
+
+  if (copyBtn)     copyBtn.addEventListener('click', copyAddress)
+
 
   // --- Scroll handling: toggle "scrolled" class ---
   const onScroll = () => {

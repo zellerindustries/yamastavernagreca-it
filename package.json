@@ -1,8 +1,8 @@
 {
   "name": "yamas-taverna-greca",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "build": "minimaz build"
   },

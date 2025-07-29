@@ -8,6 +8,8 @@
     content="default-src 'self'; img-src 'self' https://fonts.gstatic.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
   <meta name="theme-color" content="#253873">
   <meta name="format-detection" content="telephone=no">
+  <meta name="robots" content="noindex, nofollow" />
+
   <!---
   <link rel="canonical" href="https://yamastavernagreca.it" />
   <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
@@ -16,10 +18,8 @@
     content="YAMAS, taverna greca a San Vitaliano. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente." />
   <meta name="keywords"
     content="taverna greca, ristorante greco, cucina greca San Vitaliano, moussaka, souvlaki, taverna YAMAS" />
-  <meta name="author" content="YAMAS - Taverna Greca" />-->
-  <meta name="robots" content="noindex, nofollow" />
+  <meta name="author" content="YAMAS - Taverna Greca" />
 
-  <!--
   <meta property="og:title" content="YAMAS - Taverna Greca | Cucina Greca Autentica a San Vitaliano" />
   <meta property="og:description"
     content="Scopri la vera cucina greca nel cuore di San Vitaliano. Piatti tradizionali e atmosfera tipica della Grecia." />
@@ -103,8 +103,7 @@
                         }
                     }
                 ]
-            },
-            {
+            }, {
                 "@type": "MenuSection",
                 "name": "Piatti principali",
                 "hasMenuItem": [
@@ -117,8 +116,7 @@
                             "priceCurrency": "EUR",
                             "price": "8.00"
                         }
-                    },
-                    {
+                    }, {
                         "@type": "MenuItem",
                         "name": "Souvlaki",
                         "description": "Spiedini di carne grigliata serviti con pita e tzatziki",
@@ -127,8 +125,7 @@
                             "priceCurrency": "EUR",
                             "price": "7.00"
                         }
-                    },
-                    {
+                    }, {
                         "@type": "MenuItem",
                         "name": "Gyros",
                         "description": "Carne arrostita su pita con pomodori, cipolla e salsa tzatziki",
@@ -157,32 +154,28 @@
                 "@type": "Answer",
                 "text": "Ci troviamo in Via Nazionale delle Puglie 69, 80030 San Vitaliano (NA), facilmente raggiungibile da San Vitaliano."
             }
-        },
-        {
+        }, {
             "@type": "Question",
             "name": "Quali sono gli orari di apertura?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Siamo aperti tutti i giorni dalle 19:00 alle 23:00."
             }
-        },
-        {
+        }, {
             "@type": "Question",
             "name": "Offrite opzioni vegetariane o vegane?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Sì, il nostro menu include numerosi piatti vegetariani e opzioni vegane preparate con ingredienti freschi e autentici."
             }
-        },
-        {
+        }, {
             "@type": "Question",
             "name": "È necessario prenotare?",
             "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Consigliamo sempre la prenotazione per garantirti un tavolo, specialmente nei weekend. Puoi prenotare tramite WhatsApp o chiamandoci."
             }
-        },
-        {
+        }, {
             "@type": "Question",
             "name": "Offrite servizio da asporto?",
             "acceptedAnswer": {
@@ -218,10 +211,7 @@
     <nav role="navigation" aria-label="Navigazione principale">
       <div class="logo-wrapper">
         <img src="../public/assets/logo_top.svg" id="logo-top" width="200" alt="YAMAS Taverna Greca logo" />
-        <img src="../public/assets/logo_bottom.svg" id="logo-bottom" width="200" alt="YAMAS Taverna Greca logo"
-          aria-hidden="true" />
-        <span class="sr-only">YAMAS Taverna Greca</span>
-
+        <img src="../public/assets/logo_bottom.svg" id="logo-bottom" width="200" aria-hidden="true" />
       </div>
 
       <!-- Hamburger button per mobile -->
@@ -230,12 +220,12 @@
         <i class="bi bi-list" aria-hidden="true"></i>
       </button>
 
-      <ul id="primary-menu" class="reset menu" hidden>
+      <ul id="primary-menu" class="menu" hidden>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#gallery">Galleria</a></li>
         <li><a href="#contact">Contatti</a></li>
-        <li><a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" target="_blank" rel="noopener noreferrer">Indicazioni
-            Maps</a></li>
+        <li><a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" target="_blank"
+            rel="noopener noreferrer">Indicazioni</a></li>
         <li><a href="https://wa.me/+390813445057" target="_blank" rel="noopener noreferrer">Prenota</a></li>
       </ul>
     </nav>
@@ -248,8 +238,13 @@
       <h1>Benvenuti da YAMAS</h1>
       <p>Autentica cucina greca nel cuore della città</p>
       <div class="button-wrapper">
-        <a href="https://wa.me/+390813445057" class="cta-button"><i class="bi bi-calendar-event"></i> <b>Prenota</b></a>
-        <a href="#menu" class="cta-button cta-button-secondary"><b>Scopri il Menu</b></a>
+        <a href="https://wa.me/+390813445057" class="button cta">
+          <i class="bi bi-calendar-event" aria-hidden="true"></i>
+          <b>Prenota</b>
+        </a>
+        <a href="#menu" class="button">
+          <span>Scopri il Menu </span>
+        </a>
       </div>
     </section>
 
@@ -258,26 +253,38 @@
       <article class="about-text">
         <p>
           <strong>Benvenuti allo YAMAS – Taverna Greca.</strong><br>
-          Sono Peppe e dopo 25 anni di esperienza nel mio ristorante nel cuore del centro storico di Napoli, ho deciso di continuare questa meravigliosa attività nell’area vesuviana, a <strong>San Vitaliano</strong>. Vi auguro una piacevole permanenza e buon appetito!
+          Mi chiamo Peppe e, dopo 25 anni di esperienza nel mio ristorante nel centro storico di Napoli,
+          ho deciso di portare questa meravigliosa attività nell’area vesuviana, a <strong>San Vitaliano</strong>.
+          Vi auguro una piacevole permanenza e buon appetito!
         </p>
         <p>
-          Da 2 anni portiamo nel cuore della Campania i sapori tradizionali della Grecia, preparati con passione e ingredienti freschissimi scelti con cura. La nostra missione è farvi vivere un’esperienza culinaria indimenticabile, tra profumi mediterranei e atmosfere calde e accoglienti.
+          Da oltre due anni portiamo nel cuore della Campania i sapori autentici della tradizione greca,
+          preparati con passione e ingredienti selezionati con cura. Il nostro obiettivo è offrirvi un’esperienza
+          culinaria indimenticabile, tra profumi mediterranei e un’atmosfera accogliente.
         </p>
         <p>
-          La nostra cucina si basa su ricette tradizionali, come la <em>moussaka</em>, il <em>souvlaki</em> e i <em>dolmadakia</em>, preparate secondo metodi tradizionali ma con un tocco di creatività contemporanea. Offriamo anche un’ampia selezione di piatti vegetariani e vegani, senza mai rinunciare alla qualità e all’autenticità.
+          La nostra cucina si basa su ricette tradizionali come <em>moussaka</em>, <em>souvlaki</em> e
+          <em>dolmadakia</em>, rivisitate con un tocco contemporaneo. Proponiamo anche numerose opzioni vegetariane e
+          vegane,
+          sempre nel rispetto dell’autenticità e della qualità.
         </p>
         <p>
-          <strong>YAMAS</strong> è molto più di un semplice ristorante: è un luogo dove famiglia e amici si incontrano per condividere momenti speciali e scoprire la cultura greca. Il nostro staff, cordiale e preparato, vi accoglierà con il calore tipico dell’ospitalità ellenica, garantendo un servizio attento e personalizzato.
+          Utilizziamo ingredienti di prima scelta, molti dei quali importati direttamente dalla Grecia,
+          per garantirvi il gusto genuino di ogni piatto. La nostra taverna è il luogo ideale per una cena romantica,
+          una serata tra amici o semplicemente per riscoprire i sapori del Mediterraneo in un ambiente familiare e
+          rilassato.
         </p>
         <p>
-          Siamo orgogliosi di utilizzare solo ingredienti di prima scelta, molti dei quali importati direttamente dalla Grecia, per assicurarvi il gusto autentico di ogni piatto. La nostra taverna è il posto ideale per una cena romantica, una festa di gruppo o semplicemente per godere dei sapori mediterranei in un ambiente familiare e rilassato.
+          <strong>YAMAS</strong> non è solo un ristorante: è un punto d’incontro dove amici e famiglie condividono
+          momenti speciali e si avvicinano alla cultura greca. Il nostro staff, cordiale e attento,
+          vi accoglierà con il calore dell’ospitalità ellenica, garantendovi un servizio curato e personalizzato.
         </p>
         <p>
-          Vi aspettiamo per farvi scoprire la magia di YAMAS - Taverna Greca, dove ogni piatto racconta una storia di tradizione, passione e autenticità.
+          Vi aspettiamo per farvi vivere la magia di <strong>YAMAS – Taverna Greca</strong>,
+          dove ogni piatto racconta una storia di tradizione, passione e amore per il buon cibo.
         </p>
       </article>
-
-      <ul class="reset flex values-list">
+      <ul class="grid grid-2-col-mobile" id="values">
         <li>
           <i class="bi bi-egg-fried" aria-hidden="true"></i>
           <span>Ingredienti freschi e autentici</span>
@@ -294,47 +301,51 @@
           <i class="bi bi-leaf" aria-hidden="true"></i>
           <span>Piatti tradizionali e vegetariani</span>
         </li>
-        <li>
-          <i class="bi bi-clock-history" aria-hidden="true"></i>
-          <span>Orari comodi per tutti</span>
-        </li>
       </ul>
     </section>
 
 
     <section id="menu" aria-labelledby="menu-heading">
       <h2 id="menu-heading">Menu</h2>
-      <div class="menu-items">
-        <article class="menu-item">
-          <img src="../public/assets/menu/moussaka.webp" alt="Moussaka - piatto tradizionale greco" loading="lazy" />
-          <div class="menu-item-content">
+      <div class="menu-items grid grid-2-col-mobile">
+        <article class="card">
+          <img src="../public/assets/menu/antipasto.webp"
+            alt="Piatto di antipasto tipico greco con feta, olive nere, polpette di carne e involtini di foglie di vite (dolmakia)"
+            loading="lazy" />
+          <div class="content">
+            <h3>Antipasto Tipico</h3>
+            <p>Un assaggio della tradizione: feta DOP, olive Kalamata, deliziose polpette di carne e dolmakia fatti in
+              casa.</p>
+          </div>
+        </article>
+        <article class="card">
+          <img src="../public/assets/menu/moussaka.webp"
+            alt="Porzione di moussaka calda con strati di melanzane, carne macinata e una spessa copertura di besciamella dorata"
+            loading="lazy" />
+          <div class="content">
             <h3>Moussaka</h3>
-            <p>Strati di melanzane, carne macinata e besciamella.</p>
+            <p>Il nostro classico: un ricco sformato a strati con melanzane fritte, ragù di carne e una cremosa
+              besciamella, cotto al forno.</p>
           </div>
         </article>
-        <article class="menu-item">
-          <img src="../public/assets/menu/souvlaki.webp"
-            alt="Souvlaki - spiedini di carne grigliata con pita e tzatziki" loading="lazy" />
-          <div class="menu-item-content">
-            <h3>Souvlaki</h3>
-            <p>Spiedini di carne grigliata serviti con pita e tzatziki.</p>
+        <article class="card">
+          <img src="../public/assets/menu/pita.webp"
+            alt="Pita greca ripiena di carne gyros, patatine fritte, pomodoro, cipolla e salsa tzatziki."
+            loading="lazy" />
+          <div class="content">
+            <h3>Pita Gyros</h3>
+            <p>Carne di maiale allo spiedo, patatine, cipolla, pomodoro e salsa tzatziki avvolti in una soffice pita.
+            </p>
           </div>
         </article>
-        <article class="menu-item">
+        <article class="card">
           <img src="../public/assets/menu/gyros.webp"
-            alt="Gyros - carne arrostita su pita con pomodori, cipolla e salsa tzatziki" loading="lazy" />
-          <div class="menu-item-content">
+            alt="Piatto di Gyros con carne di maiale a fette, servito su una pita, accompagnato da patatine fritte, pomodoro fresco, cipolla e tzatziki"
+            loading="lazy" />
+          <div class="content">
             <h3>Gyros</h3>
-            <p>Carne arrostita su pita con pomodori, cipolla e salsa tzatziki.</p>
-          </div>
-        </article>
-        <article class="menu-item">
-          <img src="../public/assets/menu/dolmadakia.webp"
-            alt="Dolmadakia - involtini di foglie di vite ripieni di riso e erbe aromatiche" loading="lazy" />
-          <div class="menu-item-content">
-            <h3>Dolmadakia</h3>
-            <p>Involtini di foglie di vite ripieni di riso e erbe aromatiche.</p>
-            <div class="notes">Vegetariano</div>
+            <p>L'iconico piatto greco con carne di maiale cotta allo spiedo, servita su pita con patatine
+              fritte, cipolla, pomodoro e la nostra salsa tzatziki fatta in casa.</p>
           </div>
         </article>
       </div>
@@ -342,40 +353,40 @@
 
     <section id="gallery" aria-labelledby="gallery-heading">
       <h2 id="gallery-heading">Galleria</h2>
-      <ul class="gallery-grid">
-        <li>
+      <ul class="grid grid-2-col-mobile">
+        <li class="card">
           <figure>
             <img src="../public/assets/galleria/1.webp"
-              alt="Piatti tradizionali greci preparati da YAMAS, taverna greca a San Vitaliano" />
-            <figcaption>Piatti tradizionali greci preparati da YAMAS</figcaption>
+              alt="Locale in pieno stile greco taverna greca a San Vitaliano" />
+            <figcaption class="content">Locale in pieno stile greco </figcaption>
           </figure>
         </li>
-        <li>
+        <li class="card">
           <figure>
             <img src="../public/assets/galleria/2.webp"
               alt="Interno accogliente della taverna YAMAS con decorazioni tradizionali greche" />
-            <figcaption>Interno accogliente con decorazioni greche</figcaption>
+            <figcaption class="content">Interno accogliente con decorazioni greche</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="card">
           <figure>
             <img src="../public/assets/galleria/3.webp"
               alt="Atmosfera calda e familiare all'interno di YAMAS, taverna greca a San Vitaliano" />
-            <figcaption>Atmosfera calda e familiare</figcaption>
+            <figcaption class="content">Atmosfera calda e familiare</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="card">
           <figure>
             <img src="../public/assets/galleria/4.webp"
               alt="Dettagli delle decorazioni e degli arredi tipici greci della taverna YAMAS" />
-            <figcaption>Dettagli delle decorazioni tipiche greche</figcaption>
+            <figcaption class="content">Decorazioni attente al dettaglio</figcaption>
           </figure>
         </li>
-        <li>
+        <li class="card">
           <figure>
             <img src="../public/assets/galleria/5.webp"
               alt="Dettagli delle decorazioni e degli arredi tipici greci della taverna YAMAS" />
-            <figcaption>Dettagli delle decorazioni tipiche greche</figcaption>
+            <figcaption class="content">Dettagli delle decorazioni tipiche greche</figcaption>
           </figure>
         </li>
       </ul>
@@ -384,62 +395,70 @@
 
     <section id="reviews" aria-labelledby="reviews-heading">
       <h2 id="reviews-heading">Cosa dicono i nostri clienti</h2>
-      <ul class="reviews-list" role="list">
-        <li class="review" tabindex="0">
-          <div class="review-header" aria-label="Valutazione 5 stelle">
-            <span class="stars" aria-hidden="true">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </span>
-            <span class="sr-only">5 stelle</span>
+      <ul class="flex">
+        <li class="card" tabindex="0">
+          <div class="content">
+            <div class="star-wrapper" aria-label="Valutazione 5 stelle">
+              <span class="stars" aria-hidden="true">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </span>
+              <span class="sr-only">5 stelle</span>
+            </div>
+            <blockquote>
+              <p>“Un posto veramente carino, con dell'ottimo cibo e con un'atmosfera molto caratteristica. Ho gradito
+                molto quel che ho ordinato e son rimasto piacevolmente soddisfatto, anche dell'abbondanza delle
+                porzioni.
+                Sembra davvero un angolo di Grecia.”</p>
+            </blockquote>
+            <cite><b>Vincenzo C.</b></cite>
           </div>
-          <blockquote>
-            <p>“Un posto veramente carino, con dell'ottimo cibo e con un'atmosfera molto caratteristica. Ho gradito
-              molto quel che ho ordinato e son rimasto piacevolmente soddisfatto, anche dell'abbondanza delle porzioni.
-              Sembra davvero un angolo di Grecia.”</p>
-          </blockquote>
-          <cite><b>Vincenzo C.</b></cite>
         </li>
-        <li class="review" tabindex="0">
-          <div class="review-header" aria-label="Valutazione 5 stelle">
-            <span class="stars" aria-hidden="true">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-            </span>
-            <span class="sr-only">5 stelle</span>
+        <li class="card" tabindex="0">
+          <div class="content">
+            <div class="star-wrapper" aria-label="Valutazione 5 stelle">
+              <span class="stars" aria-hidden="true">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+              </span>
+              <span class="sr-only">5 stelle</span>
+            </div>
+            <blockquote>
+              <p>“Stasera ci siamo stati per la prima volta e siamo stati piacevolmente colpiti. La location è curata in
+                ogni minimo dettaglio, il bicchiere con le onde, i colori, le foto, anche la carta ti riporta alla
+                Grecia!
+                Abbiamo mangiato molto bene e la cameriera un sacco gentile soprattutto a spiegare i singoli piatti. Ci
+                ritorneremo sicuramente e consigliamo l'esperienza a tutti! Credetemi c'è differenza tra chi porta i
+                valori autentici di una nazione e chi prova a farne una misera imitazione.”</p>
+            </blockquote>
+            <cite><b>Roberto L.</b></cite>
           </div>
-          <blockquote>
-            <p>“Stasera ci siamo stati per la prima volta e siamo stati piacevolmente colpiti. La location è curata in
-              ogni minimo dettaglio, il bicchiere con le onde, i colori, le foto, anche la carta ti riporta alla Grecia!
-              Abbiamo mangiato molto bene e la cameriera un sacco gentile soprattutto a spiegare i singoli piatti. Ci
-              ritorneremo sicuramente e consigliamo l'esperienza a tutti! Credetemi c'è differenza tra chi porta i
-              valori autentici di una nazione e chi prova a farne una misera imitazione.”</p>
-          </blockquote>
-          <cite><b>Roberto L.</b></cite>
         </li>
-        <li class="review" tabindex="0">
-          <div class="review-header" aria-label="Valutazione 4 stelle">
-            <span class="stars" aria-hidden="true">
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star-fill"></i>
-              <i class="bi bi-star"></i>
-            </span>
-            <span class="sr-only">4 stelle</span>
+        <li class="card" tabindex="0">
+          <div class="content">
+            <div class="star-wrapper" aria-label="Valutazione 4 stelle">
+              <span class="stars" aria-hidden="true">
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="bi bi-star" aria-hidden="true"></i>
+              </span>
+              <span class="sr-only">4 stelle</span>
+            </div>
+            <blockquote>
+              <p>“Atmosfera della classica taverna Greca, con due sale interne ed un piccolo spazio esterno. Prodotti di
+                qualità e frittura leggerissima. Personale gentile e disponibile, con prezzi molto modici. Parcheggio
+                comodo, proprio davanti il locale.”</p>
+            </blockquote>
+            <cite><b>Gianluca M.</b></cite>
           </div>
-          <blockquote>
-            <p>“Atmosfera della classica taverna Greca, con due sale interne ed un piccolo spazio esterno. Prodotti di
-              qualità e frittura leggerissima. Personale gentile e disponibile, con prezzi molto modici. Parcheggio
-              comodo, proprio davanti il locale.”</p>
-          </blockquote>
-          <cite><b>Gianluca M.</b></cite>
         </li>
       </ul>
     </section>
@@ -449,7 +468,7 @@
       <div class="flex">
         <div>
           <h3>Orari di Apertura</h3>
-          <ul class="reset" role="list">
+          <ul>
             <li>
               <i class="bi bi-clock" aria-hidden="true"></i>
               <span class="sr-only">Orari:</span>
@@ -469,13 +488,15 @@
             </p>
           </address>
           <span class="button-wrapper">
-            <button type="button" onclick="copyAddress()" class="button"
+            <button type="button" id="copy-address-btn" class="button"
               aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti">
-              <i class="bi bi-clipboard" aria-hidden="true"></i> Copia indirizzo
+              <i class="bi bi-copy" aria-hidden="true"></i>
+              <span>Copia indirizzo</span>
             </button>
             <a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" class="button" target="_blank" rel="noopener noreferrer"
               aria-label="Apri le indicazioni su Google Maps per Via Nazionale delle Puglie 69, San Vitaliano">
-              <i class="bi bi-map" aria-hidden="true"></i> Indicazioni Google Maps
+              <i class="bi bi-map" aria-hidden="true"></i>
+              <span>Indicazioni Google Maps</span>
             </a>
           </span>
           <div id="copy-feedback" role="status" aria-live="polite" class="sr-only"></div>
@@ -485,19 +506,20 @@
           <p>
             <i class="bi bi-telephone-fill" aria-hidden="true"></i>
             <span class="sr-only">Telefono:</span>
-            <a href="tel:+390813445057" rel="noopener" aria-label="Chiama +39 081 344 50 57">+39 081 344
-              50 57</a>
+            <a href="tel:+390813445057" rel="noopener" aria-label="Chiama +39 081 344 50 57">
+              +39 081 344 50 57
+            </a>
           </p>
           <span class="button-wrapper">
             <a href="tel:+390813445057" class="button">
               <i class="bi bi-telephone-fill" aria-hidden="true"></i>
-              Chiama
+              <span>Chiama</span>
             </a>
             <a href="https://wa.me/390813445057" target="_blank" rel="noopener noreferrer" class="button"
               aria-label="Scrivici su WhatsApp al numero +39 328 48 61 697">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i> Scrivici su WhatsApp
+              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              <span>Scrivici su WhatsApp</span>
             </a>
-
           </span>
         </div>
       </div>
@@ -507,6 +529,11 @@
   </main>
 
   <footer role="contentinfo">
+    <p>
+      <span>Politica di riservatezza</span>
+      <span>Termini e condizioni</span>
+      <span>Cookie Policy</span>
+    </p>
     <p>&copy; 2025 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
   </footer>
 </body>
