@@ -235,22 +235,24 @@
   <main>
 
     <section class="hero" aria-label="Benvenuti da YAMAS">
-      <h1>Benvenuti da YAMAS</h1>
-      <p>Autentica cucina greca nel cuore della città</p>
-      <div class="button-wrapper">
-        <a href="https://wa.me/+390813445057" class="button cta">
-          <i class="bi bi-calendar-event" aria-hidden="true"></i>
-          <b>Prenota</b>
-        </a>
-        <a href="#menu" class="button">
-          <span>Scopri il Menu </span>
-        </a>
+      <div class="max-width">
+        <h1>Benvenuti da YAMAS</h1>
+        <p>Autentica cucina greca nel cuore della città</p>
+        <div class="button-wrapper">
+          <a href="https://wa.me/+390813445057" class="button cta">
+            <i class="bi bi-calendar-event" aria-hidden="true"></i>
+            <b>Prenota</b>
+          </a>
+          <a href="#menu" class="button">
+            <span>Scopri il Menu </span>
+          </a>
+        </div>
       </div>
     </section>
 
     <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">Chi Siamo</h2>
-      <article class="about-text">
+      <article class="max-width">
         <p>
           <strong>Benvenuti allo YAMAS – Taverna Greca.</strong><br>
           Mi chiamo Peppe e, dopo 25 anni di esperienza nel mio ristorante nel centro storico di Napoli,
@@ -264,8 +266,7 @@
         </p>
         <p>
           La nostra cucina si basa su ricette tradizionali come <em>moussaka</em>, <em>souvlaki</em> e
-          <em>dolmadakia</em>, rivisitate con un tocco contemporaneo. Proponiamo anche numerose opzioni vegetariane e
-          vegane,
+          <em>gyros</em>, rivisitate con un tocco contemporaneo. Proponiamo anche numerose opzioni vegetariane,
           sempre nel rispetto dell’autenticità e della qualità.
         </p>
         <p>
@@ -286,20 +287,28 @@
       </article>
       <ul class="grid grid-2-col-mobile" id="values">
         <li>
-          <i class="bi bi-egg-fried" aria-hidden="true"></i>
+          <i class="bi bi-basket" aria-hidden="true"></i>
           <span>Ingredienti freschi e autentici</span>
         </li>
         <li>
-          <i class="bi bi-people" aria-hidden="true"></i>
-          <span>Accoglienza familiare</span>
+          <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+          <span>Accoglienza calda e familiare</span>
         </li>
         <li>
-          <i class="bi bi-geo-alt" aria-hidden="true"></i>
-          <span>Locale nel cuore di San Vitaliano</span>
+          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+          <span>Nel cuore di San Vitaliano</span>
         </li>
         <li>
-          <i class="bi bi-leaf" aria-hidden="true"></i>
-          <span>Piatti tradizionali e vegetariani</span>
+          <i class="bi bi-egg-fried" aria-hidden="true"></i>
+          <span>Piatti tradizionali greci</span>
+        </li>
+        <li>
+          <i class="bi bi-leaf-fill" aria-hidden="true"></i>
+          <span>Opzioni vegetariane e vegane</span>
+        </li>
+        <li>
+          <i class="bi bi-car-front-fill" aria-hidden="true"></i>
+          <span>Parcheggio comodo nelle vicinanze</span>
         </li>
       </ul>
     </section>
@@ -310,11 +319,11 @@
       <div class="menu-items grid grid-2-col-mobile">
         <article class="card">
           <img src="../public/assets/menu/antipasto.webp"
-            alt="Piatto di antipasto tipico greco con feta, olive nere, polpette di carne e involtini di foglie di vite (dolmakia)"
+            alt="Piatto di antipasto Yamas greco con feta, olive nere, polpette miste e involtini di foglie di vite (dolmades)"
             loading="lazy" />
           <div class="content">
-            <h3>Antipasto Tipico</h3>
-            <p>Un assaggio della tradizione: feta DOP, olive Kalamata, deliziose polpette di carne e dolmakia fatti in
+            <h3>Antipasto Yamas</h3>
+            <p>Un assaggio della tradizione: feta DOP, olive Kalamata, deliziose polpette miste e dolmades fatti in
               casa.</p>
           </div>
         </article>
@@ -324,7 +333,8 @@
             loading="lazy" />
           <div class="content">
             <h3>Moussaka</h3>
-            <p>Il nostro classico: un ricco sformato a strati con melanzane fritte, ragù di carne e una cremosa
+            <p>Il nostro classico: un ricco sformato a strati con melanzane, patate, carne macinata di vitello e una
+              cremosa
               besciamella, cotto al forno.</p>
           </div>
         </article>
@@ -414,7 +424,7 @@
                 porzioni.
                 Sembra davvero un angolo di Grecia.”</p>
             </blockquote>
-            <cite><b>Vincenzo C.</b></cite>
+            <cite>Vincenzo C.</cite>
           </div>
         </li>
         <li class="card" tabindex="0">
@@ -437,7 +447,7 @@
                 ritorneremo sicuramente e consigliamo l'esperienza a tutti! Credetemi c'è differenza tra chi porta i
                 valori autentici di una nazione e chi prova a farne una misera imitazione.”</p>
             </blockquote>
-            <cite><b>Roberto L.</b></cite>
+            <cite>Roberto L.</cite>
           </div>
         </li>
         <li class="card" tabindex="0">
@@ -457,7 +467,7 @@
                 qualità e frittura leggerissima. Personale gentile e disponibile, con prezzi molto modici. Parcheggio
                 comodo, proprio davanti il locale.”</p>
             </blockquote>
-            <cite><b>Gianluca M.</b></cite>
+            <cite>Gianluca M.</cite>
           </div>
         </li>
       </ul>
@@ -488,7 +498,7 @@
             </p>
           </address>
           <span class="button-wrapper">
-            <button type="button" id="copy-address-btn" class="button"
+            <button type="button" id="copy-address-btn" class="button" aria-controls="copy-feedback"
               aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti">
               <i class="bi bi-copy" aria-hidden="true"></i>
               <span>Copia indirizzo</span>
