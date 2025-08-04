@@ -404,7 +404,7 @@ header.scrolled .menu-toggle {
   border: none;
 }
 
-#values i {
+#values i.bi {
   font-size: var(--font-size-xl);
   color: var(--color-primary);
 }
