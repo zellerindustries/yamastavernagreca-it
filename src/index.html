@@ -10,7 +10,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="noindex, nofollow" />
 
-  <!---
+
   <link rel="canonical" href="https://yamastavernagreca.it" />
   <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
 
@@ -34,159 +34,145 @@
   <meta name="twitter:description"
     content="Piatti tradizionali greci nel cuore di San Vitaliano. Prenota ora da YAMAS." />
   <meta name="twitter:image" content="https://www.yamastavernagreca.it/public/assets/twitter-card.jpg" />
-
   <script type="application/ld+json">
 {
-    "@context": "https://schema.org",
-    "@type": "Restaurant",
-    "name": "YAMAS - Taverna Greca",
-    "image": "https://www.yamastavernagreca.it/public/assets/twitter-card.jpg",
-    "url": "https://www.yamastavernagreca.it",
-    "telephone": "+39 081 344 50 57",
-    "servesCuisine": "Greek",
-    "priceRange": "€€",
-    "address": {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Restaurant",
+      "name": "YAMAS - Taverna Greca",
+      "image": "https://www.yamastavernagreca.it/public/assets/twitter-card.jpg",
+      "url": "https://www.yamastavernagreca.it",
+      "telephone": "+39 081 344 50 57",
+      "servesCuisine": ["Greek", "Vegetarian"],
+      "priceRange": "€€",
+      "address": {
         "@type": "PostalAddress",
         "streetAddress": "Via Nazionale delle Puglie 69",
         "addressLocality": "San Vitaliano",
         "postalCode": "80030",
         "addressRegion": "NA",
         "addressCountry": "IT"
-    },
-    "geo": {
+      },
+      "geo": {
         "@type": "GeoCoordinates",
         "latitude": 40.9265,
         "longitude": 14.4771
-    },
-    "openingHoursSpecification": [
+      },
+      "openingHoursSpecification": [
         {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Monday",
-            "opens": "19:00",
-            "closes": "23:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Tuesday",
-            "opens": "19:00",
-            "closes": "23:00"
-        },
-        {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "19:00",
-            "closes": "23:00"
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "19:00",
+          "closes": "23:00"
         }
-    ],
-    "aggregateRating": {
+      ],
+      "aggregateRating": {
         "@type": "AggregateRating",
         "ratingValue": "4.8",
         "reviewCount": "132"
-    },
-    "hasMenu": {
+      },
+      "menu": "https://www.yamastavernagreca.it/#menu",
+      "hasMenu": {
         "@type": "Menu",
         "name": "Menu YAMAS",
         "url": "https://www.yamastavernagreca.it/#menu",
         "hasMenuSection": [
-            {
-                "@type": "MenuSection",
-                "name": "Antipasti",
-                "hasMenuItem": [
-                    {
-                        "@type": "MenuItem",
-                        "name": "Dolmadakia",
-                        "description": "Involtini di foglie di vite ripieni di riso e erbe aromatiche",
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "EUR",
-                            "price": "5.00"
-                        }
-                    }
-                ]
-            }, {
-                "@type": "MenuSection",
-                "name": "Piatti principali",
-                "hasMenuItem": [
-                    {
-                        "@type": "MenuItem",
-                        "name": "Moussaka",
-                        "description": "Strati di melanzane, carne macinata e besciamella",
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "EUR",
-                            "price": "8.00"
-                        }
-                    }, {
-                        "@type": "MenuItem",
-                        "name": "Souvlaki",
-                        "description": "Spiedini di carne grigliata serviti con pita e tzatziki",
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "EUR",
-                            "price": "7.00"
-                        }
-                    }, {
-                        "@type": "MenuItem",
-                        "name": "Gyros",
-                        "description": "Carne arrostita su pita con pomodori, cipolla e salsa tzatziki",
-                        "offers": {
-                            "@type": "Offer",
-                            "priceCurrency": "EUR",
-                            "price": "6.50"
-                        }
-                    }
-                ]
-            }
+          {
+            "@type": "MenuSection",
+            "name": "Piatti principali",
+            "hasMenuItem": [
+              {
+                "@type": "MenuItem",
+                "name": "Moussaka",
+                "description": "Strati di melanzane, carne macinata e besciamella",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "EUR",
+                  "price": "8.50"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Souvlaki",
+                "description": "Spiedini di carne grigliata serviti con pita e tzatziki",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "EUR",
+                  "price": "10.00"
+                }
+              },
+              {
+                "@type": "MenuItem",
+                "name": "Gyros",
+                "description": "Carne arrostita su pita con pomodori, cipolla e salsa tzatziki",
+                "offers": {
+                  "@type": "Offer",
+                  "priceCurrency": "EUR",
+                  "price": "10.00"
+                }
+              }
+            ]
+          }
         ]
-    }
-}
-  </script>
-
-  <script type="application/ld+json">
-{
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
         {
-            "@type": "Question",
-            "name": "Dove si trova YAMAS - Taverna Greca?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ci troviamo in Via Nazionale delle Puglie 69, 80030 San Vitaliano (NA), facilmente raggiungibile da San Vitaliano."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Quali sono gli orari di apertura?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Siamo aperti tutti i giorni dalle 19:00 alle 23:00."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Offrite opzioni vegetariane o vegane?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sì, il nostro menu include numerosi piatti vegetariani e opzioni vegane preparate con ingredienti freschi e autentici."
-            }
-        }, {
-            "@type": "Question",
-            "name": "È necessario prenotare?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Consigliamo sempre la prenotazione per garantirti un tavolo, specialmente nei weekend. Puoi prenotare tramite WhatsApp o chiamandoci."
-            }
-        }, {
-            "@type": "Question",
-            "name": "Offrite servizio da asporto?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp."
-            }
+          "@type": "Question",
+          "name": "Dove si trova YAMAS - Taverna Greca?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ci troviamo in Via Nazionale delle Puglie 69, 80030 San Vitaliano (NA), facilmente raggiungibile da San Vitaliano."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quali sono gli orari di apertura?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Siamo aperti tutti i giorni dalle 19:00 alle 23:00."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Offrite opzioni vegetariane?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, il nostro menu include numerosi piatti vegetariani preparati con ingredienti freschi e autentici."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "È necessario prenotare?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Consigliamo sempre la prenotazione per garantirti un tavolo, specialmente nei weekend. Puoi prenotare tramite WhatsApp o chiamandoci."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Offrite servizio da asporto?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp."
+          }
         }
-    ]
+      ]
+    }
+  ]
 }
-  </script>
-  -->
+</script>
 
   <script src="script.js" defer></script>
 
