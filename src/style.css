@@ -546,3 +546,11 @@ header.scrolled .menu-toggle {
     width: 100%;
   }
 }
+
+.alert-message{
+  background-color: #ffd000;
+  color: #000;
+  text-align: center;
+  padding: var(--spacing-sm);
+
+}

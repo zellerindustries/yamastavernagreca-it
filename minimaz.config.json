@@ -5,9 +5,16 @@
     "minify": {
         "html": true,
         "css": true,
-        "js": true
+        "js": true,
+        "ts": true
     },
     "replace": {
         "../public/": "public/"
-    }
+    },
+    "styles": [
+        "style.css"
+    ],
+    "scripts": [
+        "script.js"
+    ]
 }
