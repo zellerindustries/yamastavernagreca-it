@@ -7,8 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const navMenu = document.querySelector('nav ul.menu')
   const copyBtn = document.getElementById('copy-address-btn')
 
-  if (copyBtn)     copyBtn.addEventListener('click', copyAddress)
-
+  if (copyBtn) copyBtn.addEventListener('click', copyAddress)
 
   // --- Scroll handling: toggle "scrolled" class ---
   const onScroll = () => {
@@ -30,9 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
         target.focus({ preventScroll: true })
 
         // Close mobile menu if open
-        if (navMenu.classList.contains('active')) {
-          toggleMenu(false)
-        }
+        if (navMenu.classList.contains('active')) toggleMenu(false)
       }
     })
   })
@@ -80,9 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Close menu when clicking outside ---
   const outsideClickListener = e => {
-    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
-      toggleMenu(false)
-    }
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) toggleMenu(false)
   }
 })
 
@@ -120,7 +115,6 @@ function fallbackCopy(text, feedbackEl) {
     console.error('Fallback copy failed', err)
     alert('Copia non supportata. Copia manualmente: ' + text)
   }
-
   document.body.removeChild(textarea)
 }
 

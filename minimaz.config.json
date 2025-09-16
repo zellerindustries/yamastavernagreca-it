@@ -9,12 +9,19 @@
         "ts": true
     },
     "replace": {
-        "../public/": "public/"
+        "../public/": "public/",
+        "<link rel=\"stylesheet\" href=\"../node_modules/bootstrap-icons/font/bootstrap-icons.css\" />": ""
     },
     "styles": [
-        "style.css"
+        "style.css",
+        "node_modules/bootstrap-icons/font/bootstrap-icons.min.css"
     ],
     "scripts": [
         "script.js"
-    ]
+    ],
+    "folders": {
+        "src": "",
+        "public": "public",
+        "node_modules/bootstrap-icons/font/fonts": "public/fonts"
+    }
 }

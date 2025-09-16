@@ -2,10 +2,32 @@
 <html lang="it">
 
 <head>
+  <script type="text/javascript"
+    src="https://embeds.iubenda.com/widgets/922e2624-5738-4cf3-8ffb-0d27d65aedff.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RWESBSEPD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-8RWESBSEPD');
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; img-src 'self' https://fonts.gstatic.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    img-src 'self' data: https://fonts.gstatic.com https://www.google-analytics.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
+    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+    script-src 'self'
+               https://cdn.jsdelivr.net
+               https://cdnjs.cloudflare.com
+               https://cdn.iubenda.com
+               https://www.googletagmanager.com
+               https://www.google-analytics.com;
+    connect-src 'self' https://www.google-analytics.com https://region1.analytics.google.com https://idb.iubenda.com https://cpl.iubenda.com;
+  ">
   <meta name="theme-color" content="#253873">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow" />
@@ -185,10 +207,10 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" />
 
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
 </head>
 
 <body>
@@ -207,11 +229,11 @@
       </button>
 
       <ul id="primary-menu" class="menu" hidden>
+        <li><a href="/" aria-disabled="true">Home</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#gallery">Galleria</a></li>
         <li><a href="#contact">Contatti</a></li>
-        <li><a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" target="_blank"
-            rel="noopener noreferrer">Indicazioni</a></li>
+        <li><a href="pages/dove-siamo.html" target="_self">Dove Siamo</a></li>
         <li><a href="https://wa.me/+390813445057" target="_blank" rel="noopener noreferrer">Prenota</a></li>
       </ul>
     </nav>
@@ -532,12 +554,33 @@
   </main>
 
   <footer role="contentinfo">
-    <p>
-      <span>Politica di riservatezza</span>
-      <span>Termini e condizioni</span>
-      <span>Cookie Policy</span>
-    </p>
+    <nav id="footer-navigation">
+      <ul>
+        <li><a href="pages/policies.html">
+            Politiche
+          </a></li>
+      </ul>
+    </nav>
     <p>&copy; 2025 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
+
+    <div id="bottom-navigation">
+      <nav aria-label="Navigazione principale">
+        <ul>
+          <li>
+            <a href="#contact">
+              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i><br />
+              <span>Dove siamo</span>
+            </a>
+          </li>
+          <li>
+            <a href="#contact">
+              <i class="bi bi-calendar-check-fill" aria-hidden="true"></i><br />
+              <span>Prenota</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </footer>
 </body>
 

@@ -9,7 +9,7 @@
 
   --font-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   --font-secondary: 'Playfair Display', serif;
-  --font-size-base: clamp(1rem, 2vw + .5rem, 1.25rem);
+  --font-size-base: clamp(1rem, calc(2vw + .5rem), 1.25rem);
   /* ~16-20px */
 
   --font-size-sm: calc(var(--font-size-base) * .875);
@@ -99,6 +99,11 @@ a:focus {
   text-decoration: underline;
 }
 
+a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: .8;
+}
+
 /* ==== GENERIC CLASSES ==== */
 .grid {
   display: grid;
@@ -165,6 +170,7 @@ a:focus {
   cursor: pointer;
   border-radius: var(--radius);
   font-size: var(--font-size-base);
+  display: block;
 }
 
 .button span {
@@ -233,23 +239,20 @@ header .logo-wrapper {
 }
 
 /* ==== NAVIGATION ==== */
-nav {
+header nav {
   margin: 0 auto;
   display: flex;
-  gap: var(--spacing);
   justify-content: space-between;
   align-items: center;
 }
 
-
-
-nav ul {
+header nav ul {
   display: flex;
   gap: var(--spacing-sm);
   transition: opacity var(--transition-speed) ease, transform var(--transition-speed) ease;
 }
 
-nav ul li a {
+header nav ul li a {
   font-weight: 700;
   font-size: var(--font-size-base);
   color: var(--color-primary);
@@ -260,7 +263,7 @@ nav ul li a {
 
 }
 
-nav ul li a::after {
+header nav ul li a::after {
   content: '';
   position: absolute;
   bottom: -5px;
@@ -271,9 +274,56 @@ nav ul li a::after {
   transition: width var(--transition-speed) ease;
 }
 
-nav ul li a:hover::after,
-nav ul li a:focus::after {
+header nav ul li a:hover::after,
+header nav ul li a:focus::after {
   width: 100%;
+}
+
+#footer-navigation ul {
+  margin-bottom: var(--spacing);
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing);
+  justify-content: center;
+  align-items: center;
+}
+
+#bottom-navigation {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-strong);
+  z-index: 100;
+  width: 100%;
+  box-shadow: var(--shadow-strong);
+}
+
+#bottom-navigation nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  padding: var(--spacing);
+  width: 100%;
+}
+
+#bottom-navigation nav ul li a {
+  color: var(--color-primary);
+  font-weight: 700;
+  font-size: var(--font-size-base);
+  transition: color var(--transition-speed);
+}
+
+#bottom-navigation i{
+  font-size: var(--font-size-xxl);
+}
+
+#policy-navigation li.policy{
+  margin-top: 1rem;
 }
 
 /* ==== MAIN SECTIONS ==== */
@@ -281,6 +331,7 @@ main section {
   padding: 3rem 1rem;
   margin: 0 auto;
   text-align: center;
+
 }
 
 /* ==== HERO ==== */
@@ -302,7 +353,7 @@ main h2 {
   font-size: var(--font-size-xxl);
   margin-bottom: .75rem;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+  text-shadow: 2px 2px 4px #000000;
 }
 
 .hero p {
@@ -337,6 +388,11 @@ footer {
   color: var(--color-secondary);
   text-align: center;
   padding: 1.5rem 0;
+}
+
+footer a {
+  color: var(--color-secondary);
+  transition: color var(--transition-speed);
 }
 
 /* ==== SCREEN READER ONLY ==== */
@@ -467,21 +523,21 @@ header.scrolled .menu-toggle {
   padding-bottom: 0;
 }
 
+
 /* ==== MOBILE STYLES ==== */
 @media (max-width: 768px) {
-
-  /*
-  .grid-2-cols-mobile {
-    grid-template-columns: repeat(2, 1fr);
+  #bottom-navigation {
+    display: block;
+    visibility: visible;
   }
-*/
+
   /* Show hamburger */
   .menu-toggle {
     display: flex;
   }
 
-  /* Hide menu by default */
-  nav ul {
+  /* NAVIGATION */
+  header nav ul {
     position: absolute;
     top: 90px;
     width: 100%;
@@ -499,24 +555,23 @@ header.scrolled .menu-toggle {
   }
 
   /* Show menu when active */
-  nav ul.active {
+  header nav ul.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
   }
 
-  nav ul li a {
+  header nav ul li a {
     color: var(--color-secondary);
     font-size: var(--font-size-lg);
     display: block;
   }
 
-  nav ul li a:hover,
-  nav ul li a:focus {
+  header nav ul li a:hover,
+  header nav ul li a:focus {
     color: var(--color-accent);
   }
-
 
   /* Responsive values list & contact */
   #values li,
@@ -534,6 +589,10 @@ header.scrolled .menu-toggle {
   .flex {
     flex-direction: column !important;
   }
+
+  footer {
+    padding-bottom: 8rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -547,10 +606,9 @@ header.scrolled .menu-toggle {
   }
 }
 
-.alert-message{
+.alert-message {
   background-color: #ffd000;
   color: #000;
   text-align: center;
   padding: var(--spacing-sm);
-
 }
