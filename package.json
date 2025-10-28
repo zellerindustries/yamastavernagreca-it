@@ -18,10 +18,8 @@
     "url": "https://github.com/zeller-dev/yamas-taverna-greca/issues"
   },
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
-  "devDependencies": {
-    "minimaz": "^0.0.8"
-  },
   "dependencies": {
-    "bootstrap-icons": "^1.13.1"
+    "bootstrap-icons": "^1.13.1",
+    "minimaz-cli": "^0.1.3"
   }
 }
