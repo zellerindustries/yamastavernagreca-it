@@ -15,28 +15,27 @@
   </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta
-    http-equiv="Content-Security-Policy"
-    content="default-src 'self';
-      img-src 'self' data: https://fonts.gstatic.com https://www.google-analytics.com;
-      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
-      font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-      script-src 'self'
-        https://cdn.jsdelivr.net
-        https://cdnjs.cloudflare.com
-        https://cdn.iubenda.com
-        https://www.googletagmanager.com
-        https://www.google-analytics.com;
-    connect-src 'self'
-      https://www.google-analytics.com
-      https://region1.analytics.google.com
-      https://region1.google-analytics.com
-      https://idb.iubenda.com
-      https://cpl.iubenda.com;">
+  <meta http-equiv="Content-Security-Policy"
+    content="
+  default-src 'self';
+  img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com https://www.google-analytics.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
+  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+  script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com;
+  frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
+  connect-src 'self' https://www.youtube.com https://www.google-analytics.com https://region1.google-analytics.com https://idb.iubenda.com https://cpl.iubenda.com;">
+
+  <meta http-equiv="Permissions-Policy" content="accelerometer=(),
+    autoplay=(self 'https://www.youtube.com'),
+    clipboard-write=(),
+    encrypted-media=(self 'https://www.youtube.com'),
+    gyroscope=(self 'https://www.youtube.com'),
+    picture-in-picture=(self 'https://www.youtube.com'),
+    web-share=(self 'https://www.youtube.com')">
+
   <meta name="theme-color" content="#253873">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow" />
-
 
   <link rel="canonical" href="https://yamastavernagreca.it" />
   <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
@@ -86,6 +85,12 @@
         "latitude": 40.9265,
         "longitude": 14.4771
       },
+      "sameAs": [
+        "https://www.facebook.com/yamasgreca",
+        "https://www.instagram.com/yamas.taverna.greca"
+      ],
+      "acceptsReservations": "True",
+      "paymentAccepted": ["Cash", "Credit Card"]
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -334,7 +339,6 @@
       </ul>
     </section>
 
-
     <section id="menu" aria-labelledby="menu-heading">
       <h2 id="menu-heading">Menu</h2>
       <div class="menu-items grid grid-2-col-mobile">
@@ -422,6 +426,16 @@
       </ul>
     </section>
 
+    <section class="video-section max-width" aria-labelledby="video-heading">
+      <h2 id="video-heading">Guarda il nostro video</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc" title="Video - Yamas Taverna Greca"
+          loading="lazy" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          poster="../public/assets/twitter-card.webp" allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
     <section id="reviews" aria-labelledby="reviews-heading">
       <h2 id="reviews-heading">Cosa dicono i nostri clienti</h2>
@@ -575,6 +589,12 @@
             <a href="#contact">
               <i class="bi bi-geo-alt-fill" aria-hidden="true"></i><br />
               <span>Dove siamo</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.leggimenu.it/menu/menu-sala" target="_blank">
+              <i class="bi bi-fork-knife" aria-hidden="true"></i><br />
+              <span>leggimenu.it</span>
             </a>
           </li>
           <li>
