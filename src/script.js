@@ -12,8 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // --- Scroll handling: toggle "scrolled" class ---
   const onScroll = () => {
     const scrolled = window.scrollY > 50
-    header.classList.toggle('scrolled', scrolled)
-    nav.classList.toggle('scrolled', scrolled)
+    if (header) header.classList.toggle('scrolled', scrolled)
+    if (nav) nav.classList.toggle('scrolled', scrolled)
   }
   window.addEventListener('scroll', onScroll)
   onScroll() // Initial state

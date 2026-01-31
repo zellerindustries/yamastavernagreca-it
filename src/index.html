@@ -21,9 +21,9 @@
   img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com https://www.google-analytics.com;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
   font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-  script-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com;
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com;
   frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
-  connect-src 'self' https://www.youtube.com https://www.google-analytics.com https://region1.google-analytics.com https://idb.iubenda.com https://cpl.iubenda.com;">
+  connect-src 'self' https://www.youtube.com https://www.google-analytics.com https://region1.google-analytics.com https://idb.iubenda.com https://cpl.iubenda.com; object-src 'none';">
 
   <meta http-equiv="Permissions-Policy" content="accelerometer=(),
     autoplay=(self 'https://www.youtube.com'),
@@ -37,7 +37,7 @@
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow" />
 
-  <link rel="canonical" href="https://yamastavernagreca.it" />
+  <link rel="canonical" href="https://yamastavernagreca.it/" />
   <link rel="icon" href="../public/favicon.ico" type="image/x-icon" />
 
   <meta name="description"
@@ -89,8 +89,8 @@
         "https://www.facebook.com/yamasgreca",
         "https://www.instagram.com/yamas.taverna.greca"
       ],
-      "acceptsReservations": "True",
-      "paymentAccepted": ["Cash", "Credit Card"]
+      "acceptsReservations": true,
+      "paymentAccepted": ["Cash", "Credit Card"],
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
@@ -214,19 +214,15 @@
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap" />
-
   <!-- Bootstrap Icons -->
-  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="styles/bootstrap-icons.css" />
+
 </head>
 
 <body>
 
   <header>
-    <nav role="navigation" aria-label="Navigazione principale">
+    <nav aria-label="Navigazione principale">
       <div class="logo-wrapper">
         <img src="../public/assets/logo_top.svg" id="logo-top" width="200" alt="YAMAS Taverna Greca logo" />
         <img src="../public/assets/logo_bottom.svg" id="logo-bottom" width="200" aria-hidden="true" />
@@ -235,16 +231,16 @@
       <!-- Hamburger button per mobile -->
       <button id="menu-toggle" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"
         aria-label="Apri/Chiudi menu principale" type="button">
-        <i class="bi bi-list" aria-hidden="true"></i>
+        <i class="icon list" aria-hidden="true"></i>
       </button>
 
       <ul id="primary-menu" class="menu" hidden>
-        <li><a href="/" aria-disabled="true">Home</a></li>
+        <li><a href="/" aria-current="page">Home</a></li>
         <li><a href="#menu">Menu</a></li>
         <li><a href="#gallery">Galleria</a></li>
         <li><a href="#contact">Contatti</a></li>
         <li><a href="pages/dove-siamo.html" target="_self">Dove Siamo</a></li>
-        <li><a href="https://wa.me/+390813445057" target="_blank" rel="noopener noreferrer">Prenota</a></li>
+        <li><a href="https://wa.me/390813445057" target="_blank" rel="noopener noreferrer">Prenota</a></li>
       </ul>
     </nav>
 
@@ -255,7 +251,7 @@
     <div class="alert-message">
       <p>
         <strong>
-        <i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>  14 e 15 Agosto Chiusi
+        <i class="icon exclamation-triangle-fill" aria-hidden="true"></i>  14 e 15 Agosto Chiusi
         </strong>
       </p>
     </div>
@@ -263,10 +259,10 @@
     <section class="hero" aria-label="Benvenuti da YAMAS">
       <div class="max-width">
         <h1>Benvenuti da YAMAS</h1>
-        <p>Autentica cucina greca nel cuore della città</p>
+        <p>Autentica cucina greca nel cuore di San Vitaliano NA</p>
         <div class="button-wrapper">
-          <a href="https://wa.me/+390813445057" class="button cta">
-            <i class="bi bi-calendar-event" aria-hidden="true"></i>
+          <a href="https://wa.me/390813445057" class="button cta">
+            <i class="icon calendar-event" aria-hidden="true"></i>
             <b>Prenota</b>
           </a>
           <a href="#menu" class="button">
@@ -313,27 +309,27 @@
       </article>
       <ul class="grid grid-2-col-mobile" id="values">
         <li>
-          <i class="bi bi-basket" aria-hidden="true"></i>
+          <i class="icon basket" aria-hidden="true"></i>
           <span>Ingredienti freschi e autentici</span>
         </li>
         <li>
-          <i class="bi bi-emoji-smile" aria-hidden="true"></i>
+          <i class="icon emoji-smile" aria-hidden="true"></i>
           <span>Accoglienza calda e familiare</span>
         </li>
         <li>
-          <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
+          <i class="icon geo-alt-fill" aria-hidden="true"></i>
           <span>Nel cuore di San Vitaliano</span>
         </li>
         <li>
-          <i class="bi bi-egg-fried" aria-hidden="true"></i>
+          <i class="icon egg-fried" aria-hidden="true"></i>
           <span>Piatti tradizionali greci <br><i>anche vegetariani</i></span>
         </li>
         <li>
-          <i class="bi bi-heart" aria-hidden="true"></i>
+          <i class="icon heart" aria-hidden="true"></i>
           <span>Accessibile per persone con disabilità</span>
         </li>
         <li>
-          <i class="bi bi-car-front-fill" aria-hidden="true"></i>
+          <i class="icon car-front-fill" aria-hidden="true"></i>
           <span>Parcheggio comodo nelle vicinanze</span>
         </li>
       </ul>
@@ -429,11 +425,10 @@
     <section class="video-section max-width" aria-labelledby="video-heading">
       <h2 id="video-heading">Guarda il nostro video</h2>
       <div class="video-container">
-        <iframe src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc" title="Video - Yamas Taverna Greca"
-          loading="lazy" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          poster="../public/assets/twitter-card.webp" allowfullscreen>
+        <iframe src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0"
+          loading="lazy" frameborder="0" allow="autoplay; fullscreen">
         </iframe>
+
       </div>
     </section>
 
@@ -444,11 +439,11 @@
           <div class="content">
             <div class="star-wrapper" aria-label="Valutazione 5 stelle">
               <span class="stars" aria-hidden="true">
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
               </span>
               <span class="sr-only">5 stelle</span>
             </div>
@@ -465,11 +460,11 @@
           <div class="content">
             <div class="star-wrapper" aria-label="Valutazione 5 stelle">
               <span class="stars" aria-hidden="true">
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
               </span>
               <span class="sr-only">5 stelle</span>
             </div>
@@ -488,11 +483,11 @@
           <div class="content">
             <div class="star-wrapper" aria-label="Valutazione 4 stelle">
               <span class="stars" aria-hidden="true">
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star-fill" aria-hidden="true"></i>
-                <i class="bi bi-star" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star-fill" aria-hidden="true"></i>
+                <i class="icon star" aria-hidden="true"></i>
               </span>
               <span class="sr-only">4 stelle</span>
             </div>
@@ -514,7 +509,7 @@
           <h3>Orari di Apertura</h3>
           <ul>
             <li>
-              <i class="bi bi-clock" aria-hidden="true"></i>
+              <i class="icon clock" aria-hidden="true"></i>
               <span class="sr-only">Orari:</span>
               Lunedì - Domenica: <strong>19:00 - 23:00</strong>
             </li>
@@ -524,22 +519,20 @@
         <div>
           <h3>Dove Siamo</h3>
           <address>
-            <p>
-              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i>
-              <span id="restaurant-address">
-                Via Nazionale delle Puglie 69<br />80030 San Vitaliano NA
-              </span>
-            </p>
+            <i class="icon geo-alt-fill" aria-hidden="true"></i>
+            <span id="restaurant-address">
+              Via Nazionale delle Puglie 69<br />80030 San Vitaliano NA
+            </span>
           </address>
           <span class="button-wrapper">
             <button type="button" id="copy-address-btn" class="button" aria-controls="copy-feedback"
               aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti">
-              <i class="bi bi-copy" aria-hidden="true"></i>
+              <i class="icon copy" aria-hidden="true"></i>
               <span>Copia indirizzo</span>
             </button>
             <a href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7" class="button" target="_blank" rel="noopener noreferrer"
               aria-label="Apri le indicazioni su Google Maps per Via Nazionale delle Puglie 69, San Vitaliano">
-              <i class="bi bi-map" aria-hidden="true"></i>
+              <i class="icon map" aria-hidden="true"></i>
               <span>Indicazioni Google Maps</span>
             </a>
           </span>
@@ -548,7 +541,7 @@
         <div>
           <h3>Contattaci</h3>
           <p>
-            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+            <i class="icon telephone-fill" aria-hidden="true"></i>
             <span class="sr-only">Telefono:</span>
             <a href="tel:+390813445057" rel="noopener" aria-label="Chiama +39 081 344 50 57">
               +39 081 344 50 57
@@ -556,12 +549,12 @@
           </p>
           <span class="button-wrapper">
             <a href="tel:+390813445057" class="button">
-              <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+              <i class="icon telephone-fill" aria-hidden="true"></i>
               <span>Chiama</span>
             </a>
             <a href="https://wa.me/390813445057" target="_blank" rel="noopener noreferrer" class="button"
-              aria-label="Scrivici su WhatsApp al numero +39 328 48 61 697">
-              <i class="bi bi-whatsapp" aria-hidden="true"></i>
+              aria-label="Scrivici su WhatsApp al numero +39 081 344 50 57">
+              <i class="icon whatsapp" aria-hidden="true"></i>
               <span>Scrivici su WhatsApp</span>
             </a>
           </span>
@@ -580,26 +573,26 @@
           </a></li>
       </ul>
     </nav>
-    <p>&copy; 2025 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
+    <p>&copy; 2026 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
 
     <div id="bottom-navigation">
       <nav aria-label="Navigazione principale">
         <ul>
           <li>
             <a href="#contact">
-              <i class="bi bi-geo-alt-fill" aria-hidden="true"></i><br />
+              <i class="icon geo-alt-fill" aria-hidden="true"></i><br />
               <span>Dove siamo</span>
             </a>
           </li>
           <li>
-            <a href="https://www.leggimenu.it/menu/menu-sala" target="_blank">
-              <i class="bi bi-fork-knife" aria-hidden="true"></i><br />
+            <a href="https://www.leggimenu.it/menu/menu-sala" target="_blank" rel="noopener noreferrer">
+              <i class="icon fork-knife" aria-hidden="true"></i><br />
               <span>leggimenu.it</span>
             </a>
           </li>
           <li>
             <a href="#contact">
-              <i class="bi bi-calendar-check-fill" aria-hidden="true"></i><br />
+              <i class="icon calendar-check-fill" aria-hidden="true"></i><br />
               <span>Prenota</span>
             </a>
           </li>
