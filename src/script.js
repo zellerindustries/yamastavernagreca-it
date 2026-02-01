@@ -9,44 +9,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn) copyBtn.addEventListener('click', copyAddress)
 
-  // --- Scroll handling: toggle "scrolled" class ---
+  /* --- Scroll handling --- */
   const onScroll = () => {
     const scrolled = window.scrollY > 50
     if (header) header.classList.toggle('scrolled', scrolled)
     if (nav) nav.classList.toggle('scrolled', scrolled)
   }
   window.addEventListener('scroll', onScroll)
-  onScroll() // Initial state
+  onScroll()
 
-  // --- Smooth scroll for internal links ---
+  /* --- Smooth scroll --- */
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const target = document.querySelector(link.hash)
-      if (target) {
-        e.preventDefault()
-        target.setAttribute('tabindex', '-1') // accessibility focusable
-        target.scrollIntoView({ behavior: 'smooth' })
-        target.focus({ preventScroll: true })
+      if (!target) return
 
-        // Close mobile menu if open
-        if (navMenu.classList.contains('active')) toggleMenu(false)
-      }
+      e.preventDefault()
+      target.setAttribute('tabindex', '-1')
+      target.scrollIntoView({ behavior: 'smooth' })
+      target.focus({ preventScroll: true })
+
+      if (navMenu.classList.contains('active')) toggleMenu(false)
     })
   })
 
-  // --- IntersectionObserver for fade-in ---
+  /* --- Fade-in observer --- */
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('appear')
-        obs.unobserve(entry.target)
-      }
+      if (!entry.isIntersecting) return
+      entry.target.classList.add('appear')
+      obs.unobserve(entry.target)
     })
   }, { threshold: 0.1 })
 
   document.querySelectorAll('section').forEach(section => observer.observe(section))
 
-  // --- Accessibility: enable click for Space/Enter on role=button links ---
+  /* --- Accessibility buttons --- */
   document.querySelectorAll('a[role="button"]').forEach(link => {
     link.addEventListener('keydown', e => {
       if (e.key === ' ' || e.key === 'Enter') {
@@ -56,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     })
   })
 
-  // --- Toggle hamburger menu ---
+  /* --- Toggle hamburger menu --- */
   const toggleMenu = (force) => {
-    const expanded = typeof force === 'boolean' ? !force : menuToggle.getAttribute('aria-expanded') === 'true'
+    const expanded = menuToggle.getAttribute('aria-expanded') === 'true'
     const shouldOpen = typeof force === 'boolean' ? force : !expanded
 
     menuToggle.setAttribute('aria-expanded', String(shouldOpen))
@@ -66,22 +64,72 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.toggle('active', shouldOpen)
     menuToggle.classList.toggle('open', shouldOpen)
 
-    if (shouldOpen) {
-      document.addEventListener('click', outsideClickListener)
-    } else {
-      document.removeEventListener('click', outsideClickListener)
-    }
+    document[shouldOpen ? 'addEventListener' : 'removeEventListener'](
+      'click',
+      outsideClickListener
+    )
   }
 
   menuToggle.addEventListener('click', () => toggleMenu())
 
-  // --- Close menu when clicking outside ---
   const outsideClickListener = e => {
-    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) toggleMenu(false)
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+      toggleMenu(false)
+    }
+  }
+
+  /* =================================================
+     IMAGE LIGHTBOX
+     ================================================= */
+  const images = document.querySelectorAll('img.lightbox')
+  if (images.length) {
+    const overlay = document.createElement('div')
+    const img = document.createElement('img')
+    const closeBtn = document.createElement('button')
+
+    overlay.className = 'lightbox-overlay'
+    overlay.setAttribute('role', 'dialog')
+    overlay.setAttribute('aria-modal', 'true')
+
+    img.className = 'lightbox-img'
+    closeBtn.className = 'lightbox-close'
+    closeBtn.setAttribute('aria-label', 'Close image')
+    closeBtn.innerHTML = '&times;'
+
+    overlay.appendChild(closeBtn)
+    overlay.appendChild(img)
+    document.body.appendChild(overlay)
+
+    const close = () => {
+      overlay.classList.remove('visible')
+      document.body.classList.remove('no-scroll')
+    }
+
+    closeBtn.addEventListener('click', e => {
+      e.stopPropagation()
+      close()
+    })
+
+    overlay.addEventListener('click', close)
+    img.addEventListener('click', e => e.stopPropagation())
+
+    window.addEventListener('keydown', e => {
+      if (e.key === 'Escape') close()
+    })
+
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        if (!image.src) return
+        img.src = image.src
+        img.alt = image.alt || ''
+        overlay.classList.add('visible')
+        document.body.classList.add('no-scroll')
+      })
+    })
   }
 })
 
-// --- Copy address to clipboard ---
+/* --- Copy address to clipboard --- */
 function copyAddress() {
   const addressText = document.getElementById('restaurant-address').innerText
   const feedbackEl = document.getElementById('copy-feedback')
@@ -89,16 +137,12 @@ function copyAddress() {
   if (navigator.clipboard) {
     navigator.clipboard.writeText(addressText)
       .then(() => showCopyFeedback(feedbackEl, 'Indirizzo copiato negli appunti.'))
-      .catch(err => {
-        console.error('Copy failed', err)
-        fallbackCopy(addressText, feedbackEl)
-      })
+      .catch(() => fallbackCopy(addressText, feedbackEl))
   } else {
     fallbackCopy(addressText, feedbackEl)
   }
 }
 
-// --- Fallback copy method for unsupported browsers ---
 function fallbackCopy(text, feedbackEl) {
   const textarea = document.createElement('textarea')
   textarea.value = text
@@ -111,14 +155,13 @@ function fallbackCopy(text, feedbackEl) {
   try {
     document.execCommand('copy')
     showCopyFeedback(feedbackEl, 'Indirizzo copiato.')
-  } catch (err) {
-    console.error('Fallback copy failed', err)
+  } catch {
     alert('Copia non supportata. Copia manualmente: ' + text)
   }
+
   document.body.removeChild(textarea)
 }
 
-// --- Show copy feedback ---
 function showCopyFeedback(el, message) {
   if (!el) return
   el.textContent = message

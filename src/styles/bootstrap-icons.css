@@ -72,7 +72,7 @@
 
 /* bi-star */
 .icon.clock::before {
-    content: "\F017";
+    content: "\F291";
 }
 
 .icon.copy::before {
@@ -101,4 +101,16 @@
 
 .icon.house-door-fill::before {
     content: "\F422";
+}
+
+.icon.facebook::before {
+    content: "\f344";
+}
+
+.icon.instagram::before {
+    content: "\F437";
+}
+
+.icon.external-link::before {
+    content: "\F1C5";
 }
