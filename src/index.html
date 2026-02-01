@@ -2,6 +2,26 @@
 <html lang="it">
 
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com https://www.google-analytics.com;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
+  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
+  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.iubenda.com https://embeds.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com;
+  frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
+  connect-src 'self' https://www.youtube.com https://www.google-analytics.com https://region1.google-analytics.com https://idb.iubenda.com https://cpl.iubenda.com;
+  object-src 'none';
+">
+
+  <meta http-equiv="Permissions-Policy" content="accelerometer=(),
+    autoplay=(self 'https://www.youtube.com'),
+    clipboard-write=(),
+    encrypted-media=(self 'https://www.youtube.com'),
+    gyroscope=(self 'https://www.youtube.com'),
+    picture-in-picture=(self 'https://www.youtube.com'),
+    web-share=(self 'https://www.youtube.com')">
   <script type="text/javascript"
     src="https://embeds.iubenda.com/widgets/922e2624-5738-4cf3-8ffb-0d27d65aedff.js"></script>
   <!-- Google tag (gtag.js) -->
@@ -13,26 +33,6 @@
 
     gtag('config', 'G-8RWESBSEPD');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta http-equiv="Content-Security-Policy"
-    content="
-  default-src 'self';
-  img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com https://www.google-analytics.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
-  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com https://cdn.iubenda.com https://www.googletagmanager.com https://www.google-analytics.com https://www.youtube.com;
-  frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com;
-  connect-src 'self' https://www.youtube.com https://www.google-analytics.com https://region1.google-analytics.com https://idb.iubenda.com https://cpl.iubenda.com; object-src 'none';">
-
-  <meta http-equiv="Permissions-Policy" content="accelerometer=(),
-    autoplay=(self 'https://www.youtube.com'),
-    clipboard-write=(),
-    encrypted-media=(self 'https://www.youtube.com'),
-    gyroscope=(self 'https://www.youtube.com'),
-    picture-in-picture=(self 'https://www.youtube.com'),
-    web-share=(self 'https://www.youtube.com')">
-
   <meta name="theme-color" content="#253873">
   <meta name="format-detection" content="telephone=no">
   <meta name="robots" content="index, follow" />
@@ -236,8 +236,7 @@
 
       <ul id="primary-menu" class="menu" hidden>
         <li><a href="/" aria-current="page">Home</a></li>
-        <li><a href="#menu">Menu</a></li>
-        <li><a href="#gallery">Galleria</a></li>
+        <li><a href="#menu">Menù</a></li>
         <li><a href="#contact">Contatti</a></li>
         <li><a href="pages/dove-siamo.html" target="_self">Dove Siamo</a></li>
         <li><a href="https://wa.me/390813445057" class="cta" target="_blank" rel="noopener noreferrer">Prenota</a></li>
@@ -433,9 +432,8 @@
       <h2 id="video-heading">Guarda il nostro video</h2>
       <div class="video-container">
         <iframe src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0"
-          loading="lazy" frameborder="0" allow="autoplay; fullscreen">
+          loading="lazy" frameborder="0" allow="autoplay; fullscreen" title="Video Yamas">
         </iframe>
-
       </div>
     </section>
 
@@ -586,19 +584,19 @@
         <ul>
           <li>
             <a href="/pages/dove-siamo.html">
-              <i class="icon geo-alt-fill" aria-hidden="true"></i><br />
+              <i class="icon geo-alt-fill" aria-hidden="true"></i>
               <span>Dove siamo</span>
             </a>
           </li>
           <li>
             <a href="https://www.leggimenu.it/menu/menu-sala" target="_blank" rel="noopener noreferrer">
-              <i class="icon fork-knife" aria-hidden="true"></i><br />
+              <i class="icon fork-knife" aria-hidden="true"></i>
               <span>leggimenu.it</span>
             </a>
           </li>
           <li>
             <a href="https://wa.me/390813445057" target="_blank" rel="noopener noreferrer">
-              <i class="icon calendar-check-fill" aria-hidden="true"></i><br />
+              <i class="icon calendar-check-fill" aria-hidden="true"></i>
               <span>Prenota</span>
             </a>
           </li>
