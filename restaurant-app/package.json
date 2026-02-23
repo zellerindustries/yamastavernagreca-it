@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:menu": " ng build restaurant-app --configuration=production --base-href=/menu/",
+    "build:restaurant-core": "ng build restaurant-core --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "start:booking": "ng serve booking --port 4200",
