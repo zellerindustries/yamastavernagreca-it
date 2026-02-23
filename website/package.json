@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "build": "mz b",
+    "build": "npx mz b",
     "test": "npm run build && npx serve ./dist"
   },
   "repository": {
@@ -21,7 +21,6 @@
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
-    "minimaz-cli": "^0.3.0",
-    "serve": "^14.2.5"
+    "minimaz-cli": "^0.3.1"
   }
 }

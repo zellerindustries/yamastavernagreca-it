@@ -1,0 +1,25 @@
+<footer role="contentinfo">
+    @if(restaurant()) {
+    <p>&copy; 2026 {{ restaurant().name }}. All rights reserved.</p>
+
+    <address>
+        {{ restaurant().address }}<br>
+        <a [href]="'tel:' + restaurant().phone">{{ restaurant().phone }}</a><br>
+        <a [href]="'mailto:' + restaurant().email">{{ restaurant().email }}</a>
+    </address>
+
+    <nav aria-label="Footer Navigation">
+        <ul>
+            @for(link of restaurant().footerLinks; track link.text) {
+            <li>
+                <a [href]="link.href">{{ link.text }}</a>
+            </li>
+            } @empty {
+            <li>No footer links available</li>
+            }
+        </ul>
+    </nav>
+    } @else {
+    <p>Restaurant information not available</p>
+    }
+</footer>

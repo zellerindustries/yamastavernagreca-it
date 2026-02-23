@@ -1,0 +1,23 @@
+<header role="banner">
+    @if(restaurant()) {
+    <div class="logo" aria-label="Restaurant Logo">
+        <img [src]="restaurant().logoUrl" [alt]="restaurant().name + ' Logo'" width="100" height="100">
+    </div>
+
+    <h1 id="restaurant-name">{{ restaurant().name }}</h1>
+
+    <nav aria-label="Main Menu Navigation">
+        <ul role="menubar">
+            @for(link of restaurant().navLinks; track link.text) {
+            <li role="none">
+                <a role="menuitem" [href]="link.href">{{ link.text }}</a>
+            </li>
+            } @empty {
+            <li>No navigation links available</li>
+            }
+        </ul>
+    </nav>
+    } @else {
+    <p>Restaurant information not available</p>
+    }
+</header>

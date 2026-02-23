@@ -1,0 +1,85 @@
+<main>
+    <form [formGroup]="bookingForm" (ngSubmit)="submit()" novalidate aria-describedby="form-errors">
+
+        <!-- ================= Dati Cliente ================= -->
+        <fieldset>
+            <legend>Dati cliente</legend>
+
+            <div class="form-row">
+                <label for="name">Nome completo *</label>
+                <input id="name" type="text" formControlName="name" required aria-required="true"
+                    [attr.aria-invalid]="fieldInvalid('name')" placeholder="Mario Rossi" />
+                @if(fieldInvalid('name')){ <div role="alert">Inserire un nome valido.</div> }
+            </div>
+
+            <div class="form-row">
+                <label for="phone">Telefono *</label>
+                <input id="phone" type="tel" formControlName="phone" required aria-required="true"
+                    [attr.aria-invalid]="fieldInvalid('phone')" placeholder="+39 333 1234567" />
+                @if(fieldInvalid('phone')){ <div role="alert">Inserire un numero valido.</div> }
+            </div>
+            <!--
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input id="email" type="email" formControlName="email" [attr.aria-invalid]="fieldInvalid('email')"
+                        placeholder="esempio@email.com" />
+                    @if(fieldInvalid('email')){ <div role="alert">Email non valida.</div> }
+                </div>
+-->
+        </fieldset>
+
+        <!-- ================= Dettagli Prenotazione ================= -->
+        <fieldset>
+            <legend>Dettagli prenotazione</legend>
+
+            <div class="form-row">
+                <div class="form-col">
+                    <label>Data *</label>
+                    <booking-calendar [control]="dateControl" [excludedDates]="excludedDatesFromApi"
+                        [excludedWeekDays]="excludedWeekDaysFromApi" [minDate]="today">
+                    </booking-calendar>
+                    @if(fieldInvalid('date')){ <div role="alert">Selezionare una data valida.</div> }
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-col form-col-50">
+                    <label for="time">Orario *</label>
+                    <input id="time" type="time" formControlName="time" required aria-required="true"
+                        [attr.aria-invalid]="fieldInvalid('time')" />
+                    @if(fieldInvalid('time')){ <div role="alert">Selezionare un orario.</div> }
+                </div>
+                <div class="form-col form-col-50">
+                    <label for="people">Numero persone *</label>
+                    <input id="people" type="number" formControlName="people" min="1" max="20" required
+                        aria-required="true" [attr.aria-invalid]="fieldInvalid('people')" />
+                    @if(fieldInvalid('people')){ <div role="alert">Inserire un numero tra 1 e 20.</div> }
+                </div>
+            </div>
+
+            <div class="form-row">
+
+            </div>
+
+            <div class="form-row">
+                <label for="notes">Note aggiuntive</label>
+                <textarea id="notes" formControlName="notes" rows="4"
+                    placeholder="Es. richieste particolari"></textarea>
+            </div>
+
+        </fieldset>
+
+        <!-- ================= Footer ================= -->
+        <footer>
+            <button type="submit" [disabled]="bookingForm.invalid || submitted()">
+                @if(submitted()){ Invia prenotazione… }@else{ Invia prenotazione }
+            </button>
+        </footer>
+
+        <div id="form-errors" aria-live="polite">
+            @if(successMessage()){ <p>{{ successMessage() }}</p> }
+        </div>
+
+    </form>
+
+</main>

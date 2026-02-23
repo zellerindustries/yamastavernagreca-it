@@ -1,0 +1,38 @@
+<section aria-labelledby="menu-heading">
+    <h2 id="menu-heading">Menu</h2>
+
+    @if(menuItems().length) {
+    <ul role="list">
+        @for(item of menuItems(); track item.id) {
+        <li role="listitem">
+            <article [attr.aria-labelledby]="'item-title-' + item.id" [attr.aria-describedby]="'item-desc-' + item.id">
+                @if(item.imageUrl) {
+                <img [src]="item.imageUrl" [alt]="item.name + ' image'" width="200" height="150">
+                }
+                <h3 id="item-title-{{item.id}}">{{ item.name }}</h3>
+                <p id="item-desc-{{item.id}}">{{ item.description }}</p>
+                <p><strong>Price:</strong> {{ item.price | currency:'EUR' }}</p>
+
+                @if(item.isVegan) {
+                <p aria-label="Vegan dish">🌱 Vegan</p>
+                }
+
+                @if(item.isSpicy) {
+                <p aria-label="Spicy dish">🌶 Spicy</p>
+                }
+
+                @if(item.allergens.length) {
+                <p><strong>Allergens:</strong> {{ item.allergens.join(', ') }}</p>
+                }
+
+
+            </article>
+        </li>
+        } @empty {
+        <li>No menu items available at the moment.</li>
+        }
+    </ul>
+    } @else {
+    <p>No menu items available at the moment.</p>
+    }
+</section>

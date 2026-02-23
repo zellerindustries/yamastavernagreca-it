@@ -1,0 +1,17 @@
+button {
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    background: var(--color-surface-light);
+    color: var(--color-text);
+    transition: background 0.2s ease, transform 0.05s ease;
+}
+
+button:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+button:active {
+    transform: scale(0.97);
+}

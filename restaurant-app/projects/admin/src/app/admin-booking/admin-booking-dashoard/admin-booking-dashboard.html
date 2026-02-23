@@ -1,0 +1,119 @@
+<main class="dashboard">
+    <section class="dashboard-section" aria-labelledby="admin-booking-dashboard-title">
+
+        <header class="dashboard-header">
+            <h1 id="admin-booking-dashboard-title">
+                Gestione Prenotazioni
+            </h1>
+        </header>
+
+        <!-- ================= FILTERS ================= -->
+        <section class="surface filters" aria-labelledby="filters-title">
+            <h2 id="filters-title">Filtri</h2>
+
+            <div class="filter-group">
+                <label for="dateFilter">Data</label>
+                <input id="dateFilter" type="date" (change)="setDateFilter($any($event.target).value)" />
+            </div>
+
+            <fieldset class="filter-fieldset">
+                <legend>Stato</legend>
+
+                <label>
+                    <input type="radio" name="status" value="all" checked (change)="setStatusFilter('all')" />
+                    Tutti
+                </label>
+
+                <label>
+                    <input type="radio" name="status" value="pending" (change)="setStatusFilter('pending')" />
+                    Pending
+                </label>
+
+                <label>
+                    <input type="radio" name="status" value="confirmed" (change)="setStatusFilter('confirmed')" />
+                    Confermate
+                </label>
+
+                <label>
+                    <input type="radio" name="status" value="cancelled" (change)="setStatusFilter('cancelled')" />
+                    Annullate
+                </label>
+            </fieldset>
+        </section>
+
+        <!-- ================= BOOKINGS TABLE ================= -->
+        <section class="dashboard-table" aria-labelledby="bookings-title">
+            <h2 id="bookings-title">Prenotazioni</h2>
+
+            @if(loading()) {
+            <p class="state-message" aria-live="polite">
+                Caricamento prenotazioni...
+            </p>
+            } @else {
+
+            @if(filteredBookings().length === 0) {
+            <p class="state-message" aria-live="polite">
+                Nessuna prenotazione trovata.
+            </p>
+            } @else {
+
+            <div class="table-wrapper">
+                <table class="bookings-table">
+                    <caption class="visually-hidden">
+                        Elenco prenotazioni filtrate
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Data</th>
+                            <th scope="col">Ora</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Persone</th>
+                            <th scope="col">Stato</th>
+                            <th scope="col">Azioni</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @for (booking of filteredBookings(); track trackById(i, booking); let i = $index) {
+                        <tr class="booking-row">
+                            <td>{{ booking.date }}</td>
+                            <td>{{ booking.time }}</td>
+                            <td>{{ booking.name }}</td>
+                            <td>{{ booking.people }}</td>
+
+                            <!-- STATUS BADGE -->
+                            <td>
+                                <span class="status" [class]="'status-' + booking.status">
+                                    {{ booking.status }}
+                                </span>
+                            </td>
+
+                            <!-- ACTIONS -->
+                            <td class="actions">
+                                @if(booking.status === 'pending') {
+                                <button type="button" class="btn-confirm" (click)="confirmBooking(booking.id)">
+                                    Conferma
+                                </button>
+
+                                <button type="button" class="btn-cancel" (click)="cancelBooking(booking.id)">
+                                    Annulla
+                                </button>
+                                } @else {
+                                <span class="muted">
+                                    Nessuna azione
+                                </span>
+                                }
+                            </td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+
+            }
+            }
+        </section>
+
+    </section>
+</main>
