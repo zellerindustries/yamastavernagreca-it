@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
-// import { MenuItemListComponent } from './menu-item-list/menu-item-list';
-// import { MenuHeaderComponent } from "./menu-header/menu-header";
-// import { MenuFooterComponent } from './menu-footer/menu-footer';
+import { MenuItemListComponent } from './menu-item-list/menu-item-list';
+import { MenuHeaderComponent } from "./menu-header/menu-header";
+import { MenuFooterComponent } from './menu-footer/menu-footer';
 import { MenuComingSoon } from './menu-coming-soon/menu-coming-soon';
 
 @Component({
@@ -9,7 +9,7 @@ import { MenuComingSoon } from './menu-coming-soon/menu-coming-soon';
   imports: [
     // MenuItemListComponent,
     // MenuHeaderComponent,
-    //MenuFooterComponent,
+    // MenuFooterComponent,
     MenuComingSoon
   ],
   templateUrl: './app.html',

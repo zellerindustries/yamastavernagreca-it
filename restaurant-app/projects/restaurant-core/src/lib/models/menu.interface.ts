@@ -3,8 +3,8 @@ export interface MenuItem {
     name: string;
     description: string;
     price: number;
-    imageUrl: string;
-    isVegan: boolean;
-    isSpicy: boolean;
-    allergens: string[];
+    imageUrl?: string;
+    isVegan?: boolean;
+    isSpicy?: boolean;
+    allergens?: string[];
 }

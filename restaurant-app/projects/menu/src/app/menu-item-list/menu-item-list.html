@@ -21,8 +21,8 @@
                 <p aria-label="Spicy dish">🌶 Spicy</p>
                 }
 
-                @if(item.allergens.length) {
-                <p><strong>Allergens:</strong> {{ item.allergens.join(', ') }}</p>
+                @if(item.allergens?.length) {
+                <p><strong>Allergens:</strong> {{ item.allergens?.join(', ') }}</p>
                 }
 
 

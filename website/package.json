@@ -21,6 +21,7 @@
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
   "dependencies": {
     "bootstrap-icons": "^1.13.1",
-    "minimaz-cli": "^0.3.1"
+    "minimaz-cli": "^0.3.3",
+    "serve": "^14.2.5"
   }
 }
