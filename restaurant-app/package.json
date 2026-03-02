@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build:restaurant-core": "ng build restaurant-core",
+    "build:menu": "ng build menu",
     "start:booking": "ng serve booking --port 4200",
     "start:admin": "ng serve admin --port 4201",
     "start:menu": "ng serve menu --port 4202",
