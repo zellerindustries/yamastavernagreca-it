@@ -3,7 +3,7 @@ import { Restaurant } from "../models/restaurant.interface";
 
 const BASE = 'https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/';
 
-const DEMO_MENU: Menu = {
+export const DEMO_MENU: Menu = {
     id: 'menu-1',
     name: 'YAMAS Taverna Greca Menu',
     categories: [
