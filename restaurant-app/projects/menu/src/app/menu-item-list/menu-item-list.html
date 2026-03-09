@@ -1,38 +1,89 @@
 <section aria-labelledby="menu-heading">
-    <h2 id="menu-heading">Menu</h2>
+    <!--<h2 id="menu-heading">Menu</h2>-->
 
-    @if(menuItems().length) {
-    <ul role="list">
-        @for(item of menuItems(); track item.id) {
-        <li role="listitem">
-            <article [attr.aria-labelledby]="'item-title-' + item.id" [attr.aria-describedby]="'item-desc-' + item.id">
-                @if(item.imageUrl) {
-                <img [src]="item.imageUrl" [alt]="item.name + ' image'" width="200" height="150">
-                }
-                <h3 id="item-title-{{item.id}}">{{ item.name }}</h3>
-                <p id="item-desc-{{item.id}}">{{ item.description }}</p>
-                <p><strong>Price:</strong> {{ item.price | currency:'EUR' }}</p>
+    @if (categories().length) {
 
-                @if(item.isVegan) {
-                <p aria-label="Vegan dish">🌱 Vegan</p>
-                }
+    @for (cat of categories(); track cat.id) {
+    <div>
+        <h2>{{ cat.name }}</h2>
 
-                @if(item.isSpicy) {
-                <p aria-label="Spicy dish">🌶 Spicy</p>
-                }
+        @if (cat.items.length) {
 
-                @if(item.allergens?.length) {
-                <p><strong>Allergens:</strong> {{ item.allergens?.join(', ') }}</p>
-                }
+        <ul role="list">
 
+            @for (item of cat.items; track item.id) {
 
-            </article>
-        </li>
-        } @empty {
-        <li>No menu items available at the moment.</li>
+            <li role="listitem">
+
+                <article [attr.aria-labelledby]="'item-title-' + item.id"
+                    [attr.aria-describedby]="'item-desc-' + item.id">
+
+                    <img [src]="item.imageUrl || 'assets/images/placeholder.webp'"
+                        (error)="($event.target).src='assets/images/placeholder.webp'" [alt]="item.name + ' image'"
+                        width="200" height="150">
+
+                    <div>
+
+                        <!-- Title + Price -->
+                        <header>
+                            <h4 id="item-title-{{item.id}}">
+                                {{ item.name }}
+                            </h4>
+
+                            <p>
+                                <strong>
+                                    {{ item.price | currency:'EUR' }}
+                                </strong>
+                            </p>
+                        </header>
+
+                        <!-- Description -->
+                        <p id="item-desc-{{item.id}}">
+                            {{ item.description }}
+                        </p>
+
+                        <!-- Tags -->
+                        <div>
+
+                            @if (item.isVegan) {
+                            <span aria-label="Vegan dish">🌱 Vegan</span>
+                            }
+
+                            @if (item.isSpicy) {
+                            <span aria-label="Spicy dish">🌶 Spicy</span>
+                            }
+
+                        </div>
+
+                        <!-- Allergens -->
+                        @if (item.allergens?.length) {
+                        <p>
+                            <strong>Allergens:</strong>
+                            {{ item.allergens?.join(', ') }}
+                        </p>
+                        }
+
+                    </div>
+
+                </article>
+
+            </li>
+
+            }
+
+        </ul>
+
+        } @else {
+
+        <p>No items in this category.</p>
+
         }
-    </ul>
+    </div>
+    }
+
     } @else {
+
     <p>No menu items available at the moment.</p>
+
     }
 </section>

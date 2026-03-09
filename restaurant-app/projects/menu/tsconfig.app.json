@@ -7,7 +7,9 @@
     "types": []
   },
   "include": [
-    "src/**/*.ts"
+    "src/**/*.ts",
+    "../../dist/demo.ts",
+    "../../dist/menu.interface.ts"
   ],
   "exclude": [
     "src/**/*.spec.ts"

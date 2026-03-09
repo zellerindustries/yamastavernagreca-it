@@ -20,7 +20,7 @@ export interface Restaurant {
     logoUrl: string;
     address: string;
     phone: string;
-    email: string;
+    email?: string;
     navLinks: NavLink[];
     footerLinks: FooterLink[];
     rapidActions: RapidAction[];

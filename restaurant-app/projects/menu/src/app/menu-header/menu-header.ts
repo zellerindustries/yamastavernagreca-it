@@ -1,17 +1,26 @@
 import { Component, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import { RestaurantService } from 'restaurant-core';
 
 @Component({
   selector: 'app-menu-header',
-  standalone: true,
-  imports: [CommonModule],
-  templateUrl: './menu-header.html'
+  templateUrl: './menu-header.html',
+  standalone: true
 })
 export class MenuHeaderComponent {
-  /** Inject the restaurant service */
   restaurantService = inject(RestaurantService);
+  sanitizer = inject(DomSanitizer);
 
-  /** Restaurant signal */
-  restaurant = this.restaurantService.restaurant;
+  sanitizeLogoUrl(url: string): SafeUrl {
+    return this.sanitizer.bypassSecurityTrustUrl(url);
+  }
+
+  /** Fallback if the logo fails to load */
+  onLogoError(event: Event) {
+    (event.target as HTMLImageElement).src = 'assets/images/placeholder.webp';
+  }
+
+  restaurant() {
+    return this.restaurantService.restaurant();
+  }
 }

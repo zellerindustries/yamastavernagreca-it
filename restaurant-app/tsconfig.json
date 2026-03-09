@@ -32,18 +32,6 @@
   "files": [],
   "references": [
     {
-      "path": "./projects/booking/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/booking/tsconfig.spec.json"
-    },
-    {
-      "path": "./projects/admin/tsconfig.app.json"
-    },
-    {
-      "path": "./projects/admin/tsconfig.spec.json"
-    },
-    {
       "path": "./projects/menu/tsconfig.app.json"
     },
     {

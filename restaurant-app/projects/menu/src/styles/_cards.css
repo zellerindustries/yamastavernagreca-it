@@ -1,57 +1,206 @@
-section[aria-labelledby=menu-heading] ul[role=list] {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--space-5)
-}
-
-section[aria-labelledby=menu-heading] li[role=listitem] {
-    display: block
-}
-
-section[aria-labelledby=menu-heading] article {
-    background: var(--surface);
-    border-radius: var(--radius-md);
-    padding: var(--space-4);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition-fast);
+/* ============================= */
+/* MENU SECTION                  */
+/* ============================= */
+section[aria-labelledby="menu-heading"] {
     display: flex;
     flex-direction: column;
-    gap: var(--space-3);
-    height: 100%
+    gap: var(--space-2);
+    padding: var(--space-3);
 }
 
-section[aria-labelledby=menu-heading] article:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md)
+/* Main menu title */
+section[aria-labelledby="menu-heading"] h2 {
+    margin: 0 0 var(--space-4);
+    font-size: var(--h2-size, 2rem);
+    font-weight: var(--font-weight-heading);
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: var(--primary);
 }
 
-section[aria-labelledby=menu-heading] article h3 {
+/* Category headings (Pizza, Pasta, etc.) */
+section[aria-labelledby="menu-heading"] h3 {
+    margin: var(--space-4) 0 var(--space-3);
+    font-size: var(--h3-size, 1.5rem);
+    font-weight: var(--font-weight-heading);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    padding-bottom: var(--space-1);
+    border-bottom: 2px solid var(--border);
+}
+
+/* ============================= */
+/* MENU LIST                     */
+/* ============================= */
+section[aria-labelledby="menu-heading"] ul[role="list"] {
+    list-style: none;
     margin: 0;
-    font-size: var(--h3-size)
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
 }
 
-section[aria-labelledby=menu-heading] article p {
-    margin: 0
+/* ============================= */
+/* MENU CARD                     */
+/* ============================= */
+section[aria-labelledby="menu-heading"] article {
+    display: flex;
+    gap: var(--space-3);
+    background: var(--surface);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-items: flex-start;
 }
 
-section[aria-labelledby=menu-heading] article p strong {
-    color: var(--text)
+section[aria-labelledby="menu-heading"] article:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
 }
 
-section[aria-labelledby=menu-heading] article img {
-    margin-top: auto;
-    border-radius: var(--radius-sm);
-    width: 100%;
-    height: auto;
+/* ============================= */
+/* IMAGE                         */
+/* ============================= */
+section[aria-labelledby="menu-heading"] article img {
+    flex-shrink: 0;
+    width: 120px;
+    height: 90px;
     object-fit: cover;
-    aspect-ratio: 4/3
+    border-radius: var(--radius-sm);
 }
 
-section[aria-labelledby=menu-heading] article p[aria-label] {
-    font-size: .875rem;
+/* ============================= */
+/* CONTENT COLUMN                */
+/* ============================= */
+section[aria-labelledby="menu-heading"] article>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    flex: 1;
+}
+
+/* Dish title */
+section[aria-labelledby="menu-heading"] article h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: var(--font-weight-heading);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+/* ============================= */
+/* TEXT & PRICE ALIGNMENT        */
+/* ============================= */
+section[aria-labelledby="menu-heading"] article p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+section[aria-labelledby="menu-heading"] article p strong {
+    color: var(--text);
+    font-weight: var(--font-weight-heading);
+}
+
+/* ============================= */
+/* TAGS (VEGAN / SPICY)          */
+/* ============================= */
+section[aria-labelledby="menu-heading"] article p[aria-label] {
+    font-size: 0.8rem;
     font-weight: var(--font-weight-medium);
     display: inline-flex;
     align-items: center;
-    gap: 4px
+    gap: 4px;
+    margin-top: var(--space-1);
+    padding: 2px 6px;
+    border-radius: var(--radius-xs);
+    background: var(--surface-muted);
+}
+
+/* ============================= */
+/* TABLET / DESKTOP GRID         */
+/* ============================= */
+@media (min-width: 640px) {
+    section[aria-labelledby="menu-heading"] ul[role="list"] {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: var(--space-5);
+    }
+
+    section[aria-labelledby="menu-heading"] article img {
+        width: 140px;
+        height: 105px;
+    }
+}
+
+/* ============================= */
+/* HEADER / BANNER               */
+/* ============================= */
+header[role="banner"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 0;
+}
+
+/* Logo background container */
+div[aria-label="Restaurant Logo"] {
+    width: 100%;
+    aspect-ratio: 4 / 1;
+    overflow: hidden;
+    border-radius: var(--radius-md);
+    position: relative;
+    background-color: var(--surface);
+}
+
+div[aria-label="Restaurant Logo"] img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Main title */
+header[role="banner"] h1 {
+    margin: 0;
+    font-size: var(--h1-size, 2rem);
+    font-weight: var(--font-weight-heading);
+    text-align: center;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    color: var(--primary);
+    max-width: 90%;
+    word-break: break-word;
+    text-transform: uppercase;
+    padding: var(--space-3);
+}
+
+/* Optional subtitle / description */
+header[role="banner"] p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: var(--font-weight-medium);
+    text-align: center;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+/* Responsive adjustments */
+@media (min-width: 640px) {
+    header[role="banner"] h1 {
+        font-size: 2.5rem;
+    }
+
+    header[role="banner"] p {
+        font-size: 1.125rem;
+    }
 }

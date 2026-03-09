@@ -1,7 +1,7 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RestaurantService } from 'restaurant-core';
-import { MenuItem } from 'restaurant-core';
+import { Category } from 'restaurant-core';
 
 @Component({
   selector: 'app-menu-item-list',
@@ -10,9 +10,10 @@ import { MenuItem } from 'restaurant-core';
   templateUrl: './menu-item-list.html'
 })
 export class MenuItemListComponent {
-  /** Inject the restaurant service */
   restaurantService = inject(RestaurantService);
 
-  /** Use the menu items signal directly */
-  menuItems = this.restaurantService.menuItems;
+  /** Categories signal */
+  categories = computed<Category[]>(() =>
+    this.restaurantService.menu().categories
+  );
 }

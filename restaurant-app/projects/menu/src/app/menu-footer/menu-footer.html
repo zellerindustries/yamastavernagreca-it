@@ -5,7 +5,9 @@
     <address>
         {{ restaurant().address }}<br>
         <a [href]="'tel:' + restaurant().phone">{{ restaurant().phone }}</a><br>
+        @if(restaurant().email) {
         <a [href]="'mailto:' + restaurant().email">{{ restaurant().email }}</a>
+        }
     </address>
 
     <nav aria-label="Footer Navigation">

@@ -7,10 +7,10 @@ import { MenuComingSoon } from './menu-coming-soon/menu-coming-soon';
 @Component({
   selector: 'app-root',
   imports: [
-    // MenuItemListComponent,
-    // MenuHeaderComponent,
-    // MenuFooterComponent,
-    MenuComingSoon
+    MenuItemListComponent,
+    MenuHeaderComponent,
+    MenuFooterComponent,
+    // MenuComingSoon
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'
