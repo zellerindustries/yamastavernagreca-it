@@ -5,6 +5,7 @@ export interface MenuItem {
     price: number;
     imageUrl?: string;
     isVegan?: boolean;
+    isVegetarian?: boolean;
     isSpicy?: boolean;
     allergens?: string[];
 }
