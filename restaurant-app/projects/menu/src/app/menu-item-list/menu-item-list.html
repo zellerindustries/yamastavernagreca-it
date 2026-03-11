@@ -19,8 +19,7 @@
                     [attr.aria-describedby]="'item-desc-' + item.id">
 
                     <img [src]="item.imageUrl || 'assets/images/placeholder.webp'"
-                        (error)="($event.target).src='assets/images/placeholder.webp'" [alt]="item.name + ' image'"
-                        width="200" height="150">
+                        (error)="($event.target).src='assets/images/placeholder.webp'" [alt]="item.name + ' image'" />
 
                     <div>
 

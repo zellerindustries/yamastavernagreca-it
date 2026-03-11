@@ -105,9 +105,9 @@ export const DEMO_MENU: Menu = {
             name: "Prodotti da Aggiungere",
             order: 7,
             items: [
-                { id: 46, name: "Feta (aggiunta)", description: "Porzione extra di feta", price: 1, allergens: ["milk"], imageUrl: `${BASE}feta-aggiunta.webp` },
-                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce grigliato", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki-aggiunta.webp` },
-                { id: 48, name: "Pita (aggiunta)", description: "Pane greco", price: 0.5, allergens: ["gluten"], imageUrl: `${BASE}pita-aggiunta.webp` }
+                { id: 46, name: "Feta (aggiunta)", description: "Porzione extra di feta", price: 1, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
+                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce grigliato", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
+                { id: 48, name: "Pita (aggiunta)", description: "Pane greco", price: 0.5, allergens: ["gluten"], imageUrl: `${BASE}pita.webp` }
             ]
         },
 
@@ -132,10 +132,10 @@ export const DEMO_MENU: Menu = {
             items: [
                 { id: 55, name: "Mythos 0,50 L", description: "Bottiglia 0,50 L", price: 6, imageUrl: `${BASE}mythos-50.webp` },
                 { id: 56, name: "Mythos 0,33 L", description: "Bottiglia 0,33 L", price: 4, imageUrl: `${BASE}mythos-33.webp` },
-                { id: 57, name: "Heineken 0,66 L", description: "Bottiglia 0,66 L", price: 4.5, imageUrl: `${BASE}heineken-66.webp` },
-                { id: 58, name: "Heineken 0,33 L", description: "Bottiglia 0,33 L", price: 2.5, imageUrl: `${BASE}heineken-33.webp` },
-                { id: 59, name: "Nastro Azzurro 0,66 L", description: "Bottiglia 0,66 L", price: 4.5, imageUrl: `${BASE}nastro-66.webp` },
-                { id: 60, name: "Nastro Azzurro 0,33 L", description: "Bottiglia 0,33 L", price: 2.5, imageUrl: `${BASE}nastro-33.webp` },
+                { id: 57, name: "Heineken 0,66 L", description: "Bottiglia 0,66 L", price: 4.5, imageUrl: `${BASE}heineken.webp` },
+                { id: 58, name: "Heineken 0,33 L", description: "Bottiglia 0,33 L", price: 2.5, imageUrl: `${BASE}heineken.webp` },
+                { id: 59, name: "Nastro Azzurro 0,66 L", description: "Bottiglia 0,66 L", price: 4.5, imageUrl: `${BASE}nastro.webp` },
+                { id: 60, name: "Nastro Azzurro 0,33 L", description: "Bottiglia 0,33 L", price: 2.5, imageUrl: `${BASE}nastro.webp` },
                 { id: 61, name: "Beck's 0,33 L", description: "Bottiglia 0,33 L", price: 2.5, imageUrl: `${BASE}becks.webp` },
                 { id: 62, name: "Ceres 0,33 L", description: "Bottiglia 0,33 L", price: 3.5, imageUrl: `${BASE}ceres.webp` },
                 { id: 63, name: "Tennent's 0,33 L", description: "Bottiglia 0,33 L", price: 3.5, imageUrl: `${BASE}tennents.webp` },
