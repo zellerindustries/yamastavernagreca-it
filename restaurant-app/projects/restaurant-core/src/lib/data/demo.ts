@@ -22,7 +22,7 @@ export const DEMO_MENU: Menu = {
                 { id: 8, name: "Feta", description: "Formaggio greco fresco", price: 6, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
                 { id: 9, name: "Feta al Cartoccio", description: "Formaggio greco al cartoccio", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}feta-cartoccio.webp` },
                 { id: 10, name: "Saganaki", description: "Formaggio dolce impanato e grigliato", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
-                { id: 11, name: "Souvlaki", description: "Spiedino di pollo o maiale (pollo-bacon opzionale)", price: 3, imageUrl: `${BASE}souvlaki.webp` },
+                { id: 11, name: "Souvlaki", description: "Spiedino di pollo o maiale (pollo-bacon opzionale)", price: 3, imageUrl: `${BASE}souvlaki-singolo.webp` },
                 { id: 12, name: "Dakos", description: "Fresella con feta, pomodoro, olive e origano", price: 5, allergens: ["gluten"], imageUrl: `${BASE}dakos.webp` },
                 { id: 13, name: "Eliès", description: "Olive greche Kalamata", price: 5, isVegan: true, imageUrl: `${BASE}elies.webp` },
                 { id: 14, name: "Patàtes Tiganitès", description: "Patatine fritte", price: 4, isVegan: true, imageUrl: `${BASE}patates.webp` },
