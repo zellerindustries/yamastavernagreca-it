@@ -17,17 +17,17 @@ export const DEMO_MENU: Menu = {
                 { id: 3, name: "Kolokithokeftes", description: "Crocchette di zucchine", price: 5, allergens: ["gluten"], imageUrl: `${BASE}kolokithokeftes.webp` },
                 { id: 4, name: "Melitzanokeftes", description: "Crocchette di melanzane", price: 5, allergens: ["gluten"], imageUrl: `${BASE}melitzanokeftes.webp` },
                 { id: 5, name: "Keftes di Pollo o Manzo", description: "Crocchette di carne", price: 5, allergens: ["gluten"], imageUrl: `${BASE}keftes.webp` },
-                { id: 6, name: "Bourekaki", description: "Involtino di formaggio Kasseri e bacon", price: 5, allergens: ["milk", "gluten"], imageUrl: `${BASE}bourekaki.webp` },
+                { id: 6, name: "Bourekaki", description: "3 Involtini di formaggio Kasseri e bacon", price: 5, allergens: ["milk", "gluten"], imageUrl: `${BASE}bourekaki.webp` },
                 { id: 7, name: "Dolmades", description: "Foglie di vite ripiene di riso", price: 5, isVegan: true, imageUrl: `${BASE}dolmades.webp` },
                 { id: 8, name: "Feta", description: "Formaggio greco fresco", price: 6, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
                 { id: 9, name: "Feta al Cartoccio", description: "Formaggio greco al cartoccio", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}feta-cartoccio.webp` },
                 { id: 10, name: "Saganaki", description: "Formaggio dolce impanato e grigliato", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
-                { id: 11, name: "Souvlaki", description: "Spiedino di pollo o maiale (pollo-bacon opzionale)", price: 3, imageUrl: `${BASE}souvlaki-singolo.webp` },
+                { id: 11, name: "Souvlaki", description: "Uno spiedino di pollo o maiale o pollo-bacon", price: 3, imageUrl: `${BASE}souvlaki-singolo.webp` },
                 { id: 12, name: "Dakos", description: "Fresella con feta, pomodoro, olive e origano", price: 5, allergens: ["gluten"], imageUrl: `${BASE}dakos.webp` },
                 { id: 13, name: "Eliès", description: "Olive greche Kalamata", price: 5, isVegan: true, imageUrl: `${BASE}elies.webp` },
                 { id: 14, name: "Patàtes Tiganitès", description: "Patatine fritte", price: 4, isVegan: true, imageUrl: `${BASE}patates.webp` },
                 { id: 15, name: "Tiropitakia", description: "Pasta sfoglia ripiena di feta", price: 5, allergens: ["milk", "gluten"], imageUrl: `${BASE}tiropitakia.webp` },
-                { id: 16, name: "Spanakopitakia", description: "Pasta sfoglia ripiena di spinaci", price: 5, allergens: ["milk", "gluten"], imageUrl: `${BASE}spanakopitakia.webp` },
+                { id: 16, name: "Spanakopitakia", description: "Pasta sfoglia ripiena di spinaci e feta", price: 5, allergens: ["milk", "gluten"], imageUrl: `${BASE}spanakopitakia.webp` },
                 { id: 17, name: "Piperia", description: "Peperone ripieno di feta", price: 5.5, imageUrl: `${BASE}piperia.webp` },
                 { id: 18, name: "Revithokeftes", description: "Crocchette di ceci", price: 5, isVegan: true, allergens: ["gluten"], imageUrl: `${BASE}revithokeftes.webp` }
             ]
@@ -59,7 +59,7 @@ export const DEMO_MENU: Menu = {
             name: "Pite con Carne",
             order: 4,
             items: [
-                { id: 24, name: "Pita Yamas", description: "Gyros, tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta", price: 7.5, allergens: ["gluten"], imageUrl: `${BASE}pita-gyros.webp` },
+                { id: 24, name: "Pita Yamas", description: "Gyros (carne di maiale), tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta", price: 7.5, allergens: ["gluten"], imageUrl: `${BASE}pita-gyros.webp` },
                 { id: 25, name: "Pita Gyros", description: "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 6.5, allergens: ["gluten"], imageUrl: `${BASE}pita-gyros.webp` },
                 { id: 26, name: "Pita Souvlaki", description: "Spiedino di maiale fresco, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 6.5, allergens: ["gluten"], imageUrl: `${BASE}pita-souvlaki.webp` },
                 { id: 27, name: "Pita Pollo", description: "Spiedino di pollo fresco, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 6.5, allergens: ["gluten"], imageUrl: `${BASE}pita-pollo.webp` },
@@ -86,7 +86,7 @@ export const DEMO_MENU: Menu = {
             name: "Piatti con Carne e Vegetariani",
             order: 6,
             items: [
-                { id: 35, name: "Yamas", description: "Gyros + 2 spiedini, tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta", price: 13, imageUrl: `${BASE}yamas.webp` },
+                { id: 35, name: "Yamas", description: "Gyros (carne di maiale) + 2 spiedini, tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta", price: 13, imageUrl: `${BASE}yamas.webp` },
                 { id: 36, name: "Gyros", description: "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 11, imageUrl: `${BASE}gyros.webp` },
                 { id: 37, name: "Souvlaki", description: "3 spiedini di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 11, imageUrl: `${BASE}souvlaki.webp` },
                 { id: 38, name: "Kotopulo", description: "2 spiedini di pollo, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine", price: 11, imageUrl: `${BASE}kotopulo.webp` },
@@ -106,7 +106,7 @@ export const DEMO_MENU: Menu = {
             order: 7,
             items: [
                 { id: 46, name: "Feta (aggiunta)", description: "Porzione extra di feta", price: 1, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
-                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce grigliato", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
+                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce grigliato", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki-aggiunta.webp` },
                 { id: 48, name: "Pita (aggiunta)", description: "Pane greco", price: 0.5, allergens: ["gluten"], imageUrl: `${BASE}pita.webp` }
             ]
         },
