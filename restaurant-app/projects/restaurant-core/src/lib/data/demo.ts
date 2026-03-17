@@ -21,7 +21,7 @@ export const DEMO_MENU: Menu = {
                 { id: 7, name: "Dolmades", description: "Foglie di vite ripiene di riso", price: 5, isVegan: true, imageUrl: `${BASE}dolmades.webp` },
                 { id: 8, name: "Feta", description: "Formaggio greco fresco", price: 6, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
                 { id: 9, name: "Feta al Cartoccio", description: "Formaggio greco al cartoccio", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}feta-cartoccio.webp` },
-                { id: 10, name: "Saganaki", description: "Formaggio dolce impanato e grigliato", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
+                { id: 10, name: "Saganaki", description: "Formaggio dolce impanato sulla piastra", price: 6.5, allergens: ["milk"], imageUrl: `${BASE}saganaki.webp` },
                 { id: 11, name: "Souvlaki", description: "Uno spiedino di pollo o maiale o pollo-bacon", price: 3, imageUrl: `${BASE}souvlaki-singolo.webp` },
                 { id: 12, name: "Dakos", description: "Fresella con feta, pomodoro, olive e origano", price: 5, allergens: ["gluten"], imageUrl: `${BASE}dakos.webp` },
                 { id: 13, name: "Eliès", description: "Olive greche Kalamata", price: 5, isVegan: true, imageUrl: `${BASE}elies.webp` },
@@ -106,7 +106,7 @@ export const DEMO_MENU: Menu = {
             order: 7,
             items: [
                 { id: 46, name: "Feta (aggiunta)", description: "Porzione extra di feta", price: 1, allergens: ["milk"], imageUrl: `${BASE}feta.webp` },
-                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce grigliato", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki-aggiunta.webp` },
+                { id: 47, name: "Saganaki (aggiunta)", description: "Formaggio dolce  sulla piastra", price: 1.5, allergens: ["milk"], imageUrl: `${BASE}saganaki-aggiunta.webp` },
                 { id: 48, name: "Pita (aggiunta)", description: "Pane greco", price: 0.5, allergens: ["gluten"], imageUrl: `${BASE}pita.webp` }
             ]
         },
