@@ -189,7 +189,7 @@ export const DEMO_RESTAURANT: Restaurant = {
     phone: '+39 081 344 50 57',
     // email: 'info@yamastaverna.it',
     navLinks: [{ text: 'Prenota', href: '#prenota' }, { text: 'Scopri il Menu', href: '#menu' }, { text: 'Chi Siamo', href: '#chi-siamo' }],
-    footerLinks: [{ text: 'Privacy Policy', href: '#privacy' }, { text: 'Terms of Service', href: '#terms' }],
+    footerLinks: [{ text: 'Politiche', href: 'http://localhost:3000/policies' }, { text: 'Aiutaci a Migliorare', href: 'https://forms.gle/oGZeRWNjfDuFQAxq7' }],
     rapidActions: [{ name: 'Chiama', type: 'phone' }, { name: 'Scrivi Email', type: 'email' }, { name: 'Indicazioni', type: 'directions' }, { name: 'Prenota', type: 'reserve' }],
     description: `Benvenuti allo YAMAS – Taverna Greca.\nAutentica cucina greca nel cuore di San Vitaliano NA.`,
     menuItems: DEMO_MENU.categories.flatMap(c => c.items)

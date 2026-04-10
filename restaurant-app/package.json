@@ -9,10 +9,7 @@
     "test": "ng test",
     "build:restaurant-core": "ng build restaurant-core",
     "build:menu": "ng build menu --base-href /menu/",
-    "start:booking": "ng serve booking --port 4200",
-    "start:admin": "ng serve admin --port 4201",
-    "start:menu": "ng serve menu --port 4202",
-    "start:all": "concurrently \"npm run start:booking\" \"npm run start:admin\" \"npm run start:menu\""
+    "start:menu": "ng serve menu --port 4202"
   },
   "prettier": {
     "printWidth": 100,
