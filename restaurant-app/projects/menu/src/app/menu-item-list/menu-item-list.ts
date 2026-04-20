@@ -1,7 +1,6 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RestaurantService } from 'restaurant-core';
-import { Category } from 'restaurant-core';
+import { RestaurantService, Category } from 'restaurant-core';
 
 @Component({
   selector: 'app-menu-item-list',
@@ -10,10 +9,19 @@ import { Category } from 'restaurant-core';
   templateUrl: './menu-item-list.html'
 })
 export class MenuItemListComponent {
-  restaurantService = inject(RestaurantService);
+  /** Inject the restaurant service */
+  public restaurantService = inject(RestaurantService);
 
-  /** Categories signal */
-  categories = computed<Category[]>(() =>
-    this.restaurantService.menu().categories
-  );
+  /** * Categories getter.
+   * We remove 'computed' because we are no longer using signals for data.
+   * This pulls directly from the plain object in the service.
+   */
+  get categories(): Category[] {
+    return this.restaurantService.categories;
+  }
+
+  onImageError(event: Event): void {
+    const imgElement = event.target as HTMLImageElement;
+    imgElement.src = 'assets/images/placeholder.webp';
+  }
 }

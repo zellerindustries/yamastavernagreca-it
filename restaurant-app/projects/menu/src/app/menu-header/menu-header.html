@@ -1,22 +1,13 @@
 <header role="banner">
-    @if(restaurant()) {
-    <div aria-label="Restaurant Logo">
-        <img [src]="sanitizeLogoUrl(restaurant().logoUrl)" [alt]="restaurant().name + ' Logo'" width="100" height="100"
-            (error)="onLogoError($event)">
-    </div>
+  @if(restaurant) {
+  <div aria-label="Restaurant Logo">
+    <img [src]="sanitizeLogoUrl(restaurant.logoUrl)" [alt]="restaurant.name[restaurantService.lang()] + ' Logo'"
+      width="100" height="100" (error)="onLogoError($event)">
+  </div>
 
-    <h1 id="restaurant-name">{{ restaurant().name }}</h1>
+  <h1 id="restaurant-name">
+    {{ restaurant.name[restaurantService.lang()] }}
+  </h1>
 
-    <!--
-    <nav aria-label="Main Menu Navigation">
-      <ul role="menubar">
-        @for(link of restaurant().navLinks; track link.text) {
-          <li role="none">
-            <a role="menuitem" [href]="link.href">{{ link.text }}</a>
-          </li>
-        }
-      </ul>
-    </nav>
-    -->
-    }
+  }
 </header>

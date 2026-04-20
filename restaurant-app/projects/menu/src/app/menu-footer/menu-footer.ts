@@ -9,9 +9,8 @@ import { RestaurantService } from 'restaurant-core';
   templateUrl: './menu-footer.html'
 })
 export class MenuFooterComponent {
-  /** Inject the restaurant service */
-  restaurantService = inject(RestaurantService);
-
-  /** Restaurant signal */
-  restaurant = this.restaurantService.restaurant;
+  /** * Just inject the service.
+   * The template will handle the 'restaurant' data via 'restaurantService.restaurant'
+   */
+  public restaurantService = inject(RestaurantService);
 }

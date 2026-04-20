@@ -1,32 +1,24 @@
 <section aria-labelledby="menu-heading">
-    <!--<h2 id="menu-heading">Menu</h2>-->
+    @if (categories.length) {
 
-    @if (categories().length) {
-
-    @for (cat of categories(); track cat.id) {
+    @for (cat of categories; track cat.id) {
     <div>
-        <h2>{{ cat.name }}</h2>
+        <h2>{{ cat.name[restaurantService.lang()] }}</h2>
 
         @if (cat.items.length) {
-
         <ul role="list">
-
             @for (item of cat.items; track item.id) {
-
             <li role="listitem">
-
                 <article [attr.aria-labelledby]="'item-title-' + item.id"
                     [attr.aria-describedby]="'item-desc-' + item.id">
 
-                    <img [src]="item.imageUrl || 'assets/images/placeholder.webp'"
-                        (error)="($event.target).src='assets/images/placeholder.webp'" [alt]="item.name + ' image'" />
+                    <img [src]="item.imageUrl || 'assets/images/placeholder.webp'" (error)="onImageError($event)"
+                        [alt]="item.name[restaurantService.lang()] + ' image'" />
 
                     <div>
-
-                        <!-- Title + Price -->
                         <header>
                             <h4 id="item-title-{{item.id}}">
-                                {{ item.name }}
+                                {{ item.name[restaurantService.lang()] }}
                             </h4>
 
                             <p>
@@ -36,14 +28,11 @@
                             </p>
                         </header>
 
-                        <!-- Description -->
                         <p id="item-desc-{{item.id}}">
-                            {{ item.description }}
+                            {{ item.description[restaurantService.lang()] }}
                         </p>
 
-                        <!-- Tags -->
                         <div>
-
                             @if (item.isVegan) {
                             <span aria-label="Vegan dish">🌱 Vegan</span>
                             }
@@ -53,38 +42,26 @@
                             @if (item.isSpicy) {
                             <span aria-label="Spicy dish">🌶 Spicy</span>
                             }
-
                         </div>
 
-                        <!-- Allergens -->
                         @if (item.allergens?.length) {
                         <p>
                             <strong>Allergens:</strong>
                             {{ item.allergens?.join(', ') }}
                         </p>
                         }
-
                     </div>
-
                 </article>
-
             </li>
-
             }
-
         </ul>
-
         } @else {
-
         <p>No items in this category.</p>
-
         }
     </div>
     }
 
     } @else {
-
     <p>No menu items available at the moment.</p>
-
     }
 </section>

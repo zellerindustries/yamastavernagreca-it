@@ -1,7 +1,14 @@
+/** * Helper interface for multilingual strings
+ */
+export interface Translatable {
+    it: string;
+    en: string;
+}
+
 export interface MenuItem {
     id: number;
-    name: string;
-    description: string;
+    name: Translatable;        // Updated
+    description: Translatable; // Updated
     price: number;
     imageUrl?: string;
     isVegan?: boolean;
@@ -10,16 +17,16 @@ export interface MenuItem {
     allergens?: string[];
 }
 
-export interface Menu {
-    id: string
-    name: string
-    categories: Category[]
+export interface Category {
+    id: string;
+    name: Translatable;        // Updated
+    description?: Translatable; // Updated
+    order: number;
+    items: MenuItem[];
 }
 
-export interface Category {
-    id: string
-    name: string
-    description?: string
-    order: number
-    items: MenuItem[]
+export interface Menu {
+    id: string;
+    name: Translatable;        // Updated
+    categories: Category[];
 }

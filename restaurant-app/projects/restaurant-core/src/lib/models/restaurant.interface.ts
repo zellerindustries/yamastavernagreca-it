@@ -1,22 +1,22 @@
-import { MenuItem } from './menu.interface';
+import { MenuItem, Translatable } from './menu.interface';
 
 export interface NavLink {
-    text: string;
+    text: Translatable; // Updated from string
     href: string;
 }
 
 export interface FooterLink {
-    text: string;
+    text: Translatable; // Updated from string
     href: string;
 }
 
 export interface RapidAction {
-    name: string;
+    name: Translatable; // Updated from string
     type: 'phone' | 'email' | 'directions' | 'reserve';
 }
 
 export interface Restaurant {
-    name: string;
+    name: Translatable;      // Keeping as string (Brand Name)
     logoUrl: string;
     address: string;
     phone: string;
@@ -24,6 +24,6 @@ export interface Restaurant {
     navLinks: NavLink[];
     footerLinks: FooterLink[];
     rapidActions: RapidAction[];
-    description?: string;
+    description?: Translatable; // Updated from string
     menuItems?: MenuItem[];
 }

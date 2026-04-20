@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
-import { RestaurantService } from 'restaurant-core';
+import { RestaurantService, Restaurant } from 'restaurant-core';
 
 @Component({
   selector: 'app-menu-header',
@@ -8,19 +8,21 @@ import { RestaurantService } from 'restaurant-core';
   standalone: true
 })
 export class MenuHeaderComponent {
-  restaurantService = inject(RestaurantService);
-  sanitizer = inject(DomSanitizer);
+  public restaurantService = inject(RestaurantService);
+  private sanitizer = inject(DomSanitizer);
+
+  /** * Updated to a getter.
+   * Removed the parentheses () inside because it's now a plain object.
+   */
+  get restaurant(): Restaurant {
+    return this.restaurantService.restaurant;
+  }
 
   sanitizeLogoUrl(url: string): SafeUrl {
     return this.sanitizer.bypassSecurityTrustUrl(url);
   }
 
-  /** Fallback if the logo fails to load */
   onLogoError(event: Event) {
     (event.target as HTMLImageElement).src = 'assets/images/placeholder.webp';
-  }
-
-  restaurant() {
-    return this.restaurantService.restaurant();
   }
 }
