@@ -9,7 +9,7 @@ section[aria-labelledby="menu-heading"] {
 }
 
 /* Main menu title */
-section[aria-labelledby="menu-heading"] h2 {
+section[aria-labelledby=menu-heading] h2 {
     margin: 0 0 var(--space-4);
     font-size: var(--h2-size, 2rem);
     font-weight: var(--font-weight-heading);
@@ -138,7 +138,6 @@ div[aria-label="Restaurant Logo"] {
     width: 100%;
     aspect-ratio: 4 / 1;
     overflow: hidden;
-    border-radius: var(--radius-md);
     position: relative;
     background-color: var(--surface);
 }
@@ -155,16 +154,22 @@ div[aria-label="Restaurant Logo"] img {
 }
 
 /* Main title */
-header[role="banner"] h1 {
+header[role=banner] h1 {
     margin: 0;
-    font-size: var(--h1-size, 2rem);
+    font-size: clamp(1.6rem, 6vw, var(--h1-size, 2rem));
     font-weight: var(--font-weight-heading);
     text-align: center;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+    letter-spacing: -.02em;
+    line-height: 1.05;
     color: var(--primary);
+
     max-width: 90%;
-    word-break: break-word;
+
+    /* Better mobile wrapping */
+    text-wrap: balance;
+    word-break: normal;
+    overflow-wrap: break-word;
+
     text-transform: uppercase;
     padding: var(--space-3);
 }
@@ -207,5 +212,24 @@ section[aria-labelledby="menu-heading"] article header {
 
     header[role="banner"] p {
         font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header[role=banner] h1 {
+        font-size: clamp(1.4rem, 7vw, 2rem);
+        line-height: 1;
+        max-width: 95%;
+    }
+
+    section[aria-labelledby=menu-heading] h2 {
+        font-size: clamp(1.1rem, 5vw, 1.6rem);
+
+        /* Force single line */
+        white-space: nowrap;
+
+        /* Prevent overflow issues */
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

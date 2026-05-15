@@ -55,9 +55,13 @@ footer[role=contentinfo] {
     text-align: center
 }
 
+footer>* {
+    margin: var(--space-3) 0;
+}
+
+
 footer address {
     font-style: normal;
-    margin: var(--space-3) 0;
     color: var(--text-muted)
 }
 

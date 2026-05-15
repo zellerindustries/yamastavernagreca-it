@@ -1,18 +1,9 @@
 <footer role="contentinfo">
     @if(restaurantService.restaurant; as r) {
-    <div class="lang-switcher-group">
-        <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'it'"
-            (click)="restaurantService.setLanguage('it')">
-            IT
-        </button>
 
-        <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'en'"
-            (click)="restaurantService.setLanguage('en')">
-            EN
-        </button>
-    </div>
-
-    <p>&copy; 2026 {{ r.name }}. All rights reserved.</p>
+    <p>
+        &copy; 2026 {{ r.name[restaurantService.lang()] }}. All rights reserved.
+    </p>
 
     <address>
         {{ r.address }}<br>

@@ -1,8 +1,8 @@
-<section aria-labelledby="menu-heading">
+<section aria-labelledby="menu-heading" id="menu-list">
     @if (categories.length) {
 
     @for (cat of categories; track cat.id) {
-    <div>
+    <div id="menu-group">
         <h2>{{ cat.name[restaurantService.lang()] }}</h2>
 
         @if (cat.items.length) {
