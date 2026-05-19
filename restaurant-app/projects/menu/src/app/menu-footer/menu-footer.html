@@ -1,18 +1,6 @@
 <footer role="contentinfo">
     @if(restaurantService.restaurant; as r) {
 
-    <p>
-        &copy; 2026 {{ r.name[restaurantService.lang()] }}. All rights reserved.
-    </p>
-
-    <address>
-        {{ r.address }}<br>
-        <a [href]="'tel:' + r.phone">{{ r.phone }}</a><br>
-        @if(r.email) {
-        <a [href]="'mailto:' + r.email">{{ r.email }}</a>
-        }
-    </address>
-
     <nav aria-label="Footer Navigation">
         <ul>
             @for(link of r.footerLinks; track link.href) {
@@ -24,7 +12,19 @@
             }
         </ul>
     </nav>
+
+    <address>
+        {{ r.address }}<br>
+        <a [href]="'tel:' + r.phone">{{ r.phone }}</a><br>
+        @if(r.email) {
+        <a [href]="'mailto:' + r.email">{{ r.email }}</a>
+        }
+    </address>
+
+    <p>
+        &copy; 2026 {{ r.name[restaurantService.lang()] }}. All rights reserved.
+    </p>
     } @else {
-    <p>Restaurant information not available</p>
+    <p> &copy; 2026 Zeller Industries. All rights reserved.</p>
     }
 </footer>

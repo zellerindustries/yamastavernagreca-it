@@ -9,19 +9,24 @@
     <h1 id="restaurant-name">
       {{ restaurant.name[restaurantService.lang()] }}
     </h1>
-    <div class="lang-switcher-group">
-      <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'it'"
-        (click)="restaurantService.setLanguage('it')">
-        Italiano
-      </button>
+    @if(restaurant.description){
+    <p id="restaurant-description">
+      {{ restaurant.description[restaurantService.lang()] }}
+    </p>
+    }
+    <div>
+      <div class="lang-switcher-group">
+        <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'it'"
+          (click)="restaurantService.setLanguage('it')">
+          Italiano
+        </button>
 
-      <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'en'"
-        (click)="restaurantService.setLanguage('en')">
-        Inglese
-      </button>
+        <button type="button" class="lang-btn" [class.active]="restaurantService.lang() === 'en'"
+          (click)="restaurantService.setLanguage('en')">
+          Inglese
+        </button>
+      </div>
     </div>
   </div>
-
-
   }
 </header>

@@ -75,7 +75,21 @@ footer nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: var(--space-4);
     margin-top: var(--space-3);
-    flex-wrap: wrap
+    flex-wrap: wrap;
+    line-height: 1;
+}
+
+footer nav ul li {
+    padding: var(--space-1) var(--space-3);
+    border-right: 1px solid var(--text-muted);
+}
+
+footer nav ul li:first-child {
+    padding-left: 0;
+}
+
+footer nav ul li:last-child {
+    padding-right: 0;
+    border-right: none;
 }

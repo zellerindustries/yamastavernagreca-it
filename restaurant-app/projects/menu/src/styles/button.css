@@ -4,6 +4,7 @@
     background-color: var(--border);
     /* Small border effect between buttons */
     padding: 2px;
+    margin: var(--space-3);
     border-radius: var(--radius-sm);
 }
 

@@ -175,6 +175,12 @@ export const DEMO_MENU: Menu = {
 export const DEMO_RESTAURANT: Restaurant = {
     name: { it: 'YAMAS Taverna Greca', en: 'YAMAS Taverna Greca' },
     logoUrl: `${BASE}logo.svg`,
+    description: {
+        it:
+            "Ciao, sono Peppe! Dopo 25 anni di esperienza nel mio locale nel centro storico di Napoli, ho deciso di continuare la mia attività in questa zona vesuviana. Vi auguro una buona permanenza e buon appetito!",
+        en:
+            "Hi, I'm Peppe! After 25 years of experience running my own place in the historic center of Naples, I've decided to continue my journey here in the Vesuvius area. I wish you a wonderful stay and, of course, buon appetito!"
+    },
     address: 'Via Nazionale delle Puglie 69, San Vitaliano NA',
     phone: '+39 081 344 50 57',
     navLinks: [
@@ -192,9 +198,5 @@ export const DEMO_RESTAURANT: Restaurant = {
         { name: { it: 'Indicazioni', en: 'Directions' }, type: 'directions' },
         { name: { it: 'Prenota', en: 'Book' }, type: 'reserve' }
     ],
-    description: {
-        it: `Benvenuti allo YAMAS – Taverna Greca.\nAutentica cucina greca nel cuore di San Vitaliano NA.`,
-        en: `Welcome to YAMAS – Greek Taverna.\nAuthentic Greek cuisine in the heart of San Vitaliano NA.`
-    },
     menuItems: DEMO_MENU.categories.flatMap((c: any) => c.items)
 };
