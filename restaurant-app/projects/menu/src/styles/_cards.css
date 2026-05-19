@@ -51,7 +51,7 @@ header[role="banner"] p {
 
     font-size: clamp(0.95rem, 2vw, 1.125rem);
     line-height: 1.45;
-    text-align: center;
+    text-align: justify;
 
     color: var(--text-muted);
 }
@@ -71,14 +71,20 @@ section[aria-labelledby="menu-heading"] {
 section[aria-labelledby="menu-heading"] h2 {
     margin: 0 0 var(--space-4);
 
-    font-size: clamp(1.4rem, 4vw, var(--h2-size, 2rem));
-    font-weight: var(--font-weight-heading);
+    font-size: var(--h3-size);
+    text-transform: uppercase;
+    font-weight: normal;
     line-height: 1.1;
     letter-spacing: -0.02em;
     text-align: center;
     text-wrap: balance;
 
-    color: var(--primary);
+    color: var(--bg);
+    padding: var(--space-3);
+
+    background-color: var(--primary);
+    border-radius: var(--radius-md);
+
 }
 
 /* Category Headings */
@@ -142,7 +148,7 @@ section[aria-labelledby="menu-heading"] article img {
 section[aria-labelledby="menu-heading"] article>div {
     display: flex;
     flex-direction: column;
-    gap: var(--space-1);
+    gap: var(--space-2);
     flex: 1;
     min-width: 0;
 }
@@ -150,9 +156,10 @@ section[aria-labelledby="menu-heading"] article>div {
 /* Card Header (Title & Price placement) */
 section[aria-labelledby="menu-heading"] article header {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-1);
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-2);
+    justify-content: space-between;
 }
 
 /* Dish Title */
@@ -178,9 +185,12 @@ section[aria-labelledby="menu-heading"] article p {
 }
 
 /* Inline Price Highlight */
-section[aria-labelledby="menu-heading"] article p strong {
+section[aria-labelledby="menu-heading"] article .item-price {
     font-weight: var(--font-weight-heading);
-    color: var(--text);
+    line-height: 1;
+    color: var(--success);
+    font-size: var(--h3-size);
+
 }
 
 /* Dietary / Info Tags */

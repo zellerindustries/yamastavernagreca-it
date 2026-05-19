@@ -52,13 +52,11 @@ footer[role=contentinfo] {
     margin-top: var(--space-6);
     padding: var(--space-5) var(--space-4);
     border-top: 1px solid var(--border);
-    text-align: center
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
 }
-
-footer>* {
-    margin: var(--space-3) 0;
-}
-
 
 footer address {
     font-style: normal;
@@ -75,7 +73,6 @@ footer nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: var(--space-3);
     flex-wrap: wrap;
     line-height: 1;
 }
