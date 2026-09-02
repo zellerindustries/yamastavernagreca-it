@@ -1,0 +1,189 @@
+/* ==== BUSINESS CARD ====
+   Le variabili (colori, font, spacing, radius, shadow) arrivano
+   da ../style.css, caricato prima di questo file. */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: #0d1630;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-lg);
+  overflow: auto;
+}
+
+/* ==== THE BUSINESS CARD ====
+   Niente più aspect-ratio fissa: la card si adatta al contenuto
+   invece di forzare un'altezza "vuota" quando il contenuto è
+   poco. Il max-width tiene comunque le proporzioni sotto
+   controllo su schermi larghi. */
+#business-card {
+  background-color: var(--color-secondary);
+  width: 100%;
+  max-width: 760px;
+  border-radius: calc(var(--radius) * 2);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  padding: calc(var(--spacing-lg) * 2.5);
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+#card-body {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: calc(var(--spacing-lg) * 2);
+  width: 100%;
+  align-items: center; /* le 2 colonne restano allineate al centro invece che stirate su un'altezza vuota */
+}
+
+/* ==== SEZIONE SINISTRA: BRAND ==== */
+#card-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid rgba(37, 56, 115, 0.15);
+  padding-right: var(--spacing-lg);
+}
+
+.logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.logo-wrapper img {
+  width: 100%;
+  max-width: 140px;
+  max-height: 70px;
+  object-fit: contain;
+  object-position: left top;
+}
+
+/* ==== SEZIONE CENTRALE: CONTATTI ====
+   Da "space-between" (spingeva i link in fondo a una riga
+   vuota) a un flex compatto con un gap fisso: contatti e
+   azioni restano vicini, niente più buco al centro. */
+#card-main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-lg) * 1.5);
+}
+
+#contact-info {
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-md) * 0.8);
+}
+
+#contact-info p {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.4;
+}
+
+#contact-info a {
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
+/* Link azioni rapide */
+#actions-list {
+  display: flex;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+#link-download-vcf,
+#link-menu {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-size: calc(var(--font-size-sm) * 0.95);
+  font-weight: 700;
+  color: var(--color-primary);
+  background: none;
+  border: none;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 4px;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    color var(--transition-speed),
+    border-color var(--transition-speed);
+  white-space: nowrap;
+}
+
+#link-download-vcf:hover,
+#link-menu:hover {
+  color: var(--color-accent-dark);
+  border-bottom-color: var(--color-primary);
+}
+
+/* ==== MEDIA QUERY PORTRAIT ==== */
+@media (max-width: 767px) or (orientation: portrait) {
+  body {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+  #business-card {
+    max-width: 400px;
+    padding: calc(var(--spacing-lg) * 1.5);
+  }
+  #card-body {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+  }
+  #card-header {
+    border-right: none;
+    border-bottom: 1px solid rgba(37, 56, 115, 0.12);
+    padding-right: 0;
+    padding-bottom: var(--spacing-lg);
+    align-items: center;
+    text-align: center;
+  }
+  .logo-wrapper {
+    align-items: center;
+  }
+  .logo-wrapper img {
+    object-position: center;
+  }
+  #contact-info {
+    text-align: left; /* icona + testo allineati leggibili, non centrati a blocchi */
+    align-items: center;
+  }
+  #contact-info p {
+    justify-content: center;
+  }
+  #actions-list {
+    justify-content: center;
+    margin-top: var(--spacing-lg);
+  }
+}
+
+/* ==== MEDIA QUERY: LANDSCAPE CORTO (telefono girato) ==== */
+@media (orientation: landscape) and (max-height: 480px) {
+  #business-card {
+    max-height: 92vh;
+    padding: calc(var(--spacing-lg) * 1.2);
+    overflow-y: auto;
+  }
+  #card-body {
+    gap: var(--spacing-lg);
+  }
+  .logo-wrapper {
+    align-items: center;
+  }
+  .logo-wrapper img {
+    max-height: 48px;
+  }
+}

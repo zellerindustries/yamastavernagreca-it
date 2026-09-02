@@ -1,0 +1,8 @@
+dist/
+todo/
+dev/
+node_modules/
+
+.vscode
+
+.claude
