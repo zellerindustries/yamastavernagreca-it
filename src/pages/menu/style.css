@@ -1,17 +1,23 @@
-/* ==== VARIABLES (ported from restaurant-app/projects/shared-ui) ==== */
+/* ==== VARIABLES (matched to the site's brand tokens, src/styles/base.css) ==== */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("/fonts/playfair-display.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --primary: #7a1f1f;
-  --primary-hover: #932626;
-  --accent: #d4a373;
-  --danger: #c0392b;
-  --success: #2e7d32;
-  --bg: #f7f4f1;
+  --primary: #253873;
+  --price: #253873;
+  --bg: #fffff5;
   --surface: #fff;
-  --surface-muted: #efece8;
+  --surface-muted: #f3f1e6;
   --border: #e6e2de;
   --text: #2a2a2a;
-  --text-muted: #6b6b6b;
-  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --text-muted: #555;
+  --font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-heading: "Playfair Display", serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
   --h1-size: 2.5rem;
@@ -26,9 +32,9 @@
   --radius-xs: 4px;
   --radius-sm: 6px;
   --radius-md: 12px;
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .06);
-  --shadow-md: 0 10px 30px rgba(0, 0, 0, .08);
-  --transition-fast: .2s ease;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --transition-fast: 0.2s ease;
   --breakpoint-md: 768px;
 }
 
@@ -91,8 +97,9 @@ div[aria-label="Restaurant Logo"] img {
 
 header[role="banner"] h1 {
   margin: 0;
+  font-family: var(--font-heading);
   font-size: clamp(1.6rem, 6vw, var(--h1-size));
-  font-weight: var(--font-weight-heading);
+  font-weight: 900;
   line-height: 1;
   letter-spacing: -0.02em;
   text-align: center;
@@ -178,8 +185,9 @@ section[aria-labelledby="menu-heading"] h2 {
   gap: var(--space-2);
   margin: var(--space-4) 0 var(--space-3);
   padding-bottom: var(--space-1);
+  font-family: var(--font-heading);
   font-size: clamp(1.15rem, 3vw, var(--h3-size));
-  font-weight: var(--font-weight-heading);
+  font-weight: 700;
   line-height: 1.2;
   color: var(--primary);
   border-bottom: 2px solid var(--border);
@@ -203,7 +211,9 @@ section[aria-labelledby="menu-heading"] article {
   background: var(--surface);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 section[aria-labelledby="menu-heading"] article:hover {
@@ -254,7 +264,7 @@ section[aria-labelledby="menu-heading"] article p {
 section[aria-labelledby="menu-heading"] article .item-price {
   font-weight: var(--font-weight-heading);
   line-height: 1;
-  color: var(--success);
+  color: var(--price);
   font-size: var(--h3-size);
 }
 
