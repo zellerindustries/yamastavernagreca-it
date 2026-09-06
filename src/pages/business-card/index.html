@@ -12,9 +12,7 @@
   </head>
   <body>
     <div id="business-card">
-      <h1 class="sr-only">
-        Biglietto da visita digitale — YAMAS Taverna Greca
-      </h1>
+      <h1 class="sr-only">Biglietto da visita digitale — YAMAS Taverna Greca</h1>
       <div id="card-body">
         <!-- Lato Sinistro: Brand -->
         <header id="card-header">
@@ -89,31 +87,29 @@
     </div>
 
     <script>
-      document
-        .getElementById("link-download-vcf")
-        .addEventListener("click", () => {
-          const vcard = [
-            "BEGIN:VCARD",
-            "VERSION:3.0",
-            "N:;YAMAS - Taverna Greca;;;",
-            "FN:YAMAS - Taverna Greca",
-            "ORG:YAMAS - Taverna Greca",
-            "TEL;TYPE=WORK,VOICE:+39 081 344 50 57",
-            "ADR;TYPE=WORK:;;Via Nazionale delle Puglie 69;San Vitaliano;NA;80030;Italia",
-            "URL:https://yamastavernagreca.it",
-            "END:VCARD",
-          ].join("\r\n");
+      document.getElementById('link-download-vcf').addEventListener('click', () => {
+        const vcard = [
+          'BEGIN:VCARD',
+          'VERSION:3.0',
+          'N:;YAMAS - Taverna Greca;;;',
+          'FN:YAMAS - Taverna Greca',
+          'ORG:YAMAS - Taverna Greca',
+          'TEL;TYPE=WORK,VOICE:+39 081 344 50 57',
+          'ADR;TYPE=WORK:;;Via Nazionale delle Puglie 69;San Vitaliano;NA;80030;Italia',
+          'URL:https://yamastavernagreca.it',
+          'END:VCARD',
+        ].join('\r\n');
 
-          const blob = new Blob([vcard], { type: "text/vcard" });
-          const url = URL.createObjectURL(blob);
-          const a = document.createElement("a");
-          a.href = url;
-          a.download = "YAMAS-Taverna-Greca.vcf";
-          document.body.appendChild(a);
-          a.click();
-          document.body.removeChild(a);
-          URL.revokeObjectURL(url);
-        });
+        const blob = new Blob([vcard], { type: 'text/vcard' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'YAMAS-Taverna-Greca.vcf';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+      });
     </script>
   </body>
 </html>

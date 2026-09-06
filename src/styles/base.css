@@ -2,8 +2,8 @@
    FONT
 ------------------------------ */
 @font-face {
-  font-family: "Playfair Display";
-  src: url("/fonts/playfair-display.woff2") format("woff2");
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
   --color-accent-dark: #c78f00;
   --color-text-light: #555;
 
-  --font-primary: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-secondary: "Playfair Display", serif;
+  --font-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Playfair Display', serif;
   --font-size-base: clamp(1rem, calc(2vw + 0.5rem), 1.25rem);
   /* ~16-20px */
 
@@ -121,8 +121,8 @@ a:focus {
   text-decoration: underline;
 }
 
-a[aria-disabled="true"],
-a[aria-current="page"] {
+a[aria-disabled='true'],
+a[aria-current='page'] {
   pointer-events: none;
   opacity: 0.8;
 }
@@ -340,7 +340,7 @@ figcaption {
 }
 
 #site-header nav ul li a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -415,7 +415,7 @@ main section {
 
 /* ==== HERO ==== */
 .hero {
-  background: url("/assets/banner.webp") center/cover no-repeat;
+  background: url('/assets/banner.webp') center/cover no-repeat;
   background-color: var(--color-primary);
   color: var(--color-secondary);
 }
@@ -557,13 +557,13 @@ footer a {
 }
 
 #reviews blockquote::before {
-  content: "“";
+  content: '“';
   top: 0;
   left: 0;
 }
 
 #reviews blockquote::after {
-  content: "”";
+  content: '”';
   bottom: 0;
   right: 0;
 }

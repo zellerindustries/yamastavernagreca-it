@@ -5,7 +5,10 @@
   "main": "index.html",
   "scripts": {
     "build": "npx mz b",
-    "start": "npm run build && npx serve ./dist"
+    "start": "npm run build && npx serve ./dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "prepare": "husky || true"
   },
   "repository": {
     "type": "git",
@@ -24,6 +27,7 @@
     "minimaz-cli": "^0.5.2"
   },
   "devDependencies": {
+    "husky": "^9.1.7",
     "prettier": "^3.9.5",
     "serve": "^14.2.5"
   },

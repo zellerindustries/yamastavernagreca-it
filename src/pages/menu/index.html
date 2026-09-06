@@ -1,45 +1,68 @@
 <!doctype html>
 <html lang="it">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>YAMAS Taverna Greca — Menu</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <header role="banner">
-    <div aria-label="Restaurant Logo">
-      <img id="logo-img" alt="" />
-    </div>
-
-    <div class="info-wrapper">
-      <h1 id="restaurant-name"></h1>
-      <p id="restaurant-description"></p>
-
-      <div class="lang-switcher-group">
-        <button type="button" class="lang-btn" data-lang="it">Italiano</button>
-        <button type="button" class="lang-btn" data-lang="en">Inglese</button>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>YAMAS Taverna Greca — Menu</title>
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://yamastavernagreca.it/menu/" />
+    <meta
+      name="description"
+      content="Scopri il menu completo di YAMAS Taverna Greca: piatti greci tradizionali, mezze, contorni, dolci e bevande, con descrizioni bilingue e prezzi aggiornati."
+    />
+    <meta property="og:title" content="YAMAS Taverna Greca — Menu" />
+    <meta
+      property="og:description"
+      content="Scopri il menu completo di YAMAS Taverna Greca: piatti greci tradizionali, mezze, contorni, dolci e bevande, con descrizioni bilingue e prezzi aggiornati."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yamastavernagreca.it/menu/" />
+    <meta property="og:image" content="https://yamastavernagreca.it/assets/twitter-card.webp" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="YAMAS - Taverna Greca" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YAMAS Taverna Greca — Menu" />
+    <meta
+      name="twitter:description"
+      content="Scopri il menu completo di YAMAS Taverna Greca: piatti greci tradizionali, mezze, contorni, dolci e bevande, con descrizioni bilingue e prezzi aggiornati."
+    />
+    <meta name="twitter:image" content="https://yamastavernagreca.it/assets/twitter-card.webp" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header role="banner">
+      <div aria-label="Restaurant Logo">
+        <img id="logo-img" alt="" />
       </div>
-    </div>
-  </header>
 
-  <section aria-labelledby="menu-heading" id="menu-list">
-    <!-- category groups injected here -->
-  </section>
+      <div class="info-wrapper">
+        <h1 id="restaurant-name"></h1>
+        <p id="restaurant-description"></p>
 
-  <footer role="contentinfo">
-    <nav aria-label="Footer Navigation">
-      <ul id="footer-links"></ul>
-    </nav>
+        <div class="lang-switcher-group">
+          <button type="button" class="lang-btn" data-lang="it">Italiano</button>
+          <button type="button" class="lang-btn" data-lang="en">Inglese</button>
+        </div>
+      </div>
+    </header>
 
-    <address>
-      <span id="footer-address"></span><br />
-      <a id="footer-phone" href="#"></a>
-    </address>
+    <section aria-labelledby="menu-heading" id="menu-list">
+      <!-- category groups injected here -->
+    </section>
 
-    <p id="footer-copyright"></p>
-  </footer>
+    <footer role="contentinfo">
+      <nav aria-label="Footer Navigation">
+        <ul id="footer-links"></ul>
+      </nav>
 
-  <script src="app.js"></script>
-</body>
+      <address>
+        <span id="footer-address"></span><br />
+        <a id="footer-phone" href="#"></a>
+      </address>
+
+      <p id="footer-copyright"></p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>

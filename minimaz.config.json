@@ -1,35 +1,35 @@
 {
-    "input": {
-        "dir": "src",
-        "mapping": {
-            "pages": "",
-            "styles": "",
-            "public": ""
-        },
-        "externals": {
-            "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
-            "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
-        }
+  "input": {
+    "dir": "src",
+    "mapping": {
+      "pages": "",
+      "styles": "",
+      "public": ""
     },
-    "output": {
-        "dir": "dist",
-        "replace": {
-            "<link rel=\"stylesheet\" href=\"styles/bootstrap-icons.css\" />": "",
-            "<link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\" />": "",
-            "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
-            "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
-        },
-        "html": {
-            "minify": true
-        },
-        "css": {
-            "outFile": "style.css",
-            "minify": true,
-            "bundling": true
-        },
-        "js": {
-            "minify": true,
-            "bundling": true
-        }
+    "externals": {
+      "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
+      "node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
     }
+  },
+  "output": {
+    "dir": "dist",
+    "replace": {
+      "<link rel=\"stylesheet\" href=\"styles/bootstrap-icons.css\" />": "",
+      "<link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\" />": "",
+      "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
+      "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
+    },
+    "html": {
+      "minify": true
+    },
+    "css": {
+      "outFile": "style.css",
+      "minify": true,
+      "bundling": true
+    },
+    "js": {
+      "minify": true,
+      "bundling": true
+    }
+  }
 }

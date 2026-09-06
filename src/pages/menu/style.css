@@ -1,7 +1,7 @@
 /* ==== VARIABLES (matched to the site's brand tokens, src/styles/base.css) ==== */
 @font-face {
-  font-family: "Playfair Display";
-  src: url("/fonts/playfair-display.woff2") format("woff2");
+  font-family: 'Playfair Display';
+  src: url('/fonts/playfair-display.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
@@ -16,8 +16,8 @@
   --border: #e6e2de;
   --text: #2a2a2a;
   --text-muted: #555;
-  --font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-heading: "Playfair Display", serif;
+  --font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-heading: 'Playfair Display', serif;
   --font-size-base: 16px;
   --line-height-base: 1.5;
   --h1-size: 2.5rem;
@@ -70,14 +70,14 @@ body {
 }
 
 /* ==== HEADER ==== */
-header[role="banner"] {
+header[role='banner'] {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: var(--space-2);
 }
 
-div[aria-label="Restaurant Logo"] {
+div[aria-label='Restaurant Logo'] {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 1;
@@ -85,7 +85,7 @@ div[aria-label="Restaurant Logo"] {
   background: var(--surface);
 }
 
-div[aria-label="Restaurant Logo"] img {
+div[aria-label='Restaurant Logo'] img {
   position: absolute;
   inset: 0;
   display: block;
@@ -95,7 +95,7 @@ div[aria-label="Restaurant Logo"] img {
   object-position: center;
 }
 
-header[role="banner"] h1 {
+header[role='banner'] h1 {
   margin: 0;
   font-family: var(--font-heading);
   font-size: clamp(1.6rem, 6vw, var(--h1-size));
@@ -109,7 +109,7 @@ header[role="banner"] h1 {
   color: var(--primary);
 }
 
-header[role="banner"] p {
+header[role='banner'] p {
   margin: 0 var(--space-3);
   font-size: clamp(0.95rem, 2vw, 1.125rem);
   line-height: 1.45;
@@ -168,7 +168,7 @@ header[role="banner"] p {
 }
 
 /* ==== MENU LAYOUT ==== */
-section[aria-labelledby="menu-heading"] {
+section[aria-labelledby='menu-heading'] {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -179,7 +179,7 @@ section[aria-labelledby="menu-heading"] {
   margin-top: var(--space-3);
 }
 
-section[aria-labelledby="menu-heading"] h2 {
+section[aria-labelledby='menu-heading'] h2 {
   display: flex;
   align-items: center;
   gap: var(--space-2);
@@ -193,7 +193,7 @@ section[aria-labelledby="menu-heading"] h2 {
   border-bottom: 2px solid var(--border);
 }
 
-section[aria-labelledby="menu-heading"] ul[role="list"] {
+section[aria-labelledby='menu-heading'] ul[role='list'] {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--space-3);
@@ -203,7 +203,7 @@ section[aria-labelledby="menu-heading"] ul[role="list"] {
 }
 
 /* ==== MENU CARD ==== */
-section[aria-labelledby="menu-heading"] article {
+section[aria-labelledby='menu-heading'] article {
   display: flex;
   align-items: flex-start;
   gap: var(--space-3);
@@ -216,12 +216,12 @@ section[aria-labelledby="menu-heading"] article {
     box-shadow 0.2s ease;
 }
 
-section[aria-labelledby="menu-heading"] article:hover {
+section[aria-labelledby='menu-heading'] article:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
 
-section[aria-labelledby="menu-heading"] article img {
+section[aria-labelledby='menu-heading'] article img {
   flex-shrink: 0;
   width: 88px;
   aspect-ratio: 1;
@@ -229,7 +229,7 @@ section[aria-labelledby="menu-heading"] article img {
   border-radius: var(--radius-sm);
 }
 
-section[aria-labelledby="menu-heading"] article > div {
+section[aria-labelledby='menu-heading'] article > div {
   display: flex;
   flex-direction: column;
   gap: var(--space-2);
@@ -237,7 +237,7 @@ section[aria-labelledby="menu-heading"] article > div {
   min-width: 0;
 }
 
-section[aria-labelledby="menu-heading"] article header {
+section[aria-labelledby='menu-heading'] article header {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -245,7 +245,7 @@ section[aria-labelledby="menu-heading"] article header {
   justify-content: space-between;
 }
 
-section[aria-labelledby="menu-heading"] article h4 {
+section[aria-labelledby='menu-heading'] article h4 {
   margin: 0;
   font-size: 1rem;
   font-weight: var(--font-weight-heading);
@@ -254,21 +254,21 @@ section[aria-labelledby="menu-heading"] article h4 {
   color: var(--text);
 }
 
-section[aria-labelledby="menu-heading"] article p {
+section[aria-labelledby='menu-heading'] article p {
   margin: 0;
   font-size: 0.92rem;
   line-height: 1.45;
   color: var(--text-muted);
 }
 
-section[aria-labelledby="menu-heading"] article .item-price {
+section[aria-labelledby='menu-heading'] article .item-price {
   font-weight: var(--font-weight-heading);
   line-height: 1;
   color: var(--price);
   font-size: var(--h3-size);
 }
 
-section[aria-labelledby="menu-heading"] article p[aria-label] {
+section[aria-labelledby='menu-heading'] article p[aria-label] {
   display: inline-flex;
   align-items: center;
   gap: 4px;
@@ -282,7 +282,7 @@ section[aria-labelledby="menu-heading"] article p[aria-label] {
 }
 
 /* ==== FOOTER ==== */
-footer[role="contentinfo"] {
+footer[role='contentinfo'] {
   background: var(--surface);
   margin-top: var(--space-4);
   padding: var(--space-4);
@@ -328,12 +328,12 @@ footer nav ul li:last-child {
 
 /* ==== RESPONSIVE ==== */
 @media (min-width: 640px) {
-  section[aria-labelledby="menu-heading"] ul[role="list"] {
+  section[aria-labelledby='menu-heading'] ul[role='list'] {
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: var(--space-4);
   }
 
-  section[aria-labelledby="menu-heading"] article img {
+  section[aria-labelledby='menu-heading'] article img {
     width: 120px;
   }
 }

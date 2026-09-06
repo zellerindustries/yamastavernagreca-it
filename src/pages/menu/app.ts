@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderHeader();
     renderMenu();
     renderFooter();
-    document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach(btn => {
+    document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {
       btn.classList.toggle('active', btn.dataset.lang === lang);
     });
   }
@@ -22,7 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const logo = document.getElementById('logo-img') as HTMLImageElement;
     logo.src = DEMO_RESTAURANT.logoUrl;
     logo.alt = DEMO_RESTAURANT.name[lang] + ' Logo';
-    logo.onerror = () => { logo.src = PLACEHOLDER_IMAGE; };
+    logo.onerror = () => {
+      logo.src = PLACEHOLDER_IMAGE;
+    };
 
     document.getElementById('restaurant-name')!.textContent = DEMO_RESTAURANT.name[lang];
 
@@ -78,7 +80,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const img = document.createElement('img');
     img.src = item.imageUrl || PLACEHOLDER_IMAGE;
     img.alt = item.name[lang] + ' image';
-    img.onerror = () => { img.src = PLACEHOLDER_IMAGE; };
+    img.onerror = () => {
+      img.src = PLACEHOLDER_IMAGE;
+    };
     article.appendChild(img);
 
     const content = document.createElement('div');
@@ -153,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
       '© 2026 ' + DEMO_RESTAURANT.name[lang] + '. All rights reserved.';
   }
 
-  document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach(btn => {
+  document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {
     btn.addEventListener('click', () => {
       lang = btn.dataset.lang as Lang;
       render();
