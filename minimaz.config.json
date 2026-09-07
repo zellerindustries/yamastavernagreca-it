@@ -17,7 +17,19 @@
       "<link rel=\"stylesheet\" href=\"styles/bootstrap-icons.css\" />": "",
       "<link rel=\"stylesheet\" href=\"../styles/bootstrap-icons.css\" />": "",
       "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff2": "/fonts/bootstrap-icons.woff2",
-      "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff"
+      "../node_modules/bootstrap-icons/font/fonts/bootstrap-icons.woff": "/fonts/bootstrap-icons.woff",
+      "__SITE_URL__": "https://yamastavernagreca.it",
+      "__SITE_NAME__": "YAMAS - Taverna Greca",
+      "__PHONE_DISPLAY__": "+39 081 344 50 57",
+      "__PHONE_DIGITS__": "390813445057",
+      "__ADDRESS_STREET__": "Via Nazionale delle Puglie 69",
+      "__MAPS_URL__": "https://maps.app.goo.gl/NL7sBq5uoaR92pyh7",
+      "__FACEBOOK_URL__": "https://www.facebook.com/yamastavernagreca",
+      "__INSTAGRAM_URL__": "https://www.instagram.com/yamastaverna_greca",
+      "__HOURS_OPEN__": "19:30",
+      "__HOURS_CLOSE__": "23:00",
+      "__GEO_LAT__": "40.9265",
+      "__GEO_LNG__": "14.4771"
     },
     "html": {
       "minify": true

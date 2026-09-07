@@ -7,6 +7,22 @@
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#253873" />
     <meta name="format-detection" content="telephone=no" />
+    <meta property="og:title" content="YAMAS - Taverna Greca | Biglietto da Visita Digitale" />
+    <meta
+      property="og:description"
+      content="Contatti rapidi, indicazioni e menù di YAMAS Taverna Greca a San Vitaliano."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="__SITE_URL__/assets/twitter-card.webp" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="__SITE_NAME__" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="YAMAS - Taverna Greca | Biglietto da Visita Digitale" />
+    <meta
+      name="twitter:description"
+      content="Contatti rapidi, indicazioni e menù di YAMAS Taverna Greca a San Vitaliano."
+    />
+    <meta name="twitter:image" content="__SITE_URL__/assets/twitter-card.webp" />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="card.css" />
   </head>
@@ -21,12 +37,14 @@
               src="/assets/logo_top.svg"
               id="logo-top"
               width="200"
+              height="30"
               alt="YAMAS Taverna Greca logo"
             />
             <img
               src="/assets/logo_bottom.svg"
               id="logo-bottom"
               width="200"
+              height="22"
               alt=""
               aria-hidden="true"
             />
@@ -38,13 +56,13 @@
           <address id="contact-info">
             <p id="contact-tel">
               <i class="icon telephone-fill" aria-hidden="true"></i>
-              <a id="link-tel" href="tel:+390813445057">+39 081 344 50 57</a>
+              <a id="link-tel" href="tel:+__PHONE_DIGITS__">__PHONE_DISPLAY__</a>
             </p>
             <p id="contact-whatsapp">
               <i class="icon whatsapp" aria-hidden="true"></i>
               <a
                 id="link-whatsapp"
-                href="https://wa.me/390813445057"
+                href="https://wa.me/__PHONE_DIGITS__"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Invia un messaggio</a
@@ -52,12 +70,8 @@
             </p>
             <p id="contact-address">
               <i class="icon geo-alt-fill" aria-hidden="true"></i>
-              <a
-                id="link-maps"
-                href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Via Nazionale delle Puglie 69, San Vitaliano (NA)</a
+              <a id="link-maps" href="__MAPS_URL__" target="_blank" rel="noopener noreferrer"
+                >__ADDRESS_STREET__, San Vitaliano (NA)</a
               >
             </p>
           </address>
@@ -73,7 +87,7 @@
               <li id="action-menu">
                 <a
                   id="link-menu"
-                  href="https://yamastavernagreca.it/menu/"
+                  href="__SITE_URL__/menu/"
                   target="_blank"
                   rel="noopener noreferrer"
                   ><i class="icon fork-knife" aria-hidden="true"></i>
@@ -91,12 +105,12 @@
         const vcard = [
           'BEGIN:VCARD',
           'VERSION:3.0',
-          'N:;YAMAS - Taverna Greca;;;',
-          'FN:YAMAS - Taverna Greca',
-          'ORG:YAMAS - Taverna Greca',
-          'TEL;TYPE=WORK,VOICE:+39 081 344 50 57',
-          'ADR;TYPE=WORK:;;Via Nazionale delle Puglie 69;San Vitaliano;NA;80030;Italia',
-          'URL:https://yamastavernagreca.it',
+          'N:;__SITE_NAME__;;;',
+          'FN:__SITE_NAME__',
+          'ORG:__SITE_NAME__',
+          'TEL;TYPE=WORK,VOICE:__PHONE_DISPLAY__',
+          'ADR;TYPE=WORK:;;__ADDRESS_STREET__;San Vitaliano;NA;80030;Italia',
+          'URL:__SITE_URL__',
           'END:VCARD',
         ].join('\r\n');
 

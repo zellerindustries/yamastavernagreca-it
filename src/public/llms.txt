@@ -1,0 +1,16 @@
+# YAMAS - Taverna Greca
+
+> Authentic Greek restaurant (taverna) in San Vitaliano (NA), Italy. Traditional dishes such as moussaka, souvlaki, and gyros, with vegetarian options.
+
+- Address: Via Nazionale delle Puglie 69, 80030 San Vitaliano (NA), Italy
+- Phone / WhatsApp: +39 081 344 50 57
+- Hours: Monday-Sunday, 19:30-23:00
+- Cuisine: Greek, vegetarian options available
+- Price range: €€
+
+## Pages
+
+- [Home](https://yamastavernagreca.it/): overview, menu highlights, gallery, reviews, contact
+- [Dove Siamo](https://yamastavernagreca.it/dove-siamo.html): location and map
+- [Menu](https://yamastavernagreca.it/menu/): full bilingual (Italian/English) menu with prices
+- [Link in Bio](https://yamastavernagreca.it/linkinbio.html): quick links for reservations, menu, and contact

@@ -8,43 +8,43 @@
     <!-- Description e SEO -->
     <meta
       name="description"
-      content="Scopri dove si trova YAMAS - Taverna Greca a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
+      content="Scopri dove si trova __SITE_NAME__ a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
     />
-    <link rel="canonical" href="https://yamastavernagreca.it/dove-siamo.html" />
+    <link rel="canonical" href="__SITE_URL__/dove-siamo.html" />
 
     <meta property="og:title" content="YAMAS - Dove Siamo | Taverna Greca a San Vitaliano" />
     <meta
       property="og:description"
-      content="Scopri dove si trova YAMAS - Taverna Greca a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
+      content="Scopri dove si trova __SITE_NAME__ a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://yamastavernagreca.it/dove-siamo.html" />
-    <meta property="og:image" content="https://yamastavernagreca.it/assets/twitter-card.webp" />
+    <meta property="og:url" content="__SITE_URL__/dove-siamo.html" />
+    <meta property="og:image" content="__SITE_URL__/assets/twitter-card.webp" />
     <meta property="og:locale" content="it_IT" />
-    <meta property="og:site_name" content="YAMAS - Taverna Greca" />
+    <meta property="og:site_name" content="__SITE_NAME__" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="YAMAS - Dove Siamo | Taverna Greca a San Vitaliano" />
     <meta
       name="twitter:description"
-      content="Scopri dove si trova YAMAS - Taverna Greca a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
+      content="Scopri dove si trova __SITE_NAME__ a San Vitaliano. Indirizzo, mappa interattiva e contatti rapidi per raggiungerci facilmente."
     />
-    <meta name="twitter:image" content="https://yamastavernagreca.it/assets/twitter-card.webp" />
+    <meta name="twitter:image" content="__SITE_URL__/assets/twitter-card.webp" />
 
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "@id": "https://yamastavernagreca.it/#restaurant",
-        "name": "YAMAS - Taverna Greca",
-        "url": "https://yamastavernagreca.it",
-        "image": "https://yamastavernagreca.it/assets/twitter-card.webp",
-        "telephone": "+39 081 344 50 57",
+        "@id": "__SITE_URL__/#restaurant",
+        "name": "__SITE_NAME__",
+        "url": "__SITE_URL__",
+        "image": "__SITE_URL__/assets/twitter-card.webp",
+        "telephone": "__PHONE_DISPLAY__",
         "servesCuisine": ["Greek", "Vegetarian"],
         "priceRange": "€€",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Via Nazionale delle Puglie 69",
+          "streetAddress": "__ADDRESS_STREET__",
           "addressLocality": "San Vitaliano",
           "postalCode": "80030",
           "addressRegion": "NA",
@@ -52,14 +52,13 @@
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 40.9265,
-          "longitude": 14.4771
+          "latitude": __GEO_LAT__,
+          "longitude": __GEO_LNG__
         },
-        "hasMap": "https://maps.app.goo.gl/NL7sBq5uoaR92pyh7",
-        "sameAs": [
-          "https://www.facebook.com/yamastavernagreca",
-          "https://www.instagram.com/yamastaverna_greca/"
-        ],
+        "hasMap": "__MAPS_URL__",
+        "sameAs": ["__FACEBOOK_URL__", "__INSTAGRAM_URL__"],
+        "acceptsReservations": true,
+        "paymentAccepted": ["Cash", "Credit Card"],
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -72,8 +71,8 @@
               "Saturday",
               "Sunday"
             ],
-            "opens": "19:30",
-            "closes": "23:00"
+            "opens": "__HOURS_OPEN__",
+            "closes": "__HOURS_CLOSE__"
           }
         ]
       }
@@ -101,26 +100,17 @@
       http-equiv="Content-Security-Policy"
       content="
     default-src 'self';
-    img-src 'self' data: https://fonts.gstatic.com https://www.google-analytics.com;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.iubenda.com;
+    img-src 'self' data: https://fonts.gstatic.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
     font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
     script-src 'self'
                https://cdn.jsdelivr.net
-               https://cdnjs.cloudflare.com
-               https://cdn.iubenda.com
-               https://www.googletagmanager.com
-               https://www.google-analytics.com;
+               https://cdnjs.cloudflare.com;
     frame-src https://www.google.com https://www.google.it https://www.google.com/maps/;
-    connect-src 'self'
-            https://www.google-analytics.com
-            https://region1.analytics.google.com
-            https://idb.iubenda.com
-            https://cpl.iubenda.com;
+    connect-src 'self';
   "
     />
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8RWESBSEPD"></script>
     <script src="../script.js" defer></script>
   </head>
 
@@ -133,6 +123,7 @@
               src="/assets/logo_top.svg"
               id="logo-top"
               width="200"
+              height="30"
               alt="YAMAS Taverna Greca logo"
             />
           </a>
@@ -153,7 +144,7 @@
           <li><a href="/#contact">Contatti</a></li>
           <li><a href="/dove-siamo.html" aria-current="page">Dove Siamo</a></li>
           <li>
-            <a href="https://wa.me/390813445057" class="cta" target="_blank" rel="noopener"
+            <a href="https://wa.me/__PHONE_DIGITS__" class="cta" target="_blank" rel="noopener"
               >Prenota</a
             >
           </li>
@@ -166,7 +157,7 @@
         <h1 id="location-heading">Dove Siamo</h1>
         <p>
           Ci trovi a San Vitaliano, in
-          <strong>Via Nazionale delle Puglie 69</strong>
+          <strong>__ADDRESS_STREET__</strong>
         </p>
       </section>
       <div class="map-container">
@@ -205,7 +196,7 @@
             <li>
               <i class="icon clock" aria-hidden="true"></i>
               <span class="sr-only">Orari:</span>
-              Lunedì - Domenica: <strong>19:30 - 23:00</strong>
+              Lunedì - Domenica: <strong>__HOURS_OPEN__ - __HOURS_CLOSE__</strong>
             </li>
           </ul>
         </section>
@@ -218,17 +209,17 @@
                 id="copy-address-btn"
                 class="btn"
                 aria-controls="copy-feedback"
-                aria-label="Copia l'indirizzo Via Nazionale delle Puglie 69 negli appunti"
+                aria-label="Copia l'indirizzo __ADDRESS_STREET__ negli appunti"
               >
                 <i class="icon copy" aria-hidden="true"></i>
-                <span id="restaurant-address">Via Nazionale delle Puglie 69 San Vitaliano NA</span>
+                <span id="restaurant-address">__ADDRESS_STREET__ San Vitaliano NA</span>
               </button>
               <a
-                href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7"
+                href="__MAPS_URL__"
                 class="btn"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Apri le indicazioni su Google Maps per Via Nazionale delle Puglie 69, San Vitaliano"
+                aria-label="Apri le indicazioni su Google Maps per __ADDRESS_STREET__, San Vitaliano"
               >
                 <i class="icon map" aria-hidden="true"></i>
                 <span>Indicazioni Google Maps</span>
@@ -239,16 +230,16 @@
           <div>
             <h3>Contattaci</h3>
             <span class="btn-wrapper vertical">
-              <a href="tel:+390813445057" class="btn">
+              <a href="tel:+__PHONE_DIGITS__" class="btn">
                 <i class="icon telephone-fill" aria-hidden="true"></i>
-                <span>+39 081 344 50 57</span>
+                <span>__PHONE_DISPLAY__</span>
               </a>
               <a
-                href="https://wa.me/390813445057"
+                href="https://wa.me/__PHONE_DIGITS__"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn"
-                aria-label="Scrivici su WhatsApp al numero +39 081 344 50 57"
+                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
               >
                 <i class="icon whatsapp" aria-hidden="true"></i>
                 <span>Scrivici su WhatsApp</span>
@@ -259,7 +250,7 @@
             <h3>Social</h3>
             <span class="btn-wrapper vertical">
               <a
-                href="https://www.instagram.com/yamastaverna_greca"
+                href="__INSTAGRAM_URL__"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn"
@@ -269,7 +260,7 @@
                 <span>yamastaverna_greca</span>
               </a>
               <a
-                href="https://www.facebook.com/yamastavernagreca"
+                href="__FACEBOOK_URL__"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="btn"
@@ -285,37 +276,97 @@
     </main>
 
     <footer role="contentinfo">
-      <nav id="footer-navigation">
+      <div class="footer-main">
+        <div class="footer-col footer-brand">
+          <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
+          <p>Cucina Greca Autentica a San Vitaliano</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contatti</h3>
+          <ul>
+            <li>
+              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+__PHONE_DIGITS__">
+                <i class="icon telephone-fill" aria-hidden="true"></i>
+                <span>__PHONE_DISPLAY__</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/__PHONE_DIGITS__"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+              >
+                <i class="icon whatsapp" aria-hidden="true"></i>
+                <span>WhatsApp</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Orari &amp; Social</h3>
+          <p>
+            <i class="icon clock" aria-hidden="true"></i>
+            <span class="sr-only">Orari:</span>
+            <span>Lunedì - Domenica: __HOURS_OPEN__ - __HOURS_CLOSE__</span>
+          </p>
+          <span class="footer-social">
+            <a
+              href="__FACEBOOK_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vai alla pagina Facebook di YAMAS Taverna Greca"
+            >
+              <i class="icon facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="__INSTAGRAM_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vai alla pagina Instagram di YAMAS Taverna Greca"
+            >
+              <i class="icon instagram" aria-hidden="true"></i>
+            </a>
+          </span>
+        </div>
+      </div>
+
+      <nav id="footer-navigation" aria-label="Link legali">
         <ul>
-          <li><a href="/policies.html"> Politiche </a></li>
+          <li><a href="/privacy.html"> Politica di Riservatezza </a></li>
+          <li><a href="/cookie.html"> Politica Cookie </a></li>
           <li>
             <a href="https://forms.gle/oGZeRWNjfDuFQAxq7"> Aiutaci a migliorare </a>
           </li>
         </ul>
       </nav>
-      <p>&copy; 2026 YAMAS - Taverna Greca. Tutti i diritti riservati.</p>
+      <p>&copy; <span id="copyright-year">2026</span> __SITE_NAME__. Tutti i diritti riservati.</p>
 
       <div id="bottom-navigation">
         <nav aria-label="Navigazione principale">
           <ul>
             <li>
-              <a
-                href="https://maps.app.goo.gl/NL7sBq5uoaR92pyh7"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
                 <i class="icon geo-alt-fill" aria-hidden="true"></i>
                 <span>Dove siamo</span>
               </a>
             </li>
             <li>
-              <a href="https://yamastavernagreca.it/menu/" target="_blank">
+              <a href="__SITE_URL__/menu/" target="_blank">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>
             </li>
             <li>
-              <a href="https://wa.me/390813445057" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/__PHONE_DIGITS__" target="_blank" rel="noopener noreferrer">
                 <i class="icon calendar-check-fill" aria-hidden="true"></i>
                 <span>Prenota</span>
               </a>

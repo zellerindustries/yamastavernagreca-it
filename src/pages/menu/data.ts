@@ -860,8 +860,8 @@ export const DEMO_RESTAURANT: Restaurant = {
     it: 'Ciao, sono Peppe! Dopo 25 anni di esperienza nel mio locale nel centro storico di Napoli, ho deciso di continuare la mia attività in questa zona vesuviana. Vi auguro una buona permanenza e buon appetito!',
     en: "Hi, I'm Peppe! After 25 years of experience running my own place in the historic center of Naples, I've decided to continue my journey here in the Vesuvius area. I wish you a wonderful stay and, of course, buon appetito!",
   },
-  address: 'Via Nazionale delle Puglie 69, San Vitaliano NA',
-  phone: '+39 081 344 50 57',
+  address: '__ADDRESS_STREET__, San Vitaliano NA',
+  phone: '__PHONE_DISPLAY__',
   navLinks: [
     { text: { it: 'Prenota', en: 'Book' }, href: '#prenota' },
     { text: { it: 'Scopri il Menu', en: 'See Menu' }, href: '#menu' },
@@ -869,8 +869,12 @@ export const DEMO_RESTAURANT: Restaurant = {
   ],
   footerLinks: [
     {
-      text: { it: 'Politiche', en: 'Policies' },
-      href: 'https://yamastavernagreca.it/policies.html',
+      text: { it: 'Politica di Riservatezza', en: 'Privacy Policy' },
+      href: '__SITE_URL__/privacy.html',
+    },
+    {
+      text: { it: 'Politica Cookie', en: 'Cookie Policy' },
+      href: '__SITE_URL__/cookie.html',
     },
     {
       text: { it: 'Aiutaci a Migliorare', en: 'Help us improve' },

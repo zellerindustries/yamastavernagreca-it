@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (copyBtn) copyBtn.addEventListener('click', copyAddress);
 
+  const copyrightYear = document.getElementById('copyright-year');
+  if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());
+
   /* --- Scroll handling --- */
   const onScroll = () => {
     const scrolled = window.scrollY > 50;

@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
     phone.textContent = DEMO_RESTAURANT.phone;
 
     document.getElementById('footer-copyright')!.textContent =
-      '© 2026 ' + DEMO_RESTAURANT.name[lang] + '. All rights reserved.';
+      '© ' + new Date().getFullYear() + ' ' + DEMO_RESTAURANT.name[lang] + '. All rights reserved.';
   }
 
   document.querySelectorAll<HTMLButtonElement>('.lang-btn').forEach((btn) => {

@@ -1,7 +1,7 @@
 {
   "name": "yamas-taverna-greca",
   "version": "0.0.3",
-  "description": "",
+  "description": "Static site for YAMAS - Taverna Greca, a Greek restaurant in San Vitaliano, Italy.",
   "main": "index.html",
   "scripts": {
     "build": "npx mz b",
@@ -14,10 +14,20 @@
     "type": "git",
     "url": "git+https://github.com/zeller-dev/yamas-taverna-greca.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "yamas",
+    "taverna-greca",
+    "restaurant",
+    "static-site",
+    "san-vitaliano"
+  ],
+  "author": "Hans Zeller",
+  "license": "MIT",
+  "private": true,
   "type": "commonjs",
+  "engines": {
+    "node": ">=24"
+  },
   "bugs": {
     "url": "https://github.com/zeller-dev/yamas-taverna-greca/issues"
   },

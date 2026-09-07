@@ -1,4 +1,0 @@
-User-agent: *
-Disallow:
-
-Sitemap: https://yamastavernagreca.it/sitemap.xml
