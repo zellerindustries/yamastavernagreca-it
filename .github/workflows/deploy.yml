@@ -43,6 +43,7 @@ jobs:
           name: dist
           path: dist/
           retention-days: 1
+          include-hidden-files: true
 
   deploy:
     name: Deploy
@@ -67,6 +68,6 @@ jobs:
         run: |
           set -euo pipefail
           rsync -az --delete \
-            -e "ssh -i ~/.ssh/id_ed25519 -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
+            -e "ssh -o IdentitiesOnly=yes -o StrictHostKeyChecking=yes" \
             dist/ \
             "${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }}:${{ secrets.SERVER_PATH }}"
