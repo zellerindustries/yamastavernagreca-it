@@ -95,7 +95,20 @@
 /* ==== BASE TYPOGRAPHY & LAYOUT ==== */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
   -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
 }
 
 body {
@@ -114,7 +127,7 @@ a {
   transition: color var(--transition-speed);
 }
 
-a:focus {
+a:focus-visible {
   color: var(--color-accent);
   outline: 3px solid var(--color-accent);
   outline-offset: 2px;
@@ -242,7 +255,7 @@ figcaption {
   letter-spacing: 2px;
 }
 
-.btn:focus {
+.btn:focus-visible {
   color: var(--color-secondary);
   outline: 2px solid var(--color-text-light);
   outline-offset: 3px;
@@ -254,6 +267,18 @@ figcaption {
   transition:
     background-color var(--transition-speed),
     color var(--transition-speed);
+}
+
+.btn.delivery {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+
+.btn.delivery img {
+  height: 1.5rem;
+  max-width: 9rem;
+  object-fit: contain;
 }
 
 .btn.cta:hover {
@@ -512,6 +537,50 @@ main h2 {
   color: var(--color-primary);
 }
 
+/* ==== GREEK KEY (MEANDER) MOTIF ====
+   Drawn as a mask so the colour comes from the tokens, not the SVG. */
+.hero::after,
+footer::before,
+main h2::after {
+  content: '';
+  display: block;
+  height: 0.75rem;
+  background-color: var(--color-accent);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M0 9H14M2 9V1H12V7H6V4H9'/%3E%3C/svg%3E")
+    repeat-x left center / 14px 10px;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M0 9H14M2 9V1H12V7H6V4H9'/%3E%3C/svg%3E")
+    repeat-x left center / 14px 10px;
+}
+
+main h2::after {
+  width: 7rem;
+  margin: var(--spacing-md) auto 0;
+  background-color: var(--color-primary);
+}
+
+.hero {
+  position: relative;
+}
+
+.hero::after,
+footer::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.hero::after {
+  bottom: 0;
+}
+
+footer {
+  position: relative;
+}
+
+footer::before {
+  top: 0;
+}
+
 /* ==== MENU ITEMS GRID ==== */
 #menu {
   color: var(--color-primary);
@@ -581,7 +650,7 @@ footer a {
 }
 
 .footer-col a:hover,
-.footer-col a:focus {
+.footer-col a:focus-visible {
   color: var(--color-accent);
   opacity: 1;
 }
@@ -604,6 +673,19 @@ footer a {
 
 .footer-social a {
   font-size: var(--font-size-lg);
+}
+
+/* Touch targets: at least 44px tall */
+.footer-col a,
+#footer-navigation a {
+  display: flex;
+  align-items: center;
+  min-height: 2.75rem;
+}
+
+.footer-social a {
+  justify-content: center;
+  min-width: 2.75rem;
 }
 
 @media (max-width: 768px) {
@@ -733,6 +815,67 @@ footer a {
   align-items: center;
   gap: var(--spacing-sm);
   color: var(--color-accent);
+}
+
+/* DELIVERY */
+#delivery {
+  color: var(--color-primary);
+  max-width: 800px;
+}
+
+#delivery > p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.delivery-list {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.delivery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  height: 100%;
+  padding: var(--spacing-lg);
+  background: #fff;
+  border-radius: var(--radius);
+  border-bottom: 4px solid var(--color-accent);
+  box-shadow: var(--shadow-light);
+  transition:
+    box-shadow var(--transition-speed),
+    transform var(--transition-speed);
+}
+
+.delivery-card img {
+  height: 2.5rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.delivery-cta {
+  font-size: var(--font-size-sm);
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.delivery-cta::after {
+  content: ' →';
+}
+
+.delivery-card:hover,
+.delivery-card:focus-visible {
+  box-shadow: var(--shadow-strong);
+  transform: translateY(-3px);
+}
+
+.delivery-card:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+  text-decoration: none;
 }
 
 /* CONTACT */

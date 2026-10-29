@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>__SITE_NAME__ | Cucina Greca Autentica a San Vitaliano</title>
     <meta
       http-equiv="Content-Security-Policy"
       content="
@@ -38,10 +39,6 @@
     <meta
       name="description"
       content="YAMAS, taverna greca a San Vitaliano. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente."
-    />
-    <meta
-      name="keywords"
-      content="taverna greca, ristorante greco, cucina greca San Vitaliano, moussaka, souvlaki, taverna YAMAS"
     />
     <meta name="author" content="__SITE_NAME__" />
 
@@ -115,49 +112,20 @@
               "reviewCount": "132"
             },
             "menu": "__SITE_URL__/menu/",
-            "hasMenu": {
-              "@type": "Menu",
-              "name": "Menu YAMAS",
-              "url": "__SITE_URL__/menu/",
-              "hasMenuSection": [
-                {
-                  "@type": "MenuSection",
-                  "name": "Piatti principali",
-                  "hasMenuItem": [
-                    {
-                      "@type": "MenuItem",
-                      "name": "Moussakà",
-                      "description": "Sformato di melanzane, patate, carne trita e besciamella",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "9"
-                      }
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Souvlaki",
-                      "description": "3 spiedini di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "11"
-                      }
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Gyros",
-                      "description": "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "11"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
+            "hasMenu": [
+              {
+                "@type": "Menu",
+                "@id": "__SITE_URL__/menu/#menu-it",
+                "url": "__SITE_URL__/menu/",
+                "inLanguage": "it"
+              },
+              {
+                "@type": "Menu",
+                "@id": "__SITE_URL__/menu/#menu-en",
+                "url": "__SITE_URL__/menu/",
+                "inLanguage": "en"
+              }
+            ]
           },
           {
             "@type": "FAQPage",
@@ -199,7 +167,7 @@
                 "name": "Offrite servizio da asporto?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp."
+                  "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp. Siamo presenti anche su Glovo, Just Eat e Alfonsino per la consegna a domicilio."
                 }
               }
             ]
@@ -209,8 +177,6 @@
     </script>
 
     <script src="script.js" defer></script>
-
-    <title>__SITE_NAME__ | Cucina Greca Autentica a San Vitaliano</title>
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
@@ -232,6 +198,7 @@
             id="logo-bottom"
             width="200"
             height="22"
+            alt=""
             aria-hidden="true"
           />
         </div>
@@ -599,6 +566,61 @@
               </blockquote>
               <cite>Gianluca M.</cite>
             </div>
+          </li>
+        </ul>
+      </section>
+
+      <section id="delivery" aria-labelledby="delivery-heading">
+        <h2 id="delivery-heading">Ordina a Domicilio</h2>
+        <p>Preferisci mangiare a casa? Trovi YAMAS anche sulle principali app di consegna.</p>
+        <ul class="delivery-list">
+          <li>
+            <a
+              href="__GLOVO_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Glovo"
+            >
+              <img src="/assets/delivery/glovo.svg" alt="" width="72" height="24" loading="lazy" />
+              <span class="delivery-cta">Ordina su Glovo</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="__JUSTEAT_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Just Eat"
+            >
+              <img
+                src="/assets/delivery/justeat.svg"
+                alt=""
+                width="98"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Just Eat</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="__ALFONSINO_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Alfonsino"
+            >
+              <img
+                src="/assets/delivery/alfonsino.svg"
+                alt=""
+                width="84"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Alfonsino</span>
+            </a>
           </li>
         </ul>
       </section>

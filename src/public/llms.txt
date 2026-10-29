@@ -7,6 +7,7 @@
 - Hours: Monday-Sunday, 19:30-23:00
 - Cuisine: Greek, vegetarian options available
 - Price range: €€
+- Delivery: available on Glovo, Just Eat and Alfonsino
 
 ## Pages
 

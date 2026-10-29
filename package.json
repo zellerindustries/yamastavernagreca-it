@@ -4,8 +4,8 @@
   "description": "Static site for YAMAS - Taverna Greca, a Greek restaurant in San Vitaliano, Italy.",
   "main": "index.html",
   "scripts": {
-    "build": "npx mz b",
-    "start": "npm run build && npx serve ./dist",
+    "build": "mz b",
+    "start": "npm run build && mz serve ./dist",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "prepare": "husky || true"
@@ -33,15 +33,11 @@
   },
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
   "dependencies": {
-    "bootstrap-icons": "^1.13.1",
-    "minimaz-cli": "^0.5.2"
+    "@minimaz/sitekit": "^0.1.2",
+    "bootstrap-icons": "^1.13.1"
   },
   "devDependencies": {
     "husky": "^9.1.7",
-    "prettier": "^3.9.5",
-    "serve": "^14.2.5"
-  },
-  "allowScripts": {
-    "esbuild@0.28.2": true
+    "prettier": "^3.9.5"
   }
 }

@@ -27,6 +27,2477 @@
       content="Scopri il menu completo di YAMAS Taverna Greca: piatti greci tradizionali, mezze, contorni, dolci e bevande, con descrizioni bilingue e prezzi aggiornati."
     />
     <meta name="twitter:image" content="https://yamastavernagreca.it/assets/twitter-card.webp" />
+    <!-- menu-schema:start -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Restaurant",
+            "@id": "__SITE_URL__/#restaurant",
+            "name": "__SITE_NAME__",
+            "url": "__SITE_URL__/",
+            "hasMenu": [
+              {
+                "@id": "__SITE_URL__/menu/#menu-it"
+              },
+              {
+                "@id": "__SITE_URL__/menu/#menu-en"
+              }
+            ]
+          },
+          {
+            "@type": "Menu",
+            "@id": "__SITE_URL__/menu/#menu-it",
+            "name": "YAMAS Taverna Greca Menu",
+            "url": "__SITE_URL__/menu/",
+            "inLanguage": "it",
+            "provider": {
+              "@id": "__SITE_URL__/#restaurant"
+            },
+            "hasMenuSection": [
+              {
+                "@type": "MenuSection",
+                "name": "Stuzzicheria",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Antipasto Misto x2",
+                    "description": "Tsatziki, 2 dolmades, feta, olive, 6 crocchette miste",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "10.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/antipasto.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tirokeftes",
+                    "description": "Crocchette di feta leggermente piccante",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tirokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte, glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kolokithokeftes",
+                    "description": "Crocchette di zucchine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kolokithokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Melitzanokeftes",
+                    "description": "Crocchette di melanzane",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/melitzanokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Keftes di Pollo o Manzo",
+                    "description": "Crocchette di carne",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/keftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Bourekaki",
+                    "description": "3 Involtini di formaggio Kasseri e bacon",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bourekaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte, glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Dolmades",
+                    "description": "Foglie di vite ripiene di riso",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/dolmades.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Feta",
+                    "description": "Formaggio greco fresco",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Feta al Cartoccio",
+                    "description": "Formaggio greco al cartoccio",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta-cartoccio.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Saganaki",
+                    "description": "Formaggio dolce impanato sulla piastra",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/saganaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Souvlaki",
+                    "description": "Uno spiedino di pollo o maiale o pollo-bacon",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/souvlaki-singolo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Dakos",
+                    "description": "Fresella con feta, pomodoro, olive e origano",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/dakos.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Eliès",
+                    "description": "Olive greche Kalamata",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/elies.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Patàtes Tiganitès",
+                    "description": "Patatine fritte",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/patates.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tiropitakia",
+                    "description": "Pasta sfoglia ripiena di feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tiropitakia.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte, glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Spanakopitakia",
+                    "description": "Pasta sfoglia ripiena di spinaci e feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/spanakopitakia.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte, glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Piperia",
+                    "description": "Peperone ripieno di feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/piperia.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Revithokeftes",
+                    "description": "Crocchette di ceci",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/revithokeftes.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Salse",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yogurt Greco",
+                    "description": "Yogurt greco naturale",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tsatziki",
+                    "description": "Yogurt greco aromatico con cetriolo e aglio",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tirokafteri",
+                    "description": "Yogurt greco, feta, peperoncino e lime",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      },
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Piccante",
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Insalate",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Horiatiki",
+                    "description": "Insalata greca con pomodori, cetriolo, peperoni, cipolle, feta e olive",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/horiatiki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Agurodomata",
+                    "description": "Insalata con pomodoro, cetriolo e olive greche",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/agurodomata.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Pite con Carne",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Yamas",
+                    "description": "Gyros (carne di maiale), tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-gyros.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Gyros",
+                    "description": "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-gyros.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Souvlaki",
+                    "description": "Spiedino di maiale fresco, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-souvlaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Pollo",
+                    "description": "Spiedino di pollo fresco, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-pollo.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Bifteki",
+                    "description": "Polpetta di vitello, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-bifteki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Loukaniko",
+                    "description": "Salsiccia greca, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-loukaniko.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Pite Vegetariane",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Bifteki Vegetariana",
+                    "description": "Polpetta di verdure, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-bifteki-veg.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Feta",
+                    "description": "Feta, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-feta.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine, latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Saganaki",
+                    "description": "Saganaki, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-saganaki.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine, latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Dolmades",
+                    "description": "Dolmades, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-dolmades.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Patatine",
+                    "description": "Tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-patatine.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Piatti con Carne e Vegetariani",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yamas",
+                    "description": "Gyros (carne di maiale) + 2 spiedini, tsatziki/tirokafteri/yogurt, cipolle, peperoni, pomodori, patatine, feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "13.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yamas.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Gyros",
+                    "description": "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/gyros.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Souvlaki",
+                    "description": "3 spiedini di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/souvlaki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kotopulo",
+                    "description": "2 spiedini di pollo, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kotopulo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pollo Bacon",
+                    "description": "2 spiedini pollo/bacon, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pollo-bacon.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Bifteki",
+                    "description": "2 polpette di vitello, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bifteki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Moussakà",
+                    "description": "Sformato di melanzane, patate, carne trita e besciamella",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "9.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/moussaka.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yamas Vegetariano",
+                    "description": "Dolmades, feta, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yamas-veg.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Bifteki Vegetariano",
+                    "description": "2 polpette di verdure, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "8.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bifteki-veg.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Loukaniko",
+                    "description": "2 salsicce greche, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/loukaniko.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Moussakà Vegetariana",
+                    "description": "Sformato di melanzane, patate, macinato vegano e besciamella vegana",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "9.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/moussaka-veg.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Prodotti da Aggiungere",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Feta (aggiunta)",
+                    "description": "Porzione extra di feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta-aggiunta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Saganaki (aggiunta)",
+                    "description": "Formaggio dolce sulla piastra",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/saganaki-aggiunta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita (aggiunta)",
+                    "description": "Pane greco",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "0.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Vini",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nemea - LAFKIOTI",
+                    "description": "Vino rosso in bottiglia 0,75 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nemea.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Retzina Malamatina",
+                    "description": "Vino bianco in bottiglia 0,50 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/retzina.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Sfuso Greco (0,5 L)",
+                    "description": "Rosso/Bianco 0,50 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sfuso-05.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Sfuso Greco (0,25 L)",
+                    "description": "Rosso/Bianco 0,25 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sfuso-025.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Queen of Hearts - NICO LAZARIDI",
+                    "description": "Vino bianco in bottiglia 0,75 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/queen.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kretikos - BOUTARI",
+                    "description": "Vino bianco in bottiglia 0,75 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kretikos.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Birre",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Mythos 0,50 L",
+                    "description": "Bottiglia 0,50 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/mythos-50.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Mythos 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/mythos-33.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Heineken 0,66 L",
+                    "description": "Bottiglia 0,66 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/heineken.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Heineken 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/heineken.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nastro Azzurro 0,66 L",
+                    "description": "Bottiglia 0,66 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nastro.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nastro Azzurro 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nastro.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Beck's 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/becks.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Ceres 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/ceres.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tennent's 0,33 L",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tennents.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Vergina Rossa",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/vergina.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Fix Hellas",
+                    "description": "Bottiglia 0,33 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/fix.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Bevande",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Coca Cola Zero 0,33 L",
+                    "description": "Bibita analcolica",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/coca-zero.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Coca Cola 0,33 L",
+                    "description": "Bibita analcolica",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/coca.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Fanta 0,33 L",
+                    "description": "Bibita analcolica",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/fanta.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Sprite 0,33 L",
+                    "description": "Bibita analcolica",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sprite.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Acqua 0,50 L",
+                    "description": "Acqua naturale",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/acqua.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Caffè",
+                    "description": "Espresso",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/caffe.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Dolci",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yogurt e Miele",
+                    "description": "Yogurt greco con miele, noci e nocciole",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yogurt-miele.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Torta Yamas",
+                    "description": "Yogurt cake vari gusti: miele, cioccolato, caramello, amarena",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/torta-yamas.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "latte, glutine"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Baklava",
+                    "description": "Pasta filo con sciroppo allo zucchero e noci",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/baklava.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine, frutta a guscio"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kataifi",
+                    "description": "Pasta filo con ripieno di frutta secca e sciroppo",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kataifi.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergeni",
+                        "value": "glutine, frutta a guscio"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Liquori",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Ouzo 12 Loukatos",
+                    "description": "Liquore greco",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/ouzo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Raki",
+                    "description": "Grappa",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/raki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Samos",
+                    "description": "Passito bianco naturalmente dolce",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/samos.webp"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "@type": "Menu",
+            "@id": "__SITE_URL__/menu/#menu-en",
+            "name": "YAMAS Greek Taverna Menu",
+            "url": "__SITE_URL__/menu/",
+            "inLanguage": "en",
+            "provider": {
+              "@id": "__SITE_URL__/#restaurant"
+            },
+            "hasMenuSection": [
+              {
+                "@type": "MenuSection",
+                "name": "Appetizers & Snacks",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Mixed Platter for 2",
+                    "description": "Tzatziki, 2 dolmades, feta, olives, 6 mixed croquettes",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "10.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/antipasto.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tirokeftes",
+                    "description": "Lightly spicy fried feta cheese balls",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tirokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk, gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kolokithokeftes",
+                    "description": "Traditional zucchini fritters",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kolokithokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Melitzanokeftes",
+                    "description": "Eggplant croquettes",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/melitzanokeftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Chicken or Beef Keftes",
+                    "description": "Traditional meat croquettes",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/keftes.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Bourekaki",
+                    "description": "3 Kasseri cheese and bacon rolls",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bourekaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk, gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Dolmades",
+                    "description": "Vine leaves stuffed with seasoned rice",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/dolmades.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Feta",
+                    "description": "Fresh Greek feta cheese",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Baked Feta",
+                    "description": "Greek cheese baked in foil",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta-cartoccio.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Saganaki",
+                    "description": "Pan-seared breaded Greek cheese",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/saganaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Souvlaki",
+                    "description": "A single skewer of chicken, pork, or chicken-bacon",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/souvlaki-singolo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Dakos",
+                    "description": "Barley rusk topped with feta, tomato, olives, and oregano",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/dakos.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Eliès",
+                    "description": "Greek Kalamata olives",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/elies.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Patàtes Tiganitès",
+                    "description": "French fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/patates.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tiropitakia",
+                    "description": "Small phyllo pastries stuffed with feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tiropitakia.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk, gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Spanakopitakia",
+                    "description": "Small phyllo pastries with spinach and feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/spanakopitakia.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk, gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Piperia",
+                    "description": "Pepper stuffed with feta cheese",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/piperia.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Revithokeftes",
+                    "description": "Chickpea fritters (Falafel style)",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/revithokeftes.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Dips & Sauces",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Greek Yogurt",
+                    "description": "Natural Greek yogurt",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tzatziki",
+                    "description": "Traditional yogurt dip with cucumber and garlic",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tirokafteri",
+                    "description": "Spicy cheese dip with Greek yogurt, feta, and chili",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/salsa.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      },
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Spicy",
+                        "value": true
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Salads",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Horiatiki (Greek Salad)",
+                    "description": "Traditional salad with tomatoes, cucumber, peppers, onions, feta, and olives",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/horiatiki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Agurodomata",
+                    "description": "Simple salad with tomato, cucumber, and Greek olives",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/agurodomata.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Meat Pitas",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Yamas",
+                    "description": "Pork gyros, choice of sauce, onions, peppers, tomatoes, fries, and feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-gyros.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Gyros",
+                    "description": "Pork gyros, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-gyros.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Souvlaki",
+                    "description": "Fresh pork skewer, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-souvlaki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Chicken",
+                    "description": "Fresh chicken skewer, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-pollo.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Bifteki",
+                    "description": "Veal patty, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-bifteki.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Pita Loukaniko",
+                    "description": "Greek sausage, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-loukaniko.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Vegetarian Pitas",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Veggie Bifteki Pita",
+                    "description": "Vegetable patty, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-bifteki-veg.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Feta Pita",
+                    "description": "Feta cheese, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-feta.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten, milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Saganaki Pita",
+                    "description": "Fried saganaki cheese, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-saganaki.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten, milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Dolmades Pita",
+                    "description": "Dolmades, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-dolmades.webp",
+                    "suitableForDiet": ["https://schema.org/VegetarianDiet"],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Chips Pita",
+                    "description": "Choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita-patatine.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ],
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Main Platters",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yamas Platter",
+                    "description": "Pork gyros + 2 skewers, choice of sauce, onions, peppers, tomatoes, fries, and feta",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "13.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yamas.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Gyros Platter",
+                    "description": "Pork gyros served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/gyros.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Souvlaki Platter",
+                    "description": "3 pork skewers served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/souvlaki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kotopulo Platter",
+                    "description": "2 chicken skewers served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kotopulo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Chicken & Bacon Platter",
+                    "description": "2 chicken-bacon skewers served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pollo-bacon.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Bifteki Platter",
+                    "description": "2 veal patties served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bifteki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Moussaka",
+                    "description": "Layered bake of eggplant, potatoes, minced meat, and béchamel",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "9.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/moussaka.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Vegetarian Yamas",
+                    "description": "Dolmades, feta, choice of sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "7.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yamas-veg.webp",
+                    "suitableForDiet": [
+                      "https://schema.org/VeganDiet",
+                      "https://schema.org/VegetarianDiet"
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Vegetarian Bifteki Platter",
+                    "description": "2 vegetable patties served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "8.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/bifteki-veg.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Loukaniko Platter",
+                    "description": "2 Greek sausages served with sauce, onions, tomatoes, and fries",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "11.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/loukaniko.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Vegetarian Moussaka",
+                    "description": "Layered eggplant and potato bake with vegan mince and vegan béchamel",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "9.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/moussaka-veg.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Extras & Sides",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Extra Feta",
+                    "description": "Extra portion of feta cheese",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/feta-aggiunta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Extra Saganaki",
+                    "description": "Extra grilled saganaki cheese",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/saganaki-aggiunta.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Extra Pita",
+                    "description": "Extra Greek pita bread",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "0.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/pita.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Wines",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nemea - LAFKIOTI",
+                    "description": "Red wine, 0.75 L bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nemea.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Retzina Malamatina",
+                    "description": "White wine, 0.50 L bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/retzina.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "House Greek Wine (0.5 L)",
+                    "description": "Red/White, 0.50 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sfuso-05.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "House Greek Wine (0.25 L)",
+                    "description": "Red/White, 0.25 L",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sfuso-025.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Queen of Hearts - NICO LAZARIDI",
+                    "description": "White wine, 0.75 L bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/queen.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kretikos - BOUTARI",
+                    "description": "White wine, 0.75 L bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "12.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kretikos.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Beers",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Mythos 0.50 L",
+                    "description": "0.50 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/mythos-50.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Mythos 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/mythos-33.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Heineken 0.66 L",
+                    "description": "0.66 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/heineken.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Heineken 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/heineken.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nastro Azzurro 0.66 L",
+                    "description": "0.66 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nastro.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Nastro Azzurro 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/nastro.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Beck's 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/becks.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Ceres 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/ceres.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Tennent's 0.33 L",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/tennents.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Vergina Red",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/vergina.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Fix Hellas",
+                    "description": "0.33 L Bottle",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "3.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/fix.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Soft Drinks",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Coke Zero 0.33 L",
+                    "description": "Soft drink",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/coca-zero.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Coca Cola 0.33 L",
+                    "description": "Soft drink",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/coca.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Fanta 0.33 L",
+                    "description": "Soft drink",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/fanta.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Sprite 0.33 L",
+                    "description": "Soft drink",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "2.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/sprite.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Water 0.50 L",
+                    "description": "Still water",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/acqua.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Coffee",
+                    "description": "Espresso",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "1.50",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/caffe.webp"
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Desserts",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yogurt & Honey",
+                    "description": "Greek yogurt with honey, walnuts, and hazelnuts",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/yogurt-miele.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Yamas Cake",
+                    "description": "Yogurt cake available in: honey, chocolate, caramel, or black cherry",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "5.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/torta-yamas.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "milk, gluten"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Baklava",
+                    "description": "Phyllo pastry with sugar syrup and walnuts",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/baklava.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten, tree nuts"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Kataifi",
+                    "description": "Shredded phyllo pastry with nut filling and syrup",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "6.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/kataifi.webp",
+                    "additionalProperty": [
+                      {
+                        "@type": "PropertyValue",
+                        "name": "Allergens",
+                        "value": "gluten, tree nuts"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "@type": "MenuSection",
+                "name": "Liquors",
+                "hasMenuItem": [
+                  {
+                    "@type": "MenuItem",
+                    "name": "Ouzo 12 Loukatos",
+                    "description": "Traditional Greek anise liquor",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/ouzo.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Raki",
+                    "description": "Grape pomace brandy",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/raki.webp"
+                  },
+                  {
+                    "@type": "MenuItem",
+                    "name": "Samos",
+                    "description": "Naturally sweet white dessert wine",
+                    "offers": {
+                      "@type": "Offer",
+                      "price": "4.00",
+                      "priceCurrency": "EUR"
+                    },
+                    "image": "https://restaurant-menu-pics.s3.eu-south-1.amazonaws.com/samos.webp"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+    <!-- menu-schema:end -->
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -64,6 +2535,6 @@
       <p id="footer-copyright"></p>
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
   </body>
 </html>

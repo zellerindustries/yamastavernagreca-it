@@ -26,6 +26,9 @@
       "__MAPS_URL__": "https://maps.app.goo.gl/NL7sBq5uoaR92pyh7",
       "__FACEBOOK_URL__": "https://www.facebook.com/yamastavernagreca",
       "__INSTAGRAM_URL__": "https://www.instagram.com/yamastaverna_greca",
+      "__GLOVO_URL__": "https://glovoapp.com/it/it/",
+      "__JUSTEAT_URL__": "https://www.justeat.it/",
+      "__ALFONSINO_URL__": "https://alfonsino.delivery/",
       "__HOURS_OPEN__": "19:30",
       "__HOURS_CLOSE__": "23:00",
       "__GEO_LAT__": "40.9265",
@@ -35,7 +38,6 @@
       "minify": true
     },
     "css": {
-      "outFile": "style.css",
       "minify": true,
       "bundling": true
     },

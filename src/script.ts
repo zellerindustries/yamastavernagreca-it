@@ -72,10 +72,11 @@ document.addEventListener('DOMContentLoaded', () => {
     navMenu.classList.toggle('active', shouldOpen);
     menuToggle.classList.toggle('open', shouldOpen);
 
-    document[shouldOpen ? 'addEventListener' : 'removeEventListener'](
-      'click',
-      outsideClickListener,
-    );
+    if (shouldOpen) {
+      document.addEventListener('click', outsideClickListener);
+    } else {
+      document.removeEventListener('click', outsideClickListener);
+    }
   };
 
   menuToggle?.addEventListener('click', () => toggleMenu());
