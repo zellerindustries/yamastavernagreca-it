@@ -271,7 +271,7 @@ section[aria-labelledby='menu-heading'] article .item-price {
 section[aria-labelledby='menu-heading'] article p[aria-label] {
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: var(--space-1);
   width: fit-content;
   margin-top: var(--space-1);
   padding: 2px 6px;

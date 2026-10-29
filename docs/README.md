@@ -3,6 +3,7 @@
 Static site for the restaurant, built with `minimaz-cli`. `src/` is authored, `dist/` is generated output (never edit it by hand).
 
 - [Editing content](editing-content.md) — change menu, hours, phone, links
+- [Brand & restyle scope](brand.md) — concept, palette, motif, what is in/out of scope
 - [Design](design.md) — colours, type, spacing, components, accessibility rules
 - [Build & deploy](build-and-deploy.md) — run locally, ship to production
 
