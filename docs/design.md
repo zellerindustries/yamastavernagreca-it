@@ -13,8 +13,9 @@ Greek taverna: deep blue, warm gold accent, warm off-white background, serif hea
 | `--color-primary`      | `#253873` | Headings, buttons, header (scrolled), footer  |
 | `--color-primary-dark` | `#09324a` | Hover on scrollbar, captions, card borders    |
 | `--color-secondary`    | `#fffff5` | Page background, text on primary              |
+| `--color-tint`         | `#eaeef8` | Alternate section background (sea mist)       |
 | `--color-accent`       | `#f0a500` | CTAs, hover, focus ring, stars, footer titles |
-| `--color-accent-dark`  | `#c78f00` | Darker accent state                           |
+| `--color-accent-dark`  | `#8a5f00` | Gold for text on light surfaces (5.6:1)       |
 | `--color-text-light`   | `#555`    | Secondary text                                |
 
 Body text is `#222`. Check contrast against the actual background in use. Accent gold on the off-white page is for decoration and large text only, not small body text.
@@ -27,8 +28,8 @@ Body text is `#222`. Check contrast against the actual background in use. Accent
 
 ## Spacing, shape, motion
 
-- Spacing: `--spacing-sm` 0.3rem · `--spacing-md` 0.6rem · `--spacing-lg` 1.2rem
-- Radius: `--radius` 0.5rem
+- Spacing: `--spacing-sm` 0.3rem · `--spacing-md` 0.6rem · `--spacing-lg` 1.2rem · `--spacing-xl` 2.4rem (section padding)
+- Radius: `--radius` 0.25rem (crisp, matches the logo's angles)
 - Shadows: `--shadow-light` (cards at rest), `--shadow-strong` (header, hover)
 - Transition: `--transition-speed` 0.35s. All motion is disabled under `prefers-reduced-motion`.
 
@@ -52,7 +53,7 @@ Body text is `#222`. Check contrast against the actual background in use. Accent
 
 ## Accessibility rules
 
-- Keep `:focus-visible` styles. Never `outline: none` without an equivalent visible replacement.
+- One global `:focus-visible` ring (3px blue; gold on dark surfaces: footer, scrolled header, hero). Never `outline: none` without an equivalent visible replacement.
 - Interactive elements are at least 44px tall on touch.
 - Hide content from sighted users only with `.sr-only`, not `display: none`.
 - Decorative images use `alt=""`. Icons are `aria-hidden="true"` with a text or `aria-label` alternative.
@@ -61,3 +62,7 @@ Body text is `#222`. Check contrast against the actual background in use. Accent
 ## Sub-pages
 
 `menu/` and `business-card/` are self-contained. The menu has its own `style.css` whose tokens copy the brand values from `base.css` (see the comment at its top). The business card loads `base.css` first and reuses its variables. If you change a brand token, update the menu's copy too.
+
+## Other tokens
+
+Also defined in `:root`: `--tap-target`, `--content-width`, `--container-width`, `--header-height`, `--border-width` / `--border-width-thick`, `--ring-width`, `--tracking-sm` / `--tracking` / `--tracking-wide`, `--weight-medium` / `--weight-bold` / `--weight-black`, `--opacity-muted` / `--opacity-subtle`, `--shadow-hover`, and the `--z-*` layers (bottom nav, header, nav menu, lightbox). Use them instead of literals.

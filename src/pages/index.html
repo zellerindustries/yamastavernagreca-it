@@ -8,10 +8,10 @@
       http-equiv="Content-Security-Policy"
       content="
   default-src 'self';
-  img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+  img-src 'self' data:;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
+  script-src 'self' 'unsafe-inline';
   frame-src 'self' https://www.youtube-nocookie.com;
   connect-src 'self';
   object-src 'none';
@@ -401,7 +401,7 @@
           </article>
         </div>
         <section>
-          <a href="__SITE_URL__/menu/" class="btn" target="_blank" rel="noopener noreferrer">
+          <a href="/menu/" class="btn" target="_blank" rel="noopener noreferrer">
             <i class="icon external-link"></i>
             <span> Vedi il menu completo </span>
           </a>
@@ -482,15 +482,22 @@
       <section class="video-section max-width" aria-labelledby="video-heading">
         <h2 id="video-heading">Guarda il nostro video</h2>
         <div class="video-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0"
-            loading="lazy"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            title="Video Yamas"
+          <button
+            type="button"
+            class="video-facade"
+            data-video-src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0&autoplay=1"
+            data-video-title="Video Yamas"
           >
-          </iframe>
+            <svg class="video-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span class="sr-only">Riproduci il video di Yamas</span>
+          </button>
         </div>
+        <p class="video-note">
+          Il video viene caricato da YouTube (Google) solo dopo il tuo clic. Per i dettagli vedi la
+          <a href="/privacy.html">Politica di Riservatezza</a>.
+        </p>
       </section>
 
       <section id="reviews" aria-labelledby="reviews-heading">
@@ -797,7 +804,7 @@
               </a>
             </li>
             <li>
-              <a href="__SITE_URL__/menu/" target="_blank" rel="noopener noreferrer">
+              <a href="/menu/" target="_blank" rel="noopener noreferrer">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>

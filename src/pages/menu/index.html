@@ -2498,32 +2498,43 @@
       }
     </script>
     <!-- menu-schema:end -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="menu.css" />
   </head>
   <body>
+    <a class="skip-link" href="#menu-list">Vai al menu</a>
     <header role="banner">
       <div aria-label="Restaurant Logo">
         <img id="logo-img" alt="" />
       </div>
 
+      <div class="lang-picker">
+        <label for="lang-select" class="sr-only">Lingua / Language</label>
+        <select id="lang-select"></select>
+      </div>
       <div class="info-wrapper">
         <h1 id="restaurant-name"></h1>
-        <p id="restaurant-description"></p>
-
-        <div class="lang-switcher-group">
-          <button type="button" class="lang-btn" data-lang="it">Italiano</button>
-          <button type="button" class="lang-btn" data-lang="en">Inglese</button>
-        </div>
       </div>
     </header>
 
+    <nav id="category-nav" aria-label="Categorie">
+      <ul id="category-links"></ul>
+    </nav>
+
     <h2 id="menu-heading" class="sr-only">Menu</h2>
-    <section aria-labelledby="menu-heading" id="menu-list">
-      <!-- category groups injected here -->
-    </section>
+    <main>
+      <p id="allergen-note" class="allergen-note"></p>
+      <section aria-labelledby="menu-heading" id="menu-list">
+        <!-- category groups injected here -->
+      </section>
+      <section class="welcome" aria-labelledby="welcome-title">
+        <h2 id="welcome-title"></h2>
+        <p id="restaurant-description"></p>
+      </section>
+    </main>
 
     <footer role="contentinfo">
-      <nav aria-label="Footer Navigation">
+      <nav id="footer-navigation" aria-label="Footer Navigation">
         <ul id="footer-links"></ul>
       </nav>
 

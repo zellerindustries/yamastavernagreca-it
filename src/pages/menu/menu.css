@@ -1,0 +1,351 @@
+/* Menu-only rules. Tokens, typography, section headings, footer and focus styles
+   come from the site's global stylesheet (src/styles/base.css). */
+
+/* ==== HEADER ==== */
+header[role='banner'] {
+  position: relative;
+  box-shadow: var(--shadow-strong);
+}
+
+div[aria-label='Restaurant Logo'] {
+  position: relative;
+  width: 100%;
+  height: clamp(7rem, 20vw, 12rem);
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+div[aria-label='Restaurant Logo'] img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.info-wrapper {
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-xl);
+  text-align: center;
+}
+
+header[role='banner'] h1 {
+  font-family: var(--font-secondary);
+  font-size: clamp(1.75rem, 7vw, var(--font-size-xxl));
+  font-weight: var(--weight-black);
+  line-height: 1.1;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  color: var(--color-primary);
+}
+
+header[role='banner'] h1::after {
+  content: '';
+  display: block;
+  width: 7rem;
+  height: 0.75rem;
+  margin: var(--spacing-md) auto 0;
+  background-color: var(--color-primary);
+  -webkit-mask: var(--meander) repeat-x left center / 14px 10px;
+  mask: var(--meander) repeat-x left center / 14px 10px;
+}
+
+/* Language picker: compact native select in the banner corner (label is screen-reader only) */
+.lang-picker {
+  position: absolute;
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  z-index: 1;
+}
+
+.lang-picker select {
+  min-width: 9.5rem;
+  min-height: var(--tap-target);
+  padding: var(--spacing-sm) calc(var(--spacing-lg) * 2) var(--spacing-sm) var(--spacing-lg);
+  font-family: var(--font-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-bold);
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-light);
+  cursor: pointer;
+  appearance: none;
+  /* chevron drawn from two tokenised gradients */
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--color-primary) 50%),
+    linear-gradient(135deg, var(--color-primary) 50%, transparent 50%);
+  background-position:
+    calc(100% - 1.5rem) 50%,
+    calc(100% - 1.1rem) 50%;
+  background-size: 0.4rem 0.4rem;
+  background-repeat: no-repeat;
+  transition: background-color var(--transition-speed);
+}
+
+.lang-picker select:hover {
+  background-color: var(--color-tint);
+}
+
+/* ==== SKIP LINK ==== */
+.skip-link {
+  position: absolute;
+  top: calc(var(--tap-target) * -2);
+  left: var(--spacing-md);
+  z-index: var(--z-lightbox);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: var(--radius);
+}
+
+.skip-link:focus {
+  top: var(--spacing-md);
+}
+
+/* ==== CATEGORY QUICK-JUMP ==== */
+#category-nav {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background: var(--color-secondary);
+  box-shadow: var(--shadow-light);
+}
+
+#category-nav ul {
+  display: flex;
+  gap: var(--spacing-md);
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-lg);
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  /* fade the edges so it is clear the bar scrolls */
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 1rem,
+    #000 calc(100% - 1rem),
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    #000 1rem,
+    #000 calc(100% - 1rem),
+    transparent
+  );
+}
+
+/* Pill buttons: outlined at rest, gold on hover, solid blue for the section being read */
+#category-nav a {
+  display: flex;
+  align-items: center;
+  min-height: var(--tap-target);
+  padding: 0 var(--spacing-lg);
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-bold);
+  white-space: nowrap;
+  color: var(--color-primary);
+  background: var(--color-surface);
+  border: var(--border-width) solid var(--color-primary);
+  border-radius: var(--radius-pill);
+  scroll-snap-align: center;
+  transition:
+    background-color var(--transition-speed),
+    border-color var(--transition-speed),
+    color var(--transition-speed);
+}
+
+@media (min-width: 1024px) {
+  #category-nav ul {
+    gap: var(--spacing-sm);
+  }
+
+  #category-nav a {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+#category-nav a:hover {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+#category-nav a:active {
+  transform: translateY(1px);
+}
+
+#category-nav a[aria-current='true'] {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
+
+/* ==== MENU LAYOUT ==== */
+.allergen-note {
+  width: calc(100% - 2 * var(--spacing-lg));
+  max-width: var(--container-width);
+  margin: var(--spacing-lg) auto 0;
+  padding: var(--spacing-md) var(--spacing-lg);
+  font-size: var(--font-size-xs);
+  text-align: center;
+  color: var(--color-primary);
+  background: var(--color-tint);
+  border-radius: var(--radius);
+}
+
+#menu-list {
+  padding: 0;
+  text-align: start;
+}
+
+.menu-group {
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+/* Alternate whitewash / sea-mist bands, like the site's sections */
+.menu-group:nth-child(even) {
+  background-color: var(--color-tint);
+}
+
+.menu-group > ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--spacing-md);
+  max-width: var(--container-width);
+  margin: 0 auto;
+}
+
+/* ==== MENU CARD ==== */
+.menu-group li {
+  display: flex;
+}
+
+.menu-group article {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow: hidden;
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  text-align: start;
+  border-bottom: var(--border-width-thick) solid var(--color-accent);
+  box-shadow: var(--shadow-light);
+  transition: box-shadow var(--transition-speed);
+}
+
+.menu-group article:hover {
+  box-shadow: var(--shadow-strong);
+}
+
+.menu-group article img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  background: var(--color-tint);
+}
+
+.menu-group article > div {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+}
+
+.menu-group article h3 {
+  font-size: var(--font-size-sm);
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  color: var(--color-primary);
+}
+
+.menu-group .item-desc {
+  font-size: var(--font-size-xs);
+  line-height: 1.4;
+  color: var(--color-text-light);
+}
+
+.menu-group .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.menu-group .tags li {
+  display: block;
+  padding: 2px var(--spacing-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-primary);
+  background: var(--color-tint);
+  border-radius: var(--radius);
+}
+
+.menu-group .item-price {
+  margin-top: auto;
+  padding-top: var(--spacing-sm);
+  font-size: var(--font-size-base);
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  color: var(--color-accent-dark);
+}
+
+/* Greeting from the owner, kept below the menu so the food comes first */
+.welcome {
+  max-width: 65ch;
+  margin: 0 auto;
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+.welcome p {
+  line-height: 1.6;
+  color: var(--color-text-light);
+}
+
+/* ==== FOOTER ==== */
+footer[role='contentinfo'] {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+  padding-inline: var(--spacing-lg);
+}
+
+footer address {
+  font-style: normal;
+}
+
+footer #footer-navigation ul {
+  margin-bottom: 0;
+}
+
+footer #footer-phone {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+}
+
+footer #footer-copyright {
+  font-size: var(--font-size-sm);
+  opacity: var(--opacity-subtle);
+}
+
+/* ==== RESPONSIVE ==== */
+@media (min-width: 640px) {
+  .menu-group > ul {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+/* The menu has no bottom navigation, so drop the clearance the global footer reserves */
+@media (max-width: 768px) {
+  footer[role='contentinfo'] {
+    padding-bottom: var(--spacing-lg);
+  }
+}
