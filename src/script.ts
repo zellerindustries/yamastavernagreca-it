@@ -88,6 +88,21 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   /* =================================================
+     VIDEO FACADE (load the YouTube iframe only on click)
+     ================================================= */
+  for (const facade of document.querySelectorAll<HTMLButtonElement>('.video-facade')) {
+    facade.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.src = facade.dataset.videoSrc ?? '';
+      frame.title = facade.dataset.videoTitle ?? '';
+      frame.allow = 'autoplay; fullscreen';
+      frame.allowFullscreen = true;
+      facade.replaceWith(frame);
+      frame.focus();
+    });
+  }
+
+  /* =================================================
      IMAGE LIGHTBOX
      ================================================= */
   const images = document.querySelectorAll<HTMLImageElement>('img.lightbox');

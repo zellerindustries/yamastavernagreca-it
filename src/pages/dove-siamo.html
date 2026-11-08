@@ -83,12 +83,6 @@
     <meta name="robots" content="index, follow" />
 
     <!-- Fonts e icone -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="../style.css" />
     <link rel="stylesheet" href="../styles/bootstrap-icons.css" />
 
@@ -100,12 +94,10 @@
       http-equiv="Content-Security-Policy"
       content="
     default-src 'self';
-    img-src 'self' data: https://fonts.gstatic.com;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-    script-src 'self'
-               https://cdn.jsdelivr.net
-               https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
+    script-src 'self';
     frame-src https://www.google.com https://www.google.it https://www.google.com/maps/;
     connect-src 'self';
   "
@@ -188,6 +180,61 @@
           </li>
         </ul>
       </section>
+      <section id="delivery" aria-labelledby="delivery-heading">
+        <h2 id="delivery-heading">Ordina a Domicilio</h2>
+        <p>Preferisci mangiare a casa? Trovi YAMAS anche sulle principali app di consegna.</p>
+        <ul class="delivery-list">
+          <li>
+            <a
+              href="__GLOVO_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Glovo"
+            >
+              <img src="/assets/delivery/glovo.svg" alt="" width="72" height="24" loading="lazy" />
+              <span class="delivery-cta">Ordina su Glovo</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="__JUSTEAT_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Just Eat"
+            >
+              <img
+                src="/assets/delivery/justeat.svg"
+                alt=""
+                width="98"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Just Eat</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="__ALFONSINO_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="delivery-card"
+              aria-label="Ordina su Alfonsino"
+            >
+              <img
+                src="/assets/delivery/alfonsino.svg"
+                alt=""
+                width="84"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Alfonsino</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
       <section id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contatti</h2>
         <section>
@@ -243,56 +290,6 @@
               >
                 <i class="icon whatsapp" aria-hidden="true"></i>
                 <span>Scrivici su WhatsApp</span>
-              </a>
-            </span>
-          </div>
-          <div>
-            <h3>Ordina a Domicilio</h3>
-            <span class="btn-wrapper vertical">
-              <a
-                href="__GLOVO_URL__"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn delivery"
-                aria-label="Ordina su Glovo"
-              >
-                <img
-                  src="/assets/delivery/glovo.svg"
-                  alt=""
-                  width="72"
-                  height="24"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="__JUSTEAT_URL__"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn delivery"
-                aria-label="Ordina su Just Eat"
-              >
-                <img
-                  src="/assets/delivery/justeat.svg"
-                  alt=""
-                  width="98"
-                  height="24"
-                  loading="lazy"
-                />
-              </a>
-              <a
-                href="__ALFONSINO_URL__"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="btn delivery"
-                aria-label="Ordina su Alfonsino"
-              >
-                <img
-                  src="/assets/delivery/alfonsino.svg"
-                  alt=""
-                  width="84"
-                  height="24"
-                  loading="lazy"
-                />
               </a>
             </span>
           </div>
@@ -410,7 +407,7 @@
               </a>
             </li>
             <li>
-              <a href="__SITE_URL__/menu/" target="_blank">
+              <a href="/menu/" target="_blank">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>

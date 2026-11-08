@@ -33,7 +33,7 @@
   },
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
   "dependencies": {
-    "@minimaz/sitekit": "^0.1.2",
+    "@minimaz/sitekit": "^0.2.0",
     "bootstrap-icons": "^1.13.1"
   },
   "devDependencies": {

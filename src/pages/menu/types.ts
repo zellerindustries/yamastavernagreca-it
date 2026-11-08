@@ -1,7 +1,6 @@
-export interface Translatable {
-  it: string;
-  en: string;
-}
+import type { Lang } from './languages';
+
+export type Translatable = Record<Lang, string>;
 
 export interface MenuItem {
   id: number;
@@ -53,5 +52,3 @@ export interface Restaurant {
   footerLinks: FooterLink[];
   rapidActions: RapidAction[];
 }
-
-export type Lang = 'it' | 'en';

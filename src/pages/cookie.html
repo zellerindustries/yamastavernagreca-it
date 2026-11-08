@@ -6,12 +6,6 @@
     <meta name="description" content="Informativa sui cookie di YAMAS Taverna Greca" />
     <meta name="robots" content="noindex, nofollow" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Roboto&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
@@ -19,9 +13,9 @@
       http-equiv="Content-Security-Policy"
       content="
     default-src 'self';
-    img-src 'self' data: https://fonts.gstatic.com;
-    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
     script-src 'self';
     connect-src 'self';
   "
@@ -73,7 +67,7 @@
     <main>
       <section class="max-width legal-document">
         <h1>Politica Cookie</h1>
-        <p>Ultimo aggiornamento: <time datetime="2026-09-07">7 Settembre 2026</time></p>
+        <p>Ultimo aggiornamento: <time datetime="2026-10-30">30 Ottobre 2026</time></p>
 
         <h2>Politica sull'uso dei Cookie</h2>
         <p>
@@ -103,13 +97,15 @@
 
         <h2>Contenuti di terze parti</h2>
         <p>
-          La homepage incorpora un video di YouTube tramite il dominio
+          La homepage permette di guardare un video di YouTube, caricato solo dopo il tuo clic su
+          "Riproduci", tramite il dominio
           <code>youtube-nocookie.com</code>, che secondo la documentazione ufficiale di Google non
           installa cookie sul dispositivo dell'utente. La pagina "Dove Siamo" incorpora una mappa
           tramite la Google Maps Embed API, che secondo la stessa documentazione non installa
-          cookie. Entrambi i servizi comportano comunque una connessione diretta ai server di Google
-          al caricamento della pagina. Per maggiori dettagli, vedi la
-          <a href="/privacy.html">Politica di Riservatezza</a>.
+          cookie. La mappa comporta una connessione diretta ai server di Google al caricamento della
+          pagina "Dove Siamo"; il video, solo dopo il tuo clic. Dopo il clic, YouTube potrebbe
+          archiviare o leggere informazioni sul tuo dispositivo secondo la propria informativa. Per
+          maggiori dettagli, vedi la <a href="/privacy.html">Politica di Riservatezza</a>.
         </p>
 
         <h2>Come controllare i cookie tramite il browser</h2>
@@ -243,7 +239,7 @@
               </a>
             </li>
             <li>
-              <a href="__SITE_URL__/menu/" target="_blank" rel="noopener noreferrer">
+              <a href="/menu/" target="_blank" rel="noopener noreferrer">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>
