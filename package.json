@@ -39,5 +39,8 @@
   "devDependencies": {
     "husky": "^9.1.7",
     "prettier": "^3.9.5"
+  },
+  "allowScripts": {
+    "@minimaz/sitekit@0.2.0": true
   }
 }

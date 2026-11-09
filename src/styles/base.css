@@ -799,9 +799,12 @@ footer a {
   opacity: var(--opacity-link);
 }
 
-.footer-col a i,
-.footer-col p i {
+.footer-col i {
   flex-shrink: 0;
+}
+
+/* Align the icon with the first line of wrapping text (line-height 1.4 vs icon 1) */
+.footer-col p i {
   margin-top: 0.2em;
 }
 
@@ -1325,7 +1328,6 @@ body.no-scroll {
     align-items: center;
   }
 
-  .footer-col a i,
   .footer-col p i {
     margin-top: 0;
   }
