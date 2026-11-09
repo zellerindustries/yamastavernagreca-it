@@ -49,8 +49,8 @@ header[role='banner'] h1::after {
   height: 0.75rem;
   margin: var(--spacing-md) auto 0;
   background-color: var(--color-primary);
-  -webkit-mask: var(--meander) repeat-x left center / 14px 10px;
-  mask: var(--meander) repeat-x left center / 14px 10px;
+  -webkit-mask: var(--meander) repeat-x left center / var(--meander-size);
+  mask: var(--meander) repeat-x left center / var(--meander-size);
 }
 
 /* Language picker: compact native select in the banner corner (label is screen-reader only) */

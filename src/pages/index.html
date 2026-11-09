@@ -247,10 +247,22 @@
         <div class="max-width">
           <h1>Benvenuti da YAMAS</h1>
           <p>Autentica cucina greca nel cuore di San Vitaliano NA</p>
+          <p
+            class="open-status"
+            data-open="__HOURS_OPEN__"
+            data-close="__HOURS_CLOSE__"
+            role="status"
+          >
+            Aperto tutti i giorni __HOURS_OPEN__ - __HOURS_CLOSE__
+          </p>
           <div class="btn-wrapper">
             <a href="https://wa.me/__PHONE_DIGITS__" class="btn cta">
               <i class="icon calendar-event" aria-hidden="true"></i>
-              <b>Prenota</b>
+              <b>Prenota su WhatsApp</b>
+            </a>
+            <a href="tel:+__PHONE_DIGITS__" class="btn">
+              <i class="icon telephone-fill" aria-hidden="true"></i>
+              <span>Chiama</span>
             </a>
             <a href="#menu" class="btn">
               <i class="icon fork-knife"></i>
@@ -421,7 +433,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Locale in pieno stile greco</figcaption>
+              <figcaption class="content">La sala con i tavoli blu</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -434,7 +446,9 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Interno accogliente con decorazioni greche</figcaption>
+              <figcaption class="content">
+                L'angolo con la barca a vela e l'insegna YAMAS
+              </figcaption>
             </figure>
           </li>
           <li class="card">
@@ -447,7 +461,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Atmosfera calda e familiare</figcaption>
+              <figcaption class="content">La sala vista dall'altro lato</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -460,7 +474,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Decorazioni attente al dettaglio</figcaption>
+              <figcaption class="content">L'insegna Mythos e le foto del mare</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -473,7 +487,9 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Dettagli delle decorazioni tipiche greche</figcaption>
+              <figcaption class="content">
+                Tavolo apparecchiato con tovaglie a motivo greco
+              </figcaption>
             </figure>
           </li>
         </ul>
@@ -804,7 +820,7 @@
               </a>
             </li>
             <li>
-              <a href="/menu/" target="_blank" rel="noopener noreferrer">
+              <a href="/menu/">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>
@@ -813,6 +829,12 @@
               <a href="https://wa.me/__PHONE_DIGITS__" target="_blank" rel="noopener noreferrer">
                 <i class="icon calendar-check-fill" aria-hidden="true"></i>
                 <span>Prenota</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+__PHONE_DIGITS__">
+                <i class="icon telephone-fill" aria-hidden="true"></i>
+                <span>Chiama</span>
               </a>
             </li>
           </ul>

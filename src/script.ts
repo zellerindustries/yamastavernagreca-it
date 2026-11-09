@@ -12,6 +12,30 @@ document.addEventListener('DOMContentLoaded', () => {
   const copyrightYear = document.getElementById('copyright-year');
   if (copyrightYear) copyrightYear.textContent = String(new Date().getFullYear());
 
+  /* --- Open-now status (restaurant time, whatever the visitor's timezone) --- */
+  const status = document.querySelector<HTMLElement>('.open-status');
+  if (status?.dataset.open && status.dataset.close) {
+    const { open, close } = status.dataset;
+    const toMinutes = (hhmm: string) => {
+      const [h, m] = hhmm.split(':').map(Number);
+      return h * 60 + m;
+    };
+    const parts = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Rome',
+      hour: 'numeric',
+      minute: 'numeric',
+      hourCycle: 'h23',
+    }).formatToParts(new Date());
+    const part = (type: string) => Number(parts.find((p) => p.type === type)?.value);
+    const now = part('hour') * 60 + part('minute');
+
+    const isOpen = now >= toMinutes(open) && now < toMinutes(close);
+    status.classList.toggle('is-open', isOpen);
+    status.textContent = isOpen
+      ? `Aperto ora · fino alle ${close}`
+      : `Chiuso ora · apre alle ${open}`;
+  }
+
   /* --- Scroll handling --- */
   const onScroll = () => {
     const scrolled = window.scrollY > 50;
