@@ -1,0 +1,8 @@
+/* ==== MENU ITEMS GRID ==== */
+#menu {
+  color: var(--color-primary);
+}
+
+#menu p {
+  text-align: start;
+}

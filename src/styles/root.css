@@ -1,0 +1,105 @@
+:root {
+  color-scheme: light;
+
+  /* Colors */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f5f5f5;
+  --color-surface: #fff;
+  --color-text: #222;
+  --color-text-muted: #555;
+  --color-text-inverse: #ffffff;
+  --color-primary: #253873;
+  --color-primary-hover: #0044aa;
+  --color-accent: #f0a500;
+  --color-accent-hover: #aa4400;
+  --color-border: #dddddd;
+  --color-overlay: rgba(0, 0, 0, 0.5);
+  --color-success: #2e7d32;
+  --color-error: #c62828;
+  --color-focus: #0055cc;
+
+  /* Fonts */
+  --font-primary: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+  --font-size-xs: max(0.9375rem, calc(var(--font-size-base) * 0.8));
+  --font-size-sm: calc(var(--font-size-base) * 0.875); /* 14-17.5px */
+  --font-size-base: clamp(1rem, calc(2vw + 0.5rem), 1.25rem); /* 16-20px */
+  --font-size-lg: calc(var(--font-size-base) * 1.25); /* 20-25px */
+  --font-size-xl: calc(var(--font-size-base) * 1.5); /* 24-30px */
+  --font-size-xxl: calc(var(--font-size-base) * 2); /* 32-40px */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --line-height-base: 1.6;
+  --line-height-heading: 1.2;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.3rem;
+  --spacing-md: 0.6rem;
+  --spacing-lg: 1.2rem;
+  --spacing-xl: 2.4rem;
+  --spacing-xxl: 4rem;
+  --spacing-section: 5rem;
+
+  /* Shape and effects */
+  --radius-sm: 0.25rem;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 4px 10px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --transition-fast: 0.15s;
+  --transition-base: 0.35s;
+
+  /* Layout */
+  --max-width: 1100px;
+  --header-height: 73px;
+
+  /* SITE-SPECIFIC TOKENS */
+  --color-primary-dark: #09324a;
+  --color-secondary: #fffff5;
+  --color-tint: #eaeef8;
+  --color-accent-dark: #8a5f00; /* gold for text on light surfaces, ~5.6:1 on whitewash */
+  --color-border-on-dark: rgba(255, 255, 255, 0.15);
+  --color-scrim: rgba(0, 0, 0, 0.9);
+  --color-scrim-soft: rgba(0, 0, 0, 0.6);
+  --color-scrim-strong: rgba(0, 0, 0, 0.85);
+  --color-primary-veil: rgba(37, 56, 115, 0.45); /* --color-primary over photos */
+  --color-on-scrim: #fff;
+
+  --spacing-hero: clamp(3rem, 12vw, 7rem);
+  --tap-target: 2.75rem;
+  --control-height: 3.5rem;
+  --content-width: 800px;
+
+  --border-width: 2px;
+  --border-width-thick: 4px;
+  --ring-width: 3px;
+  --ring-offset: 3px;
+
+  --tracking-sm: 1.5px;
+  --tracking: 2px;
+  --tracking-wide: 3px;
+  --weight-black: 900;
+  --opacity-muted: 0.8;
+  --opacity-subtle: 0.75;
+  --opacity-link: 0.85;
+
+  --z-bottom-nav: 100;
+  --z-header: 110;
+  --z-nav-menu: 120;
+  --z-lightbox: 3000;
+  --z-lightbox-close: 3001;
+  --bottom-nav-clearance: 8rem;
+
+  --shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --shadow-glow: 0 0 20px rgba(0, 0, 0, 0.2);
+
+  /* Greek key motif; used as a mask so its colour comes from the tokens */
+  --meander-size: 14px 10px;
+  --meander: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='10' viewBox='0 0 14 10' fill='none' stroke='%23000' stroke-width='1.5'%3E%3Cpath d='M0 9H14M2 9V1H12V7H6V4H9'/%3E%3C/svg%3E");
+
+  /* BREAKPOINTS: 480 / 768 / 1024 (reference only) */
+}

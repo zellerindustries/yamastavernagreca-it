@@ -1,0 +1,61 @@
+/* ==== HERO ==== */
+.hero {
+  background: url('/assets/banner.webp') center/cover no-repeat;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.hero > div {
+  display: inline-block;
+  max-width: 100%;
+  padding: var(--spacing-lg);
+  background-color: var(--color-primary);
+  border-radius: var(--radius-sm);
+}
+
+.hero h1 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-md);
+  letter-spacing: var(--tracking);
+}
+
+.hero p {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  margin: 0 auto var(--spacing-xl);
+  opacity: var(--opacity-muted);
+}
+
+.hero p:has(+ .open-status) {
+  margin-bottom: var(--spacing-sm);
+}
+
+.open-status {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.open-status::before {
+  content: '';
+  display: inline-block;
+  width: 0.6em;
+  height: 0.6em;
+  margin-inline-end: var(--spacing-sm);
+  border-radius: 50%;
+  background: currentcolor;
+  opacity: var(--opacity-muted);
+}
+
+.open-status.is-open::before {
+  background: var(--color-accent);
+  opacity: 1;
+}
+
+.hero .btn:not(.cta) {
+  border: var(--border-width) solid var(--color-accent);
+}
+
+.hero {
+  position: relative;
+  padding-block: var(--spacing-hero);
+}

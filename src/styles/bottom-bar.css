@@ -1,0 +1,41 @@
+#bottom-navigation {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  box-shadow: var(--shadow-lg);
+  z-index: var(--z-bottom-nav);
+  width: 100%;
+}
+
+#bottom-navigation nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0;
+  padding: var(--spacing-sm);
+  width: 100%;
+}
+
+#bottom-navigation nav ul li a {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-base);
+  transition: color var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-sm);
+  gap: var(--spacing-sm);
+}
+
+/* Press feedback on touch: the bottom nav and cards have no hover there */
+#bottom-navigation nav ul li a:active {
+  color: var(--color-accent-dark);
+}
+
+#bottom-navigation i {
+  font-size: var(--font-size-xxl);
+}

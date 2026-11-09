@@ -1,0 +1,114 @@
+#site-header nav ul li a[aria-current='page']::after {
+  width: 100%;
+}
+
+/* ==== HEADER ==== */
+#site-header {
+  box-shadow: var(--shadow-lg);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--color-secondary);
+  transition: background-color var(--transition-base) ease;
+}
+
+#site-header.scrolled {
+  background-color: var(--color-primary);
+}
+
+#site-header.scrolled .logo-wrapper #logo-bottom {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  transition:
+    opacity var(--transition-base) ease,
+    visibility var(--transition-base) ease;
+}
+
+#site-header.scrolled .logo-wrapper #logo-top {
+  filter: brightness(0) invert(1);
+  transition: filter var(--transition-base) ease;
+}
+
+#site-header.scrolled nav ul li a {
+  color: var(--color-secondary);
+  transition: color var(--transition-base);
+}
+
+#site-header .logo-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-lg);
+}
+
+/* ==== NAVIGATION ==== */
+#site-header nav {
+  margin: 0 var(--spacing-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#site-header nav ul {
+  display: flex;
+  gap: var(--spacing-sm);
+  transition:
+    opacity var(--transition-base) ease,
+    transform var(--transition-base) ease;
+}
+
+#site-header nav ul li a {
+  font-weight: var(--font-weight-medium);
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  position: relative;
+  transition: color var(--transition-base);
+  padding: var(--spacing-lg);
+}
+
+#site-header nav ul li a.cta {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-bold);
+  letter-spacing: var(--tracking-wide);
+}
+
+#site-header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: calc(var(--spacing-sm) * -1);
+  left: 0;
+  height: 3px;
+  width: 0;
+  background: var(--color-accent);
+  transition: width var(--transition-base) ease;
+}
+
+#site-header nav ul li a:hover::after,
+#site-header nav ul li a:focus::after {
+  width: 100%;
+}
+
+/* ==== MENU TOGGLE BUTTON ==== */
+.menu-toggle {
+  display: none;
+  background: none;
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-base);
+  padding: var(--spacing-lg);
+}
+
+.menu-toggle:focus {
+  outline: var(--ring-width) solid var(--color-accent);
+  outline-offset: var(--ring-offset);
+  color: var(--color-accent);
+}
+
+#site-header.scrolled .menu-toggle {
+  color: var(--color-secondary);
+}

@@ -1,0 +1,92 @@
+.btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.btn-wrapper.vertical {
+  flex-direction: column;
+}
+
+.btn-wrapper,
+.btn-wrapper .btn {
+  width: 100%;
+}
+
+.btn-wrapper .btn {
+  min-height: var(--control-height);
+}
+
+.btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: max-content;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+  margin: auto;
+  transition:
+    background-color var(--transition-base),
+    color var(--transition-base),
+    border-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.btn span {
+  text-align: center;
+}
+
+.btn i {
+  text-align: left;
+}
+
+.btn.cta {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+  border: var(--border-width) solid var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking);
+}
+
+.btn:focus-visible,
+.btn:active {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.btn.cta:active {
+  background-color: var(--color-primary);
+  color: var(--color-accent);
+  border-color: var(--color-primary);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Hover only where a pointer exists, so touch screens don't keep a stuck hover state */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn.cta:hover {
+    background-color: var(--color-primary);
+    color: var(--color-accent);
+    border-color: var(--color-primary);
+  }
+}
+
+.btn * {
+  flex-grow: 1;
+}

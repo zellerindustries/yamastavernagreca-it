@@ -1,0 +1,49 @@
+/* ==== LEGAL DOCUMENTS (Privacy/Cookie) ==== */
+.legal-document {
+  text-align: left;
+  padding: var(--spacing-lg) var(--spacing-md);
+}
+
+.legal-document h1 {
+  font-family: var(--font-secondary);
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-md);
+}
+
+.legal-document h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-lg);
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+}
+
+.legal-document p,
+.legal-document li {
+  line-height: 1.6;
+  margin-bottom: var(--spacing-sm);
+}
+
+.legal-document ul {
+  list-style: disc;
+  padding-left: var(--spacing-lg);
+}
+
+.legal-document ul ul {
+  margin-top: var(--spacing-sm);
+}
+
+.legal-document a {
+  text-decoration: underline;
+}
+
+.legal-document mark {
+  background-color: var(--color-accent);
+  color: var(--color-primary-dark);
+  padding: 0 var(--spacing-sm);
+  border-radius: 0.2em;
+}
+
+.legal-document .btn {
+  margin: var(--spacing-lg) auto 0;
+}

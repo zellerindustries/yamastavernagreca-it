@@ -1,0 +1,59 @@
+/* ==== REVIEW ==== */
+#reviews blockquote {
+  flex: 1;
+  position: relative;
+  text-align: start;
+  /* room above and below for the quote marks so long text never runs under them */
+  padding: var(--spacing-xl) var(--spacing-lg);
+}
+
+#reviews blockquote::before,
+#reviews blockquote::after {
+  position: absolute;
+  font-size: var(--font-size-xxl);
+  color: var(--color-primary);
+  line-height: 1;
+  font-weight: var(--font-weight-bold);
+}
+
+#reviews blockquote::before {
+  content: '“';
+  top: 0;
+  left: 0;
+}
+
+#reviews blockquote::after {
+  content: '”';
+  bottom: 0;
+  right: 0;
+}
+
+#reviews cite {
+  color: var(--color-primary);
+  text-align: right;
+  font-weight: bolder;
+}
+
+/* Same width per column; each card is as tall as its own text, so short reviews leave no dead space */
+#reviews > ul {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  align-items: start;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+#reviews .card .content {
+  flex: 1;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-md);
+  font-size: var(--font-size-xs);
+}
+
+/* REVIEW HEADER */
+#reviews .star-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--color-accent);
+}

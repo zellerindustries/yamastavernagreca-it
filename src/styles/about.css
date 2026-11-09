@@ -1,0 +1,22 @@
+/* ==== ABOUT & VALUES ==== */
+#about article p {
+  max-width: 720px;
+  text-align: start;
+  margin: auto auto var(--spacing-lg);
+  line-height: 1.6;
+}
+
+#values {
+  margin-top: var(--spacing-xl);
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+#values li {
+  padding-top: var(--spacing-lg);
+}
+
+#values i.icon {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}

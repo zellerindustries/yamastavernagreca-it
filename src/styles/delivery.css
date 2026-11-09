@@ -1,0 +1,68 @@
+/* DELIVERY */
+#delivery {
+  color: var(--color-primary);
+}
+
+#delivery > p {
+  margin-bottom: var(--spacing-lg);
+}
+
+.delivery-list {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  width: 100%;
+}
+
+.delivery-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  height: 100%;
+  padding: var(--spacing-lg);
+  background: var(--color-surface);
+  border-radius: var(--radius-sm);
+  border-bottom: var(--border-width-thick) solid var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  transition:
+    box-shadow var(--transition-base),
+    transform var(--transition-base);
+}
+
+/* One fixed box for every logo, so none looks smaller than the others */
+.delivery-card img {
+  width: 9rem;
+  height: 2.5rem;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.delivery-cta {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+}
+
+.delivery-cta::after {
+  content: ' →';
+}
+
+.delivery-card:focus-visible {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.delivery-card:active {
+  transform: translateY(1px);
+}
+
+@media (hover: hover) {
+  .delivery-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+  }
+}

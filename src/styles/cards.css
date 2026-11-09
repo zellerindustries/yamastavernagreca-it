@@ -1,0 +1,45 @@
+.card {
+  background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  transition: box-shadow var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: var(--border-width-thick) solid var(--color-primary-dark);
+}
+
+.card .content {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+}
+
+.card:focus-within {
+  box-shadow: var(--shadow-hover);
+  outline: none;
+}
+
+/* Gallery photos zoom slightly; the card clips the overflow */
+.card img.lightbox {
+  transition: transform var(--transition-base);
+}
+
+@media (hover: hover) {
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+  }
+
+  .card:hover img.lightbox {
+    transform: scale(1.04);
+  }
+}
