@@ -1,5 +1,7 @@
 /* ==== HERO ==== */
 .hero {
+  position: relative;
+  padding-block: var(--spacing-hero);
   background: url('/assets/banner.webp') center/cover no-repeat;
   background-color: var(--color-primary);
   color: var(--color-secondary);
@@ -53,9 +55,4 @@
 
 .hero .btn:not(.cta) {
   border: var(--border-width) solid var(--color-accent);
-}
-
-.hero {
-  position: relative;
-  padding-block: var(--spacing-hero);
 }

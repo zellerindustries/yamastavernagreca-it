@@ -119,6 +119,8 @@ footer a {
 
 .footer-social a {
   font-size: var(--font-size-lg);
+  justify-content: center;
+  min-width: var(--tap-target);
 }
 
 /* Touch targets: at least 44px tall */
@@ -127,9 +129,4 @@ footer a {
   display: flex;
   align-items: center;
   min-height: var(--tap-target);
-}
-
-.footer-social a {
-  justify-content: center;
-  min-width: var(--tap-target);
 }

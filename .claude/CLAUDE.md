@@ -1,13 +1,9 @@
-# CLAUDE.md
+# YAMAS Taverna Greca
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-## Repository structure
-
-This repo is a single static site for the YAMAS Taverna Greca restaurant, built with `minimaz-cli`. `src/` is authored, `dist/` is the build output (generated — don't hand-edit).
+Single static restaurant site built with `@minimaz/sitekit`. `src/` is authored, `dist/` is generated — don't hand-edit it.
 
 ```bash
-npm run build         # npx mz b — runs minimaz-cli, src/ -> dist/
+npm run build         # mz b --overwrite, src/ -> dist/
 npm start              # build, then `mz serve ./dist` (port 4173, set in minimaz.config.json)
 node scripts/generate-menu-schema.mjs [--check]   # regenerate/verify the /menu/ JSON-LD block from data.ts
 npm run format         # Prettier --write across the repo
@@ -16,7 +12,7 @@ npm run format:check   # Prettier --check; also runs as the Husky pre-commit hoo
 
 Requires Node >=24 (`engines`, `.nvmrc`). The `mz` binary comes from the `@minimaz/sitekit` dependency (`package.json` has no `minimaz-cli`, despite the README). Longer how-tos live in `docs/` (`build-and-deploy.md`, `editing-content.md`, `brand.md`, `design.md`, `legal-checklist.md`).
 
-There's no test suite and no linter configured — verify changes by building and checking the rendered output (`npm start` + a browser). Formatting is enforced by Prettier (`.prettierrc.json`) via a Husky pre-commit hook (`.husky/pre-commit`), not by a linter.
+No test suite. `npm run lint` runs htmlhint, stylelint and cspell (plus `lint:a11y` / `lint:links`, which build first); the Husky pre-commit hook runs `format:check` and the three lints. Config is shared with `zellerindustries-com`; add dish names and terms to `cspell.json` `words` rather than editing copy. Still verify visually with `npm start` + a browser.
 
 ## Build (`minimaz.config.json`)
 
