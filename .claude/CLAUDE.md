@@ -10,7 +10,7 @@ npm run format         # Prettier --write across the repo
 npm run format:check   # Prettier --check; also runs as the Husky pre-commit hook
 ```
 
-Requires Node >=24 (`engines`, `.nvmrc`). The `mz` binary comes from the `@minimaz/sitekit` dependency (`package.json` has no `minimaz-cli`, despite the README). Longer how-tos live in `docs/` (`build-and-deploy.md`, `editing-content.md`, `brand.md`, `design.md`, `legal-checklist.md`).
+Requires Node >=26 (`engines`, `.nvmrc`). The `mz` binary comes from the `@minimaz/sitekit` dependency (`package.json` has no `minimaz-cli`, despite the README). Longer how-tos live in `docs/` (`build-and-deploy.md`, `editing-content.md`, `brand.md`, `design.md`, `legal-checklist.md`).
 
 No test suite. `npm run lint` runs htmlhint, stylelint and cspell (plus `lint:a11y` / `lint:links`, which build first); the Husky pre-commit hook runs `format:check` and the three lints. Config is shared with `zellerindustries-com`; add dish names and terms to `cspell.json` `words` rather than editing copy. Still verify visually with `npm start` + a browser.
 
