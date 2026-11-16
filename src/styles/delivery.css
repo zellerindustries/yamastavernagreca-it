@@ -1,9 +1,9 @@
 /* DELIVERY */
-#delivery {
+.section-delivery {
   color: var(--color-primary);
 }
 
-#delivery > p {
+.section-delivery > p {
   margin-bottom: var(--spacing-lg);
 }
 
@@ -42,7 +42,6 @@
 }
 
 .delivery-cta {
-  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
   color: var(--color-primary);
 }

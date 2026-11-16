@@ -4,6 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>YAMAS - Digital Business Card</title>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  img-src 'self' data:;
+  style-src 'self';
+  font-src 'self';
+  script-src 'self';
+  connect-src 'self';
+  base-uri 'self';
+  form-action 'none';
+  object-src 'none';
+"
+    />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="theme-color" content="#253873" />
     <meta name="format-detection" content="telephone=no" />
@@ -27,14 +41,15 @@
     <link rel="stylesheet" href="card.css" />
   </head>
   <body>
-    <div id="business-card">
+    <div class="business-card" id="business-card">
       <h1 class="sr-only">Biglietto da visita digitale — YAMAS Taverna Greca</h1>
-      <div id="card-body">
+      <div class="card-body" id="card-body">
         <!-- Lato Sinistro: Brand -->
-        <header id="card-header">
+        <header class="card-header" id="card-header">
           <div class="logo-wrapper">
             <img
               src="/assets/logo_top.svg"
+              class="logo-top"
               id="logo-top"
               width="200"
               height="30"
@@ -42,6 +57,7 @@
             />
             <img
               src="/assets/logo_bottom.svg"
+              class="logo-bottom"
               id="logo-bottom"
               width="200"
               height="22"
@@ -52,8 +68,8 @@
         </header>
 
         <!-- Centro: Informazioni & Interazioni digitali -->
-        <main id="card-main">
-          <address id="contact-info">
+        <main class="card-main" id="card-main">
+          <address class="contact-info" id="contact-info">
             <p id="contact-tel">
               <i class="icon telephone-fill" aria-hidden="true"></i>
               <a id="link-tel" href="tel:+__PHONE_DIGITS__">__PHONE_DISPLAY__</a>
@@ -77,15 +93,16 @@
           </address>
 
           <nav id="actions-navigation" aria-label="Azioni rapide">
-            <ul id="actions-list">
+            <ul class="actions-list" id="actions-list">
               <li id="action-save">
-                <button id="link-download-vcf" type="button">
+                <button class="link-download-vcf" id="link-download-vcf" type="button">
                   <i class="icon person-vcard-fill" aria-hidden="true"></i>
                   <span>Aggiungi ai contatti</span>
                 </button>
               </li>
               <li id="action-menu">
                 <a
+                  class="link-menu"
                   id="link-menu"
                   href="__SITE_URL__/menu/"
                   target="_blank"
@@ -100,30 +117,6 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById('link-download-vcf').addEventListener('click', () => {
-        const vcard = [
-          'BEGIN:VCARD',
-          'VERSION:3.0',
-          'N:;__SITE_NAME__;;;',
-          'FN:__SITE_NAME__',
-          'ORG:__SITE_NAME__',
-          'TEL;TYPE=WORK,VOICE:__PHONE_DISPLAY__',
-          'ADR;TYPE=WORK:;;__ADDRESS_STREET__;San Vitaliano;NA;80030;Italia',
-          'URL:__SITE_URL__',
-          'END:VCARD',
-        ].join('\r\n');
-
-        const blob = new Blob([vcard], { type: 'text/vcard' });
-        const url = URL.createObjectURL(blob);
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'YAMAS-Taverna-Greca.vcf';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-        URL.revokeObjectURL(url);
-      });
-    </script>
+    <script src="card.js" defer></script>
   </body>
 </html>

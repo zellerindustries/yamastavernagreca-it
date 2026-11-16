@@ -58,7 +58,7 @@
   background: var(--color-scrim-soft);
   color: var(--color-on-scrim);
 
-  font-size: 2rem;
+  font-size: var(--font-size-xxl);
   line-height: 1;
 
   cursor: pointer;

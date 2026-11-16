@@ -25,19 +25,27 @@
   </head>
 
   <body>
-    <header id="site-header">
+    <header class="site-header" id="site-header">
       <nav aria-label="Navigazione principale">
-        <div class="logo-wrapper">
-          <a href="/">
-            <img
-              src="/assets/logo_top.svg"
-              id="logo-top"
-              width="200"
-              height="30"
-              alt="YAMAS Taverna Greca logo"
-            />
-          </a>
-        </div>
+        <a class="logo-wrapper" href="/" aria-label="YAMAS Taverna Greca, home">
+          <img
+            src="/assets/logo_top.svg"
+            class="logo-top"
+            id="logo-top"
+            width="200"
+            height="30"
+            alt="YAMAS Taverna Greca logo"
+          />
+          <img
+            src="/assets/logo_bottom.svg"
+            class="logo-bottom"
+            id="logo-bottom"
+            width="200"
+            height="22"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
         <button
           id="menu-toggle"
           class="menu-toggle"
@@ -50,11 +58,16 @@
         </button>
         <ul id="primary-menu" class="menu" hidden>
           <li><a href="/">Home</a></li>
-          <li><a href="/#menu">Menù</a></li>
-          <li><a href="/#contact">Contatti</a></li>
+          <li><a href="/menu/">Menù</a></li>
+          <li><a href="/ordina/">Ordina</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
           <li><a href="/dove-siamo.html">Dove Siamo</a></li>
           <li>
-            <a href="https://wa.me/__PHONE_DIGITS__" class="cta" target="_blank" rel="noopener"
+            <a
+              href="https://wa.me/__PHONE_DIGITS__"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
               >Prenota</a
             >
           </li>
@@ -137,7 +150,7 @@
             <a
               href="https://support.google.com/youtube/answer/171780"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
               >youtube-nocookie.com</a
             >): non installa cookie, ma comporta comunque una connessione ai server di Google
             (Alphabet Inc.) che riceve l'indirizzo IP dell'utente.
@@ -150,7 +163,7 @@
         </ul>
         <p>
           Per questi servizi si rimanda all'informativa privacy di Google, disponibile su
-          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener"
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer"
             >policies.google.com/privacy</a
           >.
         </p>
@@ -158,11 +171,10 @@
         <h2>Destinatari dei Dati e Trasferimenti Extra UE</h2>
         <p>
           I dati possono essere trattati dal fornitore di hosting del Sito (per i log di sistema),
-          da Amazon Web Services (che ospita le immagini del menu digitale), Google (video YouTube e
-          mappa Google Maps) e, se scegli di contattarci via WhatsApp, da WhatsApp (gruppo Meta). I
-          dati non sono diffusi né venduti. Amazon, Google e Meta possono trattare i dati anche in
-          paesi extra UE, in particolare negli Stati Uniti, sulla base del Data Privacy Framework
-          UE-USA o di altre garanzie previste dagli artt. 44 e seguenti del GDPR.
+          da Google (video YouTube e mappa Google Maps) e, se scegli di contattarci via WhatsApp, da
+          WhatsApp (gruppo Meta). I dati non sono diffusi né venduti. Google e Meta possono trattare
+          i dati anche in paesi extra UE, in particolare negli Stati Uniti, sulla base del Data
+          Privacy Framework UE-USA o di altre garanzie previste dagli artt. 44 e seguenti del GDPR.
         </p>
         <h2>Conferimento dei Dati e Decisioni Automatizzate</h2>
         <p>
@@ -192,7 +204,7 @@
         </p>
         <p>
           Hai inoltre il diritto di proporre reclamo al
-          <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener"
+          <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer"
             >Garante per la Protezione dei Dati Personali</a
           >.
         </p>
@@ -210,39 +222,6 @@
         <div class="footer-col footer-brand">
           <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
           <p>Cucina Greca Autentica a San Vitaliano</p>
-        </div>
-
-        <div class="footer-col">
-          <h3>Contatti</h3>
-          <ul>
-            <li>
-              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
-                <i class="icon geo-alt-fill" aria-hidden="true"></i>
-                <span>__ADDRESS_STREET__, San Vitaliano NA</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+__PHONE_DIGITS__">
-                <i class="icon telephone-fill" aria-hidden="true"></i>
-                <span>__PHONE_DISPLAY__</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/__PHONE_DIGITS__"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
-              >
-                <i class="icon whatsapp" aria-hidden="true"></i>
-                <span>WhatsApp</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Orari &amp; Social</h3>
           <p>
             <i class="icon clock" aria-hidden="true"></i>
             <span class="sr-only">Orari:</span>
@@ -267,9 +246,62 @@
             </a>
           </span>
         </div>
+
+        <nav class="footer-sitemap" aria-label="Menu del sito">
+          <div class="footer-col">
+            <h3>Il locale</h3>
+            <ul>
+              <li><a href="/#about">Chi siamo</a></li>
+              <li><a href="/#gallery">Galleria</a></li>
+              <li><a href="/#reviews">Recensioni</a></li>
+              <li><a href="/dove-siamo.html">Dove siamo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Menù e ordini</h3>
+            <ul>
+              <li><a href="/menu/">Menù completo</a></li>
+              <li><a href="/ordina/">Ordina a domicilio</a></li>
+              <li><a href="/ordina/glovo.html">Glovo</a></li>
+              <li><a href="/ordina/justeat.html">Just Eat</a></li>
+              <li><a href="/ordina/alfonsino.html">Alfonsino</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li><a href="/contatti.html">Tutti i contatti</a></li>
+              <li>
+                <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                  <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                  <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+__PHONE_DIGITS__">
+                  <i class="icon telephone-fill" aria-hidden="true"></i>
+                  <span>__PHONE_DISPLAY__</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/__PHONE_DIGITS__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+                >
+                  <i class="icon whatsapp" aria-hidden="true"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      <nav id="footer-navigation" aria-label="Link legali">
+      <nav class="footer-navigation" id="footer-navigation" aria-label="Link legali">
         <ul>
           <li><a href="/privacy.html" aria-current="page"> Politica di Riservatezza </a></li>
           <li><a href="/cookie.html"> Politica Cookie </a></li>
@@ -280,7 +312,7 @@
       </nav>
       <p>&copy; <span id="copyright-year">2026</span> __SITE_NAME__. Tutti i diritti riservati.</p>
 
-      <div id="bottom-navigation">
+      <div class="bottom-navigation" id="bottom-navigation">
         <nav aria-label="Navigazione principale">
           <ul>
             <li>

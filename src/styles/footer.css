@@ -1,4 +1,4 @@
-#footer-navigation ul {
+.footer-navigation ul {
   margin-bottom: var(--spacing-lg);
   display: flex;
   flex-direction: row;
@@ -10,13 +10,13 @@
   opacity: var(--opacity-subtle);
 }
 
-#footer-navigation a:focus-visible,
-#footer-navigation a:active {
+.footer-navigation a:focus-visible,
+.footer-navigation a:active {
   text-decoration: underline;
 }
 
 @media (hover: hover) {
-  #footer-navigation a:hover {
+  .footer-navigation a:hover {
     text-decoration: underline;
   }
 }
@@ -40,19 +40,25 @@ footer a {
   transition: color var(--transition-base);
 }
 
+/* Brand column plus one menu column per section; columns wrap by available width */
 .footer-main {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 9rem), 1fr));
   gap: var(--spacing-lg);
-  text-align: left;
+  text-align: start;
   max-width: var(--max-width);
   margin: 0 auto var(--spacing-lg);
   padding: 0 var(--spacing-lg) var(--spacing-lg);
   border-bottom: 1px solid var(--color-border-on-dark);
 }
 
+/* The menu wrapper is one landmark for screen readers; its columns join the footer grid */
+.footer-sitemap {
+  display: contents;
+}
+
 .footer-col {
-  flex: 1 1 0;
+  min-width: 0;
 }
 
 .footer-col h3 {
@@ -74,8 +80,7 @@ footer a {
   display: flex;
   align-items: flex-start;
   gap: var(--spacing-sm);
-  font-size: var(--font-size-sm);
-  line-height: 1.4;
+  line-height: var(--line-height-compact);
   opacity: var(--opacity-link);
 }
 
@@ -83,7 +88,7 @@ footer a {
   flex-shrink: 0;
 }
 
-/* Align the icon with the first line of wrapping text (line-height 1.4 vs icon 1) */
+/* Align the icon with the first line of wrapping text (compact line-height vs icon 1) */
 .footer-col p i {
   margin-top: 0.2em;
 }
@@ -125,7 +130,7 @@ footer a {
 
 /* Touch targets: at least 44px tall */
 .footer-col a,
-#footer-navigation a {
+.footer-navigation a {
   display: flex;
   align-items: center;
   min-height: var(--tap-target);

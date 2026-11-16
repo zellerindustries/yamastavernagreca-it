@@ -16,7 +16,7 @@
 }
 
 .hero h1 {
-  font-size: var(--font-size-xxl);
+  font-size: var(--font-size-display);
   margin-bottom: var(--spacing-md);
   letter-spacing: var(--tracking);
 }
@@ -28,31 +28,37 @@
   opacity: var(--opacity-muted);
 }
 
-.hero p:has(+ .open-status) {
+.hero p:has(+ .hero-status) {
   margin-bottom: var(--spacing-sm);
 }
 
+.hero-status {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* Open: gold pill. Closed: quiet outline. The long text may wrap on a phone. */
 .open-status {
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
+  white-space: normal;
+  text-align: center;
 }
 
 .open-status::before {
   content: '';
-  display: inline-block;
+  flex: none;
   width: 0.6em;
   height: 0.6em;
-  margin-inline-end: var(--spacing-sm);
   border-radius: 50%;
   background: currentcolor;
   opacity: var(--opacity-muted);
 }
 
 .open-status.is-open::before {
-  background: var(--color-accent);
   opacity: 1;
 }
 
+/* Gold edge so the blue button reads over the photo; inset so it adds no size */
 .hero .btn:not(.cta) {
-  border: var(--border-width) solid var(--color-accent);
+  box-shadow: inset 0 0 0 var(--border-width) var(--color-accent);
 }

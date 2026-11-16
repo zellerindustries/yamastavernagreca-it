@@ -1,13 +1,14 @@
-/* Menu-only rules. Tokens, typography, section headings, footer and focus styles
-   come from the site's global stylesheet (src/styles/base.css). */
+/* Menu-only rules. Tokens, typography, header, footer and focus styles come from the
+   site's global stylesheet (src/style.css). */
 
 /* ==== HEADER ==== */
-header[role='banner'] {
+.menu-intro {
   position: relative;
   box-shadow: var(--shadow-lg);
 }
 
-div[aria-label='Restaurant Logo'] {
+/* Decorative banner pattern above the restaurant name */
+.header-pattern {
   position: relative;
   width: 100%;
   height: clamp(7rem, 20vw, 12rem);
@@ -15,7 +16,7 @@ div[aria-label='Restaurant Logo'] {
   background: var(--color-surface);
 }
 
-div[aria-label='Restaurant Logo'] img {
+.header-pattern img {
   position: absolute;
   inset: 0;
   display: block;
@@ -30,7 +31,7 @@ div[aria-label='Restaurant Logo'] img {
   text-align: center;
 }
 
-header[role='banner'] h1 {
+.menu-intro h1 {
   font-family: var(--font-secondary);
   font-size: clamp(1.75rem, 7vw, var(--font-size-xxl));
   font-weight: var(--weight-black);
@@ -42,7 +43,7 @@ header[role='banner'] h1 {
   color: var(--color-primary);
 }
 
-header[role='banner'] h1::after {
+.menu-intro h1::after {
   content: '';
   display: block;
   width: 7rem;
@@ -53,42 +54,18 @@ header[role='banner'] h1::after {
   mask: var(--meander) repeat-x left center / var(--meander-size);
 }
 
-/* Language picker: compact native select in the banner corner (label is screen-reader only) */
+/* Language picker: IT / EN pills in a whitewash capsule in the banner corner */
 .lang-picker {
   position: absolute;
   top: var(--spacing-md);
-  right: var(--spacing-md);
+  inset-inline-end: var(--spacing-md);
   z-index: 1;
-}
-
-.lang-picker select {
-  min-width: 9.5rem;
-  min-height: var(--tap-target);
-  padding: var(--spacing-sm) calc(var(--spacing-lg) * 2) var(--spacing-sm) var(--spacing-lg);
-  font-family: var(--font-primary);
-  font-size: var(--font-size-sm);
-  font-weight: var(--font-weight-bold);
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  border: var(--border-width) solid var(--color-primary);
-  border-radius: var(--radius-sm);
+  display: flex;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs);
+  background: var(--color-secondary);
+  border-radius: var(--radius-pill);
   box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  appearance: none;
-  /* chevron drawn from two tokenised gradients */
-  background-image:
-    linear-gradient(45deg, transparent 50%, var(--color-primary) 50%),
-    linear-gradient(135deg, var(--color-primary) 50%, transparent 50%);
-  background-position:
-    calc(100% - 1.5rem) 50%,
-    calc(100% - 1.1rem) 50%;
-  background-size: 0.4rem 0.4rem;
-  background-repeat: no-repeat;
-  transition: background-color var(--transition-base);
-}
-
-.lang-picker select:hover {
-  background-color: var(--color-tint);
 }
 
 /* ==== SKIP LINK ==== */
@@ -108,15 +85,16 @@ header[role='banner'] h1::after {
 }
 
 /* ==== CATEGORY QUICK-JUMP ==== */
-#category-nav {
+/* Sticks just below the sticky site header */
+.category-nav {
   position: sticky;
-  top: 0;
+  top: var(--header-height);
   z-index: var(--z-header);
   background: var(--color-secondary);
   box-shadow: var(--shadow-sm);
 }
 
-#category-nav ul {
+.category-nav ul {
   display: flex;
   gap: var(--spacing-md);
   width: max-content;
@@ -142,48 +120,9 @@ header[role='banner'] h1::after {
   );
 }
 
-/* Pill buttons: outlined at rest, gold on hover, solid blue for the section being read */
-#category-nav a {
-  display: flex;
-  align-items: center;
-  min-height: var(--tap-target);
-  padding: 0 var(--spacing-lg);
-  font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-bold);
-  white-space: nowrap;
-  color: var(--color-primary);
-  background: var(--color-surface);
-  border: var(--border-width) solid var(--color-primary);
-  border-radius: var(--radius-pill);
+/* Category links are .pill.outline (pills.css); the strip only adds scroll snapping */
+.category-nav a {
   scroll-snap-align: center;
-  transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    color var(--transition-base);
-}
-
-@media (min-width: 1024px) {
-  #category-nav ul {
-    gap: var(--spacing-sm);
-  }
-
-  #category-nav a {
-    padding: 0 var(--spacing-md);
-  }
-}
-
-#category-nav a:hover {
-  background: var(--color-accent);
-  border-color: var(--color-accent);
-}
-
-#category-nav a:active {
-  transform: translateY(1px);
-}
-
-#category-nav a[aria-current='true'] {
-  color: var(--color-secondary);
-  background: var(--color-primary);
 }
 
 /* ==== MENU LAYOUT ==== */
@@ -192,14 +131,13 @@ header[role='banner'] h1::after {
   max-width: var(--max-width);
   margin: var(--spacing-lg) auto 0;
   padding: var(--spacing-md) var(--spacing-lg);
-  font-size: var(--font-size-xs);
   text-align: center;
   color: var(--color-primary);
   background: var(--color-tint);
   border-radius: var(--radius-sm);
 }
 
-#menu-list {
+.menu-list {
   padding: 0;
   text-align: start;
 }
@@ -239,8 +177,10 @@ header[role='banner'] h1::after {
   transition: box-shadow var(--transition-base);
 }
 
-.menu-group article:hover {
-  box-shadow: var(--shadow-lg);
+@media (hover: hover) {
+  .menu-group article:hover {
+    box-shadow: var(--shadow-lg);
+  }
 }
 
 .menu-group article img {
@@ -259,32 +199,21 @@ header[role='banner'] h1::after {
 }
 
 .menu-group article h3 {
-  font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
-  line-height: 1.2;
+  line-height: var(--line-height-heading);
   color: var(--color-primary);
 }
 
 .menu-group .item-desc {
-  font-size: var(--font-size-xs);
-  line-height: 1.4;
+  line-height: var(--line-height-compact);
   color: var(--color-text-muted);
 }
 
-.menu-group .tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-sm);
-}
-
-.menu-group .tags li {
-  display: block;
-  padding: 2px var(--spacing-md);
+/* Allergens stay a plain line: the list can be long, a pill would not wrap */
+.menu-group .item-allergens {
   font-size: var(--font-size-xs);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-primary);
-  background: var(--color-tint);
-  border-radius: var(--radius-sm);
+  line-height: var(--line-height-compact);
+  color: var(--color-text-muted);
 }
 
 .menu-group .item-price {
@@ -304,35 +233,12 @@ header[role='banner'] h1::after {
 }
 
 .welcome p {
-  line-height: 1.6;
   color: var(--color-text-muted);
 }
 
-/* ==== FOOTER ==== */
-footer[role='contentinfo'] {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-lg);
-  padding-inline: var(--spacing-lg);
-}
-
-footer address {
-  font-style: normal;
-}
-
-footer #footer-navigation ul {
-  margin-bottom: 0;
-}
-
-footer #footer-phone {
-  display: inline-flex;
-  align-items: center;
-  min-height: var(--tap-target);
-}
-
-footer #footer-copyright {
-  font-size: var(--font-size-sm);
-  opacity: var(--opacity-subtle);
+/* Anchor jumps stop below the site header and the category strip */
+.menu-group {
+  scroll-margin-top: calc(var(--header-height) + var(--tap-target) + var(--spacing-xl));
 }
 
 /* ==== RESPONSIVE ==== */
@@ -340,12 +246,5 @@ footer #footer-copyright {
   .menu-group > ul {
     grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
     gap: var(--spacing-lg);
-  }
-}
-
-/* The menu has no bottom navigation, so drop the clearance the global footer reserves */
-@media (max-width: 768px) {
-  footer[role='contentinfo'] {
-    padding-bottom: var(--spacing-lg);
   }
 }

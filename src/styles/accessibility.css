@@ -5,7 +5,7 @@
 }
 
 footer :focus-visible,
-#site-header.scrolled :focus-visible,
+.site-header.scrolled :focus-visible,
 .hero :focus-visible {
   outline-color: var(--color-accent);
 }
@@ -35,6 +35,9 @@ a:focus-visible {
   *,
   *::before,
   *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
   }
 }

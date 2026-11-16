@@ -1,5 +1,5 @@
 /* CONTACT */
-#contact .flex {
+.section-contact .flex {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   grid-template-rows: auto 1fr 1fr;
@@ -12,16 +12,16 @@
 
 /* Column wrappers dissolve so headings and buttons share one grid:
    every button gets the same width and height, whatever its text length */
-#contact .flex > div,
-#contact .btn-wrapper {
+.section-contact .flex > div,
+.section-contact .btn-wrapper {
   display: contents;
 }
 
-#contact .btn {
+.section-contact .btn {
   margin: 0;
 }
 
-#contact div:last-child {
+.section-contact div:last-child {
   margin-bottom: 0;
   padding-bottom: 0;
 }

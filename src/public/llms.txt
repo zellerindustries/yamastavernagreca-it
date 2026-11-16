@@ -13,5 +13,7 @@
 
 - [Home](https://yamastavernagreca.it/): overview, menu highlights, gallery, reviews, contact
 - [Dove Siamo](https://yamastavernagreca.it/dove-siamo.html): location and map
+- [Contatti](https://yamastavernagreca.it/contatti.html): phone, WhatsApp, address, opening hours and social profiles
+- [Ordina a domicilio](https://yamastavernagreca.it/ordina/): order by phone or WhatsApp, or through Glovo, Just Eat and Alfonsino
 - [Menu](https://yamastavernagreca.it/menu/): full bilingual (Italian/English) menu with prices
 - [Link in Bio](https://yamastavernagreca.it/linkinbio.html): quick links for reservations, menu, and contact

@@ -50,6 +50,15 @@ function loadMenuData() {
 }
 
 /**
+ * Schema.org needs absolute image URLs; site-relative paths get the build-time site token.
+ * @param {string} url Image URL from data.ts
+ * @returns {string} Absolute URL (or the site token plus path)
+ */
+function toAbsoluteUrl(url) {
+  return url.startsWith('/') ? `__SITE_URL__${url}` : url;
+}
+
+/**
  * @param {object} item data.ts MenuItem
  * @param {string} categoryId
  * @returns {string[]} schema.org RestrictedDiet URLs, only those data.ts supports
@@ -100,7 +109,7 @@ function buildMenuItem(item, categoryId, lang) {
     name: item.name[lang],
     description: item.description[lang],
     offers: { '@type': 'Offer', price: item.price.toFixed(2), priceCurrency: 'EUR' },
-    ...(item.imageUrl ? { image: item.imageUrl } : {}),
+    ...(item.imageUrl ? { image: toAbsoluteUrl(item.imageUrl) } : {}),
     ...(diets.length ? { suitableForDiet: diets } : {}),
     ...(properties.length ? { additionalProperty: properties } : {}),
   };

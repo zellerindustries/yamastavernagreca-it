@@ -2,9 +2,33 @@ body {
   font-family: var(--font-primary);
   font-size: var(--font-size-base);
   color: var(--color-text);
-  line-height: 1.5;
+  line-height: var(--line-height-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* No lone last word in headings; paragraphs directly in a section stay at a readable line length */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  line-height: var(--line-height-heading);
+}
+
+/* Item titles (cards, contact blocks): a sans bold step below the serif section titles */
+h3 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+main section > p {
+  max-width: 65ch;
+  margin-inline: auto;
 }
 
 a {

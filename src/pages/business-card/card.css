@@ -9,7 +9,7 @@ body {
 }
 
 body {
-  background: #0d1630;
+  background: var(--color-primary-deep);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,19 +22,19 @@ body {
    invece di forzare un'altezza "vuota" quando il contenuto è
    poco. Il max-width tiene comunque le proporzioni sotto
    controllo su schermi larghi. */
-#business-card {
+.business-card {
   background-color: var(--color-secondary);
   width: 100%;
   max-width: 760px;
   border-radius: calc(var(--radius-sm) * 2);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  box-shadow: var(--shadow-overlay);
   padding: calc(var(--spacing-lg) * 2.5);
   position: relative;
   display: flex;
   align-items: center;
 }
 
-#card-body {
+.card-body {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: calc(var(--spacing-lg) * 2);
@@ -43,12 +43,12 @@ body {
 }
 
 /* ==== SEZIONE SINISTRA: BRAND ==== */
-#card-header {
+.card-header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-right: 1px solid rgba(37, 56, 115, 0.15);
-  padding-right: var(--spacing-lg);
+  border-inline-end: 1px solid var(--color-border-on-light);
+  padding-inline-end: var(--spacing-lg);
 }
 
 .logo-wrapper {
@@ -70,20 +70,20 @@ body {
    Da "space-between" (spingeva i link in fondo a una riga
    vuota) a un flex compatto con un gap fisso: contatti e
    azioni restano vicini, niente più buco al centro. */
-#card-main {
+.card-main {
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing-lg) * 1.5);
 }
 
-#contact-info {
+.contact-info {
   font-style: normal;
   display: flex;
   flex-direction: column;
   gap: calc(var(--spacing-md) * 0.8);
 }
 
-#contact-info p {
+.contact-info p {
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -92,20 +92,20 @@ body {
   line-height: 1.4;
 }
 
-#contact-info a {
+.contact-info a {
   color: var(--color-primary-dark);
   font-weight: 600;
 }
 
 /* Link azioni rapide */
-#actions-list {
+.actions-list {
   display: flex;
   gap: var(--spacing-lg);
   flex-wrap: wrap;
 }
 
-#link-download-vcf,
-#link-menu {
+.link-download-vcf,
+.link-menu {
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -124,10 +124,12 @@ body {
   white-space: nowrap;
 }
 
-#link-download-vcf:hover,
-#link-menu:hover {
-  color: var(--color-accent-dark);
-  border-bottom-color: var(--color-primary);
+@media (hover: hover) {
+  .link-download-vcf:hover,
+  .link-menu:hover {
+    color: var(--color-accent-dark);
+    border-bottom-color: var(--color-primary);
+  }
 }
 
 /* ==== MEDIA QUERY PORTRAIT ==== */
@@ -135,18 +137,18 @@ body {
   body {
     padding: var(--spacing-lg) var(--spacing-md);
   }
-  #business-card {
+  .business-card {
     max-width: 400px;
     padding: calc(var(--spacing-lg) * 1.5);
   }
-  #card-body {
+  .card-body {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
   }
-  #card-header {
-    border-right: none;
-    border-bottom: 1px solid rgba(37, 56, 115, 0.12);
-    padding-right: 0;
+  .card-header {
+    border-inline-end: none;
+    border-bottom: 1px solid var(--color-border-on-light);
+    padding-inline-end: 0;
     padding-bottom: var(--spacing-lg);
     align-items: center;
     text-align: center;
@@ -157,14 +159,14 @@ body {
   .logo-wrapper img {
     object-position: center;
   }
-  #contact-info {
-    text-align: left; /* icona + testo allineati leggibili, non centrati a blocchi */
+  .contact-info {
+    text-align: start; /* icona + testo allineati leggibili, non centrati a blocchi */
     align-items: center;
   }
-  #contact-info p {
+  .contact-info p {
     justify-content: center;
   }
-  #actions-list {
+  .actions-list {
     justify-content: center;
     margin-top: var(--spacing-lg);
   }
@@ -172,12 +174,12 @@ body {
 
 /* ==== MEDIA QUERY: LANDSCAPE CORTO (telefono girato) ==== */
 @media (orientation: landscape) and (max-height: 480px) {
-  #business-card {
-    max-height: 92vh;
+  .business-card {
+    max-height: 92dvh;
     padding: calc(var(--spacing-lg) * 1.2);
     overflow-y: auto;
   }
-  #card-body {
+  .card-body {
     gap: var(--spacing-lg);
   }
   .logo-wrapper {

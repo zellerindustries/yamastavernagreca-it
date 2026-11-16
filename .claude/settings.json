@@ -1,0 +1,18 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$CLAUDE_PROJECT_DIR/../../../.claude/skills/enforcing-rules/scripts/hook.mjs\""
+          }
+        ]
+      }
+    ]
+  },
+  "worktree": {
+    "bgIsolation": "none"
+  }
+}

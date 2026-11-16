@@ -17,9 +17,9 @@
 [class^='bi-']::before,
 [class*=' bi-']::before {
   display: inline-block;
-  font-family: bootstrap-icons, sans-serif !important;
+  font-family: bootstrap-icons, sans-serif;
   font-style: normal;
-  font-weight: normal !important;
+  font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;

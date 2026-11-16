@@ -5,7 +5,7 @@
   overflow: hidden;
   max-width: 100%;
   border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-md);
 }
 
 .video-facade {

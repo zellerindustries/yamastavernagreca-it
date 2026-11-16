@@ -1,8 +1,8 @@
 /* ==== MENU ITEMS GRID ==== */
-#menu {
+.section-menu {
   color: var(--color-primary);
 }
 
-#menu p {
+.section-menu p {
   text-align: start;
 }

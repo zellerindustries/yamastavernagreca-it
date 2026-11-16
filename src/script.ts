@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const isOpen = now >= toMinutes(open) && now < toMinutes(close);
     status.classList.toggle('is-open', isOpen);
+    status.classList.toggle('accent', isOpen);
+    status.classList.toggle('on-dark', !isOpen);
     status.textContent = isOpen
       ? `Aperto ora · fino alle ${close}`
       : `Chiuso ora · apre alle ${open}`;

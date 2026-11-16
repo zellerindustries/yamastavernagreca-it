@@ -5,7 +5,7 @@ import type { Lang } from './languages';
 import type { MenuItem } from './types';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const PLACEHOLDER_IMAGE = 'assets/images/placeholder.webp';
+  const PLACEHOLDER_IMAGE = '/assets/menu/dishes/placeholder.webp';
 
   const isLang = (code: string | null): code is Lang => languages.some((l) => l.code === code);
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let lang: Lang = detectLang();
-  const langSelect = document.getElementById('lang-select') as HTMLSelectElement;
+  const langPicker = document.getElementById('lang-picker')!;
 
   interface UiStrings {
     menu: string;
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
     spicy: string;
     empty: string;
     emptyCategory: string;
-    rights: string;
     allergenNote: string;
   }
 
@@ -52,7 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       spicy: 'Piccante',
       empty: 'Il menu non è al momento disponibile.',
       emptyCategory: 'Nessun piatto in questa categoria.',
-      rights: 'Tutti i diritti riservati.',
       allergenNote: 'Se hai allergie o intolleranze, chiedi al nostro personale prima di ordinare.',
     },
     en: {
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       spicy: 'Spicy',
       empty: 'The menu is not available at the moment.',
       emptyCategory: 'No items in this category.',
-      rights: 'All rights reserved.',
       allergenNote: 'If you have allergies or intolerances, please ask our staff before ordering.',
     },
   };
@@ -89,18 +86,12 @@ document.addEventListener('DOMContentLoaded', () => {
     renderCategoryNav();
     renderMenu();
     observeCategories();
-    renderFooter();
-    langSelect.value = lang;
+    for (const button of langPicker.querySelectorAll<HTMLButtonElement>('button')) {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === lang));
+    }
   }
 
   function renderHeader() {
-    const logo = document.getElementById('logo-img') as HTMLImageElement;
-    logo.src = DEMO_RESTAURANT.logoUrl;
-    logo.alt = DEMO_RESTAURANT.name[lang] + ' Logo';
-    logo.onerror = () => {
-      logo.src = PLACEHOLDER_IMAGE;
-    };
-
     document.getElementById('restaurant-name')!.textContent = DEMO_RESTAURANT.name[lang];
 
     const description = document.getElementById('restaurant-description') as HTMLParagraphElement;
@@ -124,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const li = document.createElement('li');
       const a = document.createElement('a');
       a.href = '#cat-' + cat.id;
+      a.className = 'pill outline';
       a.textContent = cat.name[lang];
       li.appendChild(a);
       list.appendChild(li);
@@ -140,6 +132,19 @@ document.addEventListener('DOMContentLoaded', () => {
       links.set(link.hash.slice(1), link);
     }
     const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const bar = document.getElementById('category-links')!;
+
+    /**
+     * Centres a link inside the horizontal bar. Scrolls only the bar: link.scrollIntoView
+     * also scrolls the page, which on phones cancels the page's own smooth scroll to the
+     * tapped category and fights the user's touch scroll.
+     */
+    const centreInBar = (link: HTMLAnchorElement) => {
+      const barBox = bar.getBoundingClientRect();
+      const linkBox = link.getBoundingClientRect();
+      const offset = linkBox.left + linkBox.width / 2 - (barBox.left + barBox.width / 2);
+      bar.scrollBy({ left: offset, behavior: reduceMotion ? 'auto' : 'smooth' });
+    };
 
     categoryObserver = new IntersectionObserver(
       (entries) => {
@@ -148,11 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
           for (const [id, link] of links) {
             if (id === entry.target.id) {
               link.setAttribute('aria-current', 'true');
-              link.scrollIntoView({
-                inline: 'center',
-                block: 'nearest',
-                behavior: reduceMotion ? 'auto' : 'smooth',
-              });
+              centreInBar(link);
             } else {
               link.removeAttribute('aria-current');
             }
@@ -237,16 +238,20 @@ document.addEventListener('DOMContentLoaded', () => {
     content.appendChild(desc);
 
     const tags = document.createElement('ul');
-    tags.className = 'tags';
+    tags.className = 'pill-list';
     tags.setAttribute('role', 'list');
     if (item.isVegan) tags.appendChild(tag(ui[lang].vegan));
     else if (item.isVegetarian) tags.appendChild(tag(ui[lang].vegetarian));
     if (item.isSpicy) tags.appendChild(tag(ui[lang].spicy));
+    if (tags.children.length) content.appendChild(tags);
+
     if (item.allergens && item.allergens.length) {
       const names = item.allergens.map((a) => allergenLabels[a]?.[lang] ?? a);
-      tags.appendChild(tag(ui[lang].allergens + ': ' + names.join(', ')));
+      const allergens = document.createElement('p');
+      allergens.className = 'item-allergens';
+      allergens.textContent = ui[lang].allergens + ': ' + names.join(', ');
+      content.appendChild(allergens);
     }
-    if (tags.children.length) content.appendChild(tags);
 
     const price = document.createElement('strong');
     price.className = 'item-price';
@@ -260,46 +265,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function tag(text: string): HTMLLIElement {
     const li = document.createElement('li');
+    li.className = 'pill';
     li.textContent = text;
     return li;
   }
 
-  function renderFooter() {
-    const list = document.getElementById('footer-links')!;
-    list.innerHTML = '';
-
-    for (const link of DEMO_RESTAURANT.footerLinks) {
-      const li = document.createElement('li');
-      const a = document.createElement('a');
-      a.href = link.href;
-      a.textContent = link.text[lang];
-      li.appendChild(a);
-      list.appendChild(li);
-    }
-
-    document.getElementById('footer-address')!.textContent = DEMO_RESTAURANT.address;
-
-    const phone = document.getElementById('footer-phone') as HTMLAnchorElement;
-    phone.href = 'tel:' + DEMO_RESTAURANT.phone;
-    phone.textContent = DEMO_RESTAURANT.phone;
-
-    document.getElementById('footer-copyright')!.textContent =
-      '© ' + new Date().getFullYear() + ' ' + DEMO_RESTAURANT.name[lang] + '. ' + ui[lang].rights;
-  }
-
+  // One pill per language; the visible text is the code, the accessible name the full language
   for (const { code, label } of languages) {
-    const option = document.createElement('option');
-    option.value = code;
-    option.lang = code;
-    option.textContent = label;
-    langSelect.appendChild(option);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'pill';
+    button.lang = code;
+    button.dataset.lang = code;
+    button.textContent = code;
+    button.setAttribute('aria-label', label);
+    button.addEventListener('click', () => {
+      lang = code;
+      render();
+    });
+    langPicker.appendChild(button);
   }
-
-  langSelect.addEventListener('change', () => {
-    if (!isLang(langSelect.value)) return;
-    lang = langSelect.value;
-    render();
-  });
 
   render();
 });

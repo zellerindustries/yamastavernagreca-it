@@ -21,13 +21,13 @@ Rules that follow: keep surfaces flat, corners crisp (small radius), spacing air
 | Sea mist    | `--color-tint`      | `#eaeef8` | **New.** Alternate section background       |
 | Honey       | `--color-accent`    | `#f0a500` | CTAs, motif, focus. Decorative / large only |
 
-No other colours are added. Photography (Santorini hero, dishes) supplies the warmth.
+No other colours are added. Hover and overlay shades are derived from these with `color-mix()` (`--color-primary-dark`, `--color-accent-soft`), never new hues. Photography (Santorini hero, dishes) supplies the warmth.
 
 ## Typography
 
 - **Headings:** Playfair Display 900, uppercase, tracked. Kept: it is the only self-hosted face and already carries the brand.
 - **Body:** Roboto. Kept.
-- **Labels and buttons:** uppercase and tracked, echoing "TAVERNA GRECA" in the logo.
+- **Labels and buttons:** small, medium weight, uppercase and lightly tracked, echoing "TAVERNA GRECA" in the logo. Light on purpose: no border, no bold; hover darkens the same hue.
 
 ## Motif
 
@@ -39,7 +39,7 @@ Italian first, direct and warm ("Preferisci mangiare a casa?"). Short sentences,
 
 ## Restyle scope
 
-**In scope (main site, `src/styles/base.css` and the five top-level pages):**
+**In scope (main site, `src/styles/` and the five top-level pages):**
 
 - Sharper corners (`--radius` 0.5rem → 0.25rem) to match the logo's angles.
 - Alternating whitewash / sea-mist full-width sections for rhythm.
@@ -49,7 +49,7 @@ Italian first, direct and warm ("Preferisci mangiare a casa?"). Short sentences,
 **Out of scope (needs a separate decision):**
 
 - Logo, palette changes, new typefaces.
-- `menu/` page (own stylesheet with copied tokens) and `business-card/`. Sync them after the main site is approved.
+- `menu/` page and `business-card/`: they use the global tokens, so they follow a palette change automatically, but check them visually afterwards.
 - Copy changes, new pages, JS behaviour.
 
 **Done when:** the home page reads as one calm, blue-and-white taverna with gold touches; contrast and tap-target rules in `design.md` still hold; build and Prettier pass.

@@ -9,6 +9,7 @@
 @import url('./styles/header.css');
 @import url('./styles/hero.css');
 @import url('./styles/buttons.css');
+@import url('./styles/pills.css');
 @import url('./styles/cards.css');
 @import url('./styles/footer.css');
 @import url('./styles/bottom-bar.css');
@@ -17,6 +18,7 @@
 @import url('./styles/legal-document.css');
 @import url('./styles/reviews.css');
 @import url('./styles/delivery.css');
+@import url('./styles/order.css');
 @import url('./styles/contact.css');
 @import url('./styles/video.css');
 @import url('./styles/lightbox.css');

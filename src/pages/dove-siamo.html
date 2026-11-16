@@ -105,19 +105,27 @@
   </head>
 
   <body>
-    <header id="site-header">
+    <header class="site-header" id="site-header">
       <nav aria-label="Navigazione principale">
-        <div class="logo-wrapper">
-          <a href="/">
-            <img
-              src="/assets/logo_top.svg"
-              id="logo-top"
-              width="200"
-              height="30"
-              alt="YAMAS Taverna Greca logo"
-            />
-          </a>
-        </div>
+        <a class="logo-wrapper" href="/" aria-label="YAMAS Taverna Greca, home">
+          <img
+            src="/assets/logo_top.svg"
+            class="logo-top"
+            id="logo-top"
+            width="200"
+            height="30"
+            alt="YAMAS Taverna Greca logo"
+          />
+          <img
+            src="/assets/logo_bottom.svg"
+            class="logo-bottom"
+            id="logo-bottom"
+            width="200"
+            height="22"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
         <button
           id="menu-toggle"
           class="menu-toggle"
@@ -130,11 +138,16 @@
         </button>
         <ul id="primary-menu" class="menu" hidden>
           <li><a href="/">Home</a></li>
-          <li><a href="/#menu">Menù</a></li>
-          <li><a href="/#contact">Contatti</a></li>
+          <li><a href="/menu/">Menù</a></li>
+          <li><a href="/ordina/">Ordina</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
           <li><a href="/dove-siamo.html" aria-current="page">Dove Siamo</a></li>
           <li>
-            <a href="https://wa.me/__PHONE_DIGITS__" class="cta" target="_blank" rel="noopener"
+            <a
+              href="https://wa.me/__PHONE_DIGITS__"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
               >Prenota</a
             >
           </li>
@@ -143,7 +156,7 @@
     </header>
 
     <main>
-      <section id="location" aria-labelledby="location-heading">
+      <section class="section-location" id="location" aria-labelledby="location-heading">
         <h1 id="location-heading">Dove Siamo</h1>
         <p>
           Ci trovi a San Vitaliano, in
@@ -163,7 +176,7 @@
         ></iframe>
       </div>
       <section>
-        <ul class="grid grid-2-col-mobile" id="values">
+        <ul class="grid grid-2-col-mobile values-list" id="values">
           <li class="card">
             <i class="icon geo-alt-fill" aria-hidden="true"></i>
             <p class="content">Nel cuore di San Vitaliano, provincia di Napoli</p>
@@ -178,30 +191,21 @@
           </li>
         </ul>
       </section>
-      <section id="delivery" aria-labelledby="delivery-heading">
+      <section class="section-delivery" id="delivery" aria-labelledby="delivery-heading">
         <h2 id="delivery-heading">Ordina a Domicilio</h2>
-        <p>Preferisci mangiare a casa? Trovi YAMAS anche sulle principali app di consegna.</p>
+        <p>
+          Preferisci mangiare a casa? Trovi YAMAS anche sulle principali app di consegna.
+          <a href="/ordina/">Scopri come ordinare</a>.
+        </p>
         <ul class="delivery-list">
           <li>
-            <a
-              href="__GLOVO_URL__"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="delivery-card"
-              aria-label="Ordina su Glovo"
-            >
+            <a href="/ordina/glovo.html" class="delivery-card" aria-label="Ordina su Glovo">
               <img src="/assets/delivery/glovo.svg" alt="" width="72" height="24" loading="lazy" />
               <span class="delivery-cta">Ordina su Glovo</span>
             </a>
           </li>
           <li>
-            <a
-              href="__JUSTEAT_URL__"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="delivery-card"
-              aria-label="Ordina su Just Eat"
-            >
+            <a href="/ordina/justeat.html" class="delivery-card" aria-label="Ordina su Just Eat">
               <img
                 src="/assets/delivery/justeat.svg"
                 alt=""
@@ -213,13 +217,7 @@
             </a>
           </li>
           <li>
-            <a
-              href="__ALFONSINO_URL__"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="delivery-card"
-              aria-label="Ordina su Alfonsino"
-            >
+            <a href="/ordina/alfonsino.html" class="delivery-card" aria-label="Ordina su Alfonsino">
               <img
                 src="/assets/delivery/alfonsino.svg"
                 alt=""
@@ -233,7 +231,7 @@
         </ul>
       </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
+      <section class="section-contact" id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contatti</h2>
         <section>
           <h3>Orari di Apertura</h3>
@@ -325,39 +323,6 @@
         <div class="footer-col footer-brand">
           <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
           <p>Cucina Greca Autentica a San Vitaliano</p>
-        </div>
-
-        <div class="footer-col">
-          <h3>Contatti</h3>
-          <ul>
-            <li>
-              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
-                <i class="icon geo-alt-fill" aria-hidden="true"></i>
-                <span>__ADDRESS_STREET__, San Vitaliano NA</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+__PHONE_DIGITS__">
-                <i class="icon telephone-fill" aria-hidden="true"></i>
-                <span>__PHONE_DISPLAY__</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/__PHONE_DIGITS__"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
-              >
-                <i class="icon whatsapp" aria-hidden="true"></i>
-                <span>WhatsApp</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Orari &amp; Social</h3>
           <p>
             <i class="icon clock" aria-hidden="true"></i>
             <span class="sr-only">Orari:</span>
@@ -382,9 +347,62 @@
             </a>
           </span>
         </div>
+
+        <nav class="footer-sitemap" aria-label="Menu del sito">
+          <div class="footer-col">
+            <h3>Il locale</h3>
+            <ul>
+              <li><a href="/#about">Chi siamo</a></li>
+              <li><a href="/#gallery">Galleria</a></li>
+              <li><a href="/#reviews">Recensioni</a></li>
+              <li><a href="/dove-siamo.html">Dove siamo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Menù e ordini</h3>
+            <ul>
+              <li><a href="/menu/">Menù completo</a></li>
+              <li><a href="/ordina/">Ordina a domicilio</a></li>
+              <li><a href="/ordina/glovo.html">Glovo</a></li>
+              <li><a href="/ordina/justeat.html">Just Eat</a></li>
+              <li><a href="/ordina/alfonsino.html">Alfonsino</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li><a href="/contatti.html">Tutti i contatti</a></li>
+              <li>
+                <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                  <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                  <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+__PHONE_DIGITS__">
+                  <i class="icon telephone-fill" aria-hidden="true"></i>
+                  <span>__PHONE_DISPLAY__</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/__PHONE_DIGITS__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+                >
+                  <i class="icon whatsapp" aria-hidden="true"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      <nav id="footer-navigation" aria-label="Link legali">
+      <nav class="footer-navigation" id="footer-navigation" aria-label="Link legali">
         <ul>
           <li><a href="/privacy.html"> Politica di Riservatezza </a></li>
           <li><a href="/cookie.html"> Politica Cookie </a></li>
@@ -395,7 +413,7 @@
       </nav>
       <p>&copy; <span id="copyright-year">2026</span> __SITE_NAME__. Tutti i diritti riservati.</p>
 
-      <div id="bottom-navigation">
+      <div class="bottom-navigation" id="bottom-navigation">
         <nav aria-label="Navigazione principale">
           <ul>
             <li>

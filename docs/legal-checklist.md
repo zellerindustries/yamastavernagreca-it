@@ -30,7 +30,7 @@ Collected from the user directly (phone/WhatsApp), so Art. 13 applies, plus the 
 - [ ] **Each purpose has a legal basis** named with its article (6(1)(b) contact/booking, 6(1)(f)
       server security). No purpose without a basis, no basis without a purpose.
 - [ ] **Legitimate interest** (if used) is described, not just cited (Art. 13(1)(d)).
-- [ ] **Recipients named or categorised**: hosting provider, AWS (S3 bucket serving the menu images), Google (Maps, YouTube, the feedback form), WhatsApp/Meta
+- [ ] **Recipients named or categorised**: hosting provider, Google (Maps, YouTube, the feedback form), WhatsApp/Meta
       (Art. 13(1)(e)). Regulators expect names or clear categories.
 - [ ] **Third-country transfers** named, with the safeguard (e.g. EU-US Data Privacy Framework)
       (Art. 13(1)(f)).
@@ -123,7 +123,7 @@ WCAG-style practices (headings, focus, contrast, tap targets).
 ## 4. Release routine (about 10 minutes)
 
 1. `npm run build`, then the host grep from section 2 against `dist/`.
-2. `npm start`, open `/`, `/dove-siamo.html`, `/menu/`, `/linkinbio.html`, `/privacy.html`,
+2. `npm start`, open `/`, `/dove-siamo.html`, `/contatti.html`, `/ordina/`, `/menu/`, `/linkinbio.html`, `/privacy.html`,
    `/cookie.html` with an empty browser profile; read the Network and Application tabs; play the
    video; switch menu language.
 3. Compare what you saw with the claims in `privacy.html` and `cookie.html`.

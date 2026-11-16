@@ -1,6 +1,6 @@
 /* ==== MOBILE STYLES ==== */
 @media (max-width: 768px) {
-  #bottom-navigation {
+  .bottom-navigation {
     display: block;
     visibility: visible;
   }
@@ -10,12 +10,12 @@
     display: flex;
   }
 
-  #site-header nav {
+  .site-header nav {
     margin: 0;
   }
 
   /* NAVIGATION */
-  #site-header nav ul {
+  .site-header nav ul {
     position: absolute;
     top: var(--header-height);
     width: 100%;
@@ -36,37 +36,42 @@
   }
 
   /* Show menu when active */
-  #site-header nav ul.active {
+  .site-header nav ul.active {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
     pointer-events: auto;
   }
 
-  #site-header nav ul li a {
+  .site-header nav ul li a {
     color: var(--color-secondary);
     font-size: var(--font-size-lg);
     display: block;
   }
 
-  #site-header nav ul li a:hover,
-  #site-header nav ul li a:focus {
+  .site-header nav ul li a:focus {
     color: var(--color-accent);
   }
 
+  @media (hover: hover) {
+    .site-header nav ul li a:hover {
+      color: var(--color-accent);
+    }
+  }
+
   /* Responsive values list & contact */
-  #contact .flex {
+  .section-contact .flex {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     grid-auto-flow: row;
   }
 
-  #contact .flex h3 {
+  .section-contact .flex h3 {
     margin-top: var(--spacing-md);
   }
 
   .flex {
-    flex-direction: column !important;
+    flex-direction: column;
   }
 
   /* FOOTER */
@@ -74,28 +79,22 @@
     padding-bottom: var(--bottom-nav-clearance);
   }
 
-  .footer-main {
-    flex-direction: column;
-    align-items: center;
+  /* Brand on its own centred row; the section menus sit below it, two to a row */
+  .footer-brand {
+    grid-column: 1 / -1;
     text-align: center;
-  }
-
-  .footer-col {
-    flex: none;
-    width: 100%;
   }
 
   .footer-brand img {
     margin: 0 auto;
   }
 
-  .footer-col a,
-  .footer-col p {
+  .footer-brand p {
     justify-content: center;
     align-items: center;
   }
 
-  .footer-col p i {
+  .footer-brand p i {
     margin-top: 0;
   }
 

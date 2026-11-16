@@ -1,6 +1,6 @@
 /* ==== LEGAL DOCUMENTS (Privacy/Cookie) ==== */
 .legal-document {
-  text-align: left;
+  text-align: start;
   padding: var(--spacing-lg) var(--spacing-md);
 }
 
@@ -20,13 +20,12 @@
 
 .legal-document p,
 .legal-document li {
-  line-height: 1.6;
   margin-bottom: var(--spacing-sm);
 }
 
 .legal-document ul {
   list-style: disc;
-  padding-left: var(--spacing-lg);
+  padding-inline-start: var(--spacing-lg);
 }
 
 .legal-document ul ul {
