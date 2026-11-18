@@ -33,7 +33,7 @@
       "__HOURS_CLOSE__": "23:00",
       "__GEO_LAT__": "40.9265",
       "__GEO_LNG__": "14.4771",
-      "__ROBOTS__": "noindex, nofollow"
+      "__ROBOTS__": "index, follow"
     },
     "html": {
       "minify": true
