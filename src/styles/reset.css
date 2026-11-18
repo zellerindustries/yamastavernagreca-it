@@ -1,0 +1,32 @@
+/* ==== GLOBAL RESET ==== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-drag: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  /* anchors land clear of the sticky header */
+  scroll-padding-top: calc(var(--header-height) + var(--spacing-lg));
+  -webkit-text-size-adjust: 100%;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Form controls get the browser's own font unless told otherwise */
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}

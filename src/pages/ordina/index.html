@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ordina a Domicilio | YAMAS Taverna Greca a San Vitaliano</title>
+
+    <!-- Description e SEO -->
+    <meta
+      name="description"
+      content="Ordina i piatti di __SITE_NAME__ a domicilio: chiamaci o scrivici su WhatsApp, oppure scegli Glovo, Just Eat o Alfonsino."
+    />
+    <link rel="canonical" href="__SITE_URL__/ordina/" />
+
+    <meta property="og:title" content="Ordina a Domicilio | YAMAS Taverna Greca a San Vitaliano" />
+    <meta
+      property="og:description"
+      content="Ordina i piatti di __SITE_NAME__ a domicilio: chiamaci o scrivici su WhatsApp, oppure scegli Glovo, Just Eat o Alfonsino."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="__SITE_URL__/ordina/" />
+    <meta property="og:image" content="__SITE_URL__/assets/twitter-card.webp" />
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:site_name" content="__SITE_NAME__" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ordina a Domicilio | YAMAS Taverna Greca a San Vitaliano" />
+    <meta
+      name="twitter:description"
+      content="Ordina i piatti di __SITE_NAME__ a domicilio: chiamaci o scrivici su WhatsApp, oppure scegli Glovo, Just Eat o Alfonsino."
+    />
+    <meta name="twitter:image" content="__SITE_URL__/assets/twitter-card.webp" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebPage",
+            "@id": "__SITE_URL__/ordina/#webpage",
+            "url": "__SITE_URL__/ordina/",
+            "name": "Ordina a Domicilio | YAMAS Taverna Greca a San Vitaliano",
+            "inLanguage": "it",
+            "about": { "@id": "__SITE_URL__/#restaurant" }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "__SITE_URL__/" },
+              { "@type": "ListItem", "position": 2, "name": "Ordina a domicilio", "item": "__SITE_URL__/ordina/" }
+            ]
+          },
+          {
+            "@type": "Restaurant",
+            "@id": "__SITE_URL__/#restaurant",
+            "name": "__SITE_NAME__",
+            "url": "__SITE_URL__",
+            "image": "__SITE_URL__/assets/twitter-card.webp",
+            "telephone": "__PHONE_DISPLAY__",
+            "servesCuisine": ["Greek", "Vegetarian"],
+            "priceRange": "€€",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "__ADDRESS_STREET__",
+              "addressLocality": "San Vitaliano",
+              "postalCode": "80030",
+              "addressRegion": "NA",
+              "addressCountry": "IT"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": __GEO_LAT__,
+              "longitude": __GEO_LNG__
+            },
+            "hasMap": "__MAPS_URL__",
+            "sameAs": ["__FACEBOOK_URL__", "__INSTAGRAM_URL__"],
+            "acceptsReservations": true,
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday",
+                  "Sunday"
+                ],
+                "opens": "__HOURS_OPEN__",
+                "closes": "__HOURS_CLOSE__"
+              }
+            ],
+            "contactPoint": [
+              {
+                "@type": "ContactPoint",
+                "contactType": "reservations",
+                "telephone": "__PHONE_DISPLAY__"
+              },
+              {
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "url": "https://wa.me/__PHONE_DIGITS__"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Theme -->
+    <meta name="theme-color" content="#253873" />
+    <meta name="robots" content="__ROBOTS__" />
+
+    <!-- Fonts e icone -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- CSP -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+    default-src 'self';
+    img-src 'self' data:;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
+    script-src 'self';
+    connect-src 'self';
+  "
+    />
+  </head>
+
+  <body>
+    <header class="site-header" id="site-header">
+      <nav aria-label="Navigazione principale">
+        <a class="logo-wrapper" href="/" aria-label="YAMAS Taverna Greca, home">
+          <img
+            src="/assets/logo_top.svg"
+            class="logo-top"
+            id="logo-top"
+            width="200"
+            height="30"
+            alt="YAMAS Taverna Greca logo"
+          />
+          <img
+            src="/assets/logo_bottom.svg"
+            class="logo-bottom"
+            id="logo-bottom"
+            width="200"
+            height="22"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+        <button
+          id="menu-toggle"
+          class="menu-toggle"
+          aria-controls="primary-menu"
+          aria-expanded="false"
+          type="button"
+        >
+          <i class="icon list" aria-hidden="true"></i>
+          <span class="sr-only">Apri/Chiudi menu</span>
+        </button>
+        <ul id="primary-menu" class="menu" hidden>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu/">Menù</a></li>
+          <li><a href="/ordina/" aria-current="page">Ordina</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
+          <li><a href="/dove-siamo.html">Dove Siamo</a></li>
+          <li>
+            <a
+              href="https://wa.me/__PHONE_DIGITS__"
+              class="cta"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Prenota</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="section-order" id="order" aria-labelledby="order-heading">
+        <h1 id="order-heading">Ordina a Domicilio</h1>
+        <p>
+          Ordina i piatti di YAMAS dove preferisci: chiamaci direttamente oppure scegli la tua app
+          di consegna.
+        </p>
+        <section>
+          <h2>Ordina direttamente</h2>
+          <p>Il modo più semplice è chiamarci o scriverci su WhatsApp.</p>
+          <div class="btn-wrapper">
+            <a href="tel:+__PHONE_DIGITS__" class="btn cta">
+              <i class="icon telephone-fill" aria-hidden="true"></i>
+              <span>__PHONE_DISPLAY__</span>
+            </a>
+            <a
+              href="https://wa.me/__PHONE_DIGITS__"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn"
+              aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+            >
+              <i class="icon whatsapp" aria-hidden="true"></i>
+              <span>Scrivici su WhatsApp</span>
+            </a>
+          </div>
+        </section>
+      </section>
+      <section class="section-delivery" id="delivery" aria-labelledby="delivery-heading">
+        <h2 id="delivery-heading">Oppure scegli la tua app</h2>
+        <p>Trovi YAMAS sulle principali app di consegna. Scopri come ordinare con ciascuna.</p>
+        <ul class="delivery-list">
+          <li>
+            <a href="/ordina/glovo.html" class="delivery-card" aria-label="Come ordinare su Glovo">
+              <img src="/assets/delivery/glovo.svg" alt="" width="72" height="24" loading="lazy" />
+              <span class="delivery-cta">Come ordinare su Glovo</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ordina/justeat.html"
+              class="delivery-card"
+              aria-label="Come ordinare su Just Eat"
+            >
+              <img
+                src="/assets/delivery/justeat.svg"
+                alt=""
+                width="98"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Come ordinare su Just Eat</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/ordina/alfonsino.html"
+              class="delivery-card"
+              aria-label="Come ordinare su Alfonsino"
+            >
+              <img
+                src="/assets/delivery/alfonsino.svg"
+                alt=""
+                width="84"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Come ordinare su Alfonsino</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer role="contentinfo">
+      <div class="footer-main">
+        <div class="footer-col footer-brand">
+          <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
+          <p>Cucina Greca Autentica a San Vitaliano</p>
+          <p>
+            <i class="icon clock" aria-hidden="true"></i>
+            <span class="sr-only">Orari:</span>
+            <span>Lunedì - Domenica: __HOURS_OPEN__ - __HOURS_CLOSE__</span>
+          </p>
+          <span class="footer-social">
+            <a
+              href="__FACEBOOK_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vai alla pagina Facebook di YAMAS Taverna Greca"
+            >
+              <i class="icon facebook" aria-hidden="true"></i>
+            </a>
+            <a
+              href="__INSTAGRAM_URL__"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Vai alla pagina Instagram di YAMAS Taverna Greca"
+            >
+              <i class="icon instagram" aria-hidden="true"></i>
+            </a>
+          </span>
+        </div>
+
+        <nav class="footer-sitemap" aria-label="Menu del sito">
+          <div class="footer-col">
+            <h3>Il locale</h3>
+            <ul>
+              <li><a href="/#about">Chi siamo</a></li>
+              <li><a href="/#gallery">Galleria</a></li>
+              <li><a href="/#reviews">Recensioni</a></li>
+              <li><a href="/dove-siamo.html">Dove siamo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Menù e ordini</h3>
+            <ul>
+              <li><a href="/menu/">Menù completo</a></li>
+              <li><a href="/ordina/">Ordina a domicilio</a></li>
+              <li><a href="/ordina/glovo.html">Glovo</a></li>
+              <li><a href="/ordina/justeat.html">Just Eat</a></li>
+              <li><a href="/ordina/alfonsino.html">Alfonsino</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li><a href="/contatti.html">Tutti i contatti</a></li>
+              <li>
+                <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                  <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                  <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+__PHONE_DIGITS__">
+                  <i class="icon telephone-fill" aria-hidden="true"></i>
+                  <span>__PHONE_DISPLAY__</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/__PHONE_DIGITS__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+                >
+                  <i class="icon whatsapp" aria-hidden="true"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+
+      <nav class="footer-navigation" id="footer-navigation" aria-label="Link legali">
+        <ul>
+          <li><a href="/privacy.html"> Politica di Riservatezza </a></li>
+          <li><a href="/cookie.html"> Politica Cookie </a></li>
+          <li>
+            <a href="https://forms.gle/oGZeRWNjfDuFQAxq7"> Aiutaci a migliorare </a>
+          </li>
+        </ul>
+      </nav>
+      <p>&copy; <span id="copyright-year">2026</span> __SITE_NAME__. Tutti i diritti riservati.</p>
+
+      <div class="bottom-navigation" id="bottom-navigation">
+        <nav aria-label="Navigazione principale">
+          <ul>
+            <li>
+              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                <span>Dove siamo</span>
+              </a>
+            </li>
+            <li>
+              <a href="/menu/">
+                <i class="icon fork-knife" aria-hidden="true"></i>
+                <span>Menù</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/__PHONE_DIGITS__" target="_blank" rel="noopener noreferrer">
+                <i class="icon calendar-check-fill" aria-hidden="true"></i>
+                <span>Prenota</span>
+              </a>
+            </li>
+            <li>
+              <a href="tel:+__PHONE_DIGITS__">
+                <i class="icon telephone-fill" aria-hidden="true"></i>
+                <span>Chiama</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <script src="/script.js" defer></script>
+  </body>
+</html>

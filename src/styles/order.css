@@ -1,0 +1,62 @@
+/* ==== ORDER PAGES (hub and one page per delivery app) ==== */
+
+/* Path back to the hub, small and left-aligned above the heading */
+.breadcrumb {
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-sm);
+  text-align: start;
+}
+
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.breadcrumb li + li::before {
+  content: '/';
+  margin-inline-end: var(--spacing-sm);
+  color: var(--color-text-muted);
+}
+
+.breadcrumb a {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--tap-target);
+}
+
+/* Numbered steps: the order is real information, so the numbers are shown */
+.steps {
+  max-width: 40ch;
+  margin: 0 auto var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  counter-reset: step;
+  text-align: start;
+}
+
+.steps li {
+  display: grid;
+  grid-template-columns: var(--spacing-xl) 1fr;
+  gap: var(--spacing-md);
+  align-items: center;
+  counter-increment: step;
+}
+
+.steps li::before {
+  content: counter(step);
+  display: grid;
+  place-items: center;
+  width: var(--spacing-xl);
+  height: var(--spacing-xl);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--color-secondary);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Space between the stacked blocks inside the order section */
+.section-order > section {
+  margin-top: var(--spacing-xl);
+}

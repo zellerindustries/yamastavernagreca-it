@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>__SITE_NAME__ | Cucina Greca Autentica a San Vitaliano</title>
     <meta
       http-equiv="Content-Security-Policy"
       content="
   default-src 'self';
-  img-src 'self' data: https://i.ytimg.com https://fonts.gstatic.com;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com https://cdn.jsdelivr.net;
-  script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com;
+  img-src 'self' data:;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self';
+  script-src 'self' 'unsafe-inline';
   frame-src 'self' https://www.youtube-nocookie.com;
   connect-src 'self';
   object-src 'none';
@@ -29,7 +30,7 @@
     />
     <meta name="theme-color" content="#253873" />
     <meta name="format-detection" content="telephone=no" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="__ROBOTS__" />
 
     <link rel="canonical" href="__SITE_URL__/" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
@@ -38,10 +39,6 @@
     <meta
       name="description"
       content="YAMAS, taverna greca a San Vitaliano. Scopri la vera cucina greca con piatti tradizionali, ingredienti freschi e un'atmosfera accogliente."
-    />
-    <meta
-      name="keywords"
-      content="taverna greca, ristorante greco, cucina greca San Vitaliano, moussaka, souvlaki, taverna YAMAS"
     />
     <meta name="author" content="__SITE_NAME__" />
 
@@ -115,49 +112,20 @@
               "reviewCount": "132"
             },
             "menu": "__SITE_URL__/menu/",
-            "hasMenu": {
-              "@type": "Menu",
-              "name": "Menu YAMAS",
-              "url": "__SITE_URL__/menu/",
-              "hasMenuSection": [
-                {
-                  "@type": "MenuSection",
-                  "name": "Piatti principali",
-                  "hasMenuItem": [
-                    {
-                      "@type": "MenuItem",
-                      "name": "Moussakà",
-                      "description": "Sformato di melanzane, patate, carne trita e besciamella",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "9"
-                      }
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Souvlaki",
-                      "description": "3 spiedini di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "11"
-                      }
-                    },
-                    {
-                      "@type": "MenuItem",
-                      "name": "Gyros",
-                      "description": "Carne di maiale, tsatziki/tirokafteri/yogurt, cipolle, pomodori, patatine",
-                      "offers": {
-                        "@type": "Offer",
-                        "priceCurrency": "EUR",
-                        "price": "11"
-                      }
-                    }
-                  ]
-                }
-              ]
-            }
+            "hasMenu": [
+              {
+                "@type": "Menu",
+                "@id": "__SITE_URL__/menu/#menu-it",
+                "url": "__SITE_URL__/menu/",
+                "inLanguage": "it"
+              },
+              {
+                "@type": "Menu",
+                "@id": "__SITE_URL__/menu/#menu-en",
+                "url": "__SITE_URL__/menu/",
+                "inLanguage": "en"
+              }
+            ]
           },
           {
             "@type": "FAQPage",
@@ -199,7 +167,7 @@
                 "name": "Offrite servizio da asporto?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp."
+                  "text": "Sì, puoi ordinare i tuoi piatti preferiti da asporto contattandoci telefonicamente o via WhatsApp. Siamo presenti anche su Glovo, Just Eat e Alfonsino per la consegna a domicilio."
                 }
               }
             ]
@@ -208,20 +176,17 @@
       }
     </script>
 
-    <script src="script.js" defer></script>
-
-    <title>__SITE_NAME__ | Cucina Greca Autentica a San Vitaliano</title>
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
-    <header id="site-header">
+    <header class="site-header" id="site-header">
       <nav aria-label="Navigazione principale">
-        <div class="logo-wrapper">
+        <a class="logo-wrapper" href="/" aria-label="YAMAS Taverna Greca, home">
           <img
             src="/assets/logo_top.svg"
+            class="logo-top"
             id="logo-top"
             width="200"
             height="30"
@@ -229,12 +194,14 @@
           />
           <img
             src="/assets/logo_bottom.svg"
+            class="logo-bottom"
             id="logo-bottom"
             width="200"
             height="22"
+            alt=""
             aria-hidden="true"
           />
-        </div>
+        </a>
 
         <!-- Hamburger button per mobile -->
         <button
@@ -250,8 +217,9 @@
 
         <ul id="primary-menu" class="menu" hidden>
           <li><a href="/" aria-current="page">Home</a></li>
-          <li><a href="#menu">Menù</a></li>
-          <li><a href="#contact">Contatti</a></li>
+          <li><a href="/menu/">Menù</a></li>
+          <li><a href="/ordina/">Ordina</a></li>
+          <li><a href="/contatti.html">Contatti</a></li>
           <li><a href="/dove-siamo.html" target="_self">Dove Siamo</a></li>
           <li>
             <a
@@ -280,12 +248,26 @@
         <div class="max-width">
           <h1>Benvenuti da YAMAS</h1>
           <p>Autentica cucina greca nel cuore di San Vitaliano NA</p>
+          <div class="hero-status">
+            <span
+              class="pill on-dark open-status"
+              data-open="__HOURS_OPEN__"
+              data-close="__HOURS_CLOSE__"
+              role="status"
+            >
+              Aperto tutti i giorni __HOURS_OPEN__ - __HOURS_CLOSE__
+            </span>
+          </div>
           <div class="btn-wrapper">
             <a href="https://wa.me/__PHONE_DIGITS__" class="btn cta">
               <i class="icon calendar-event" aria-hidden="true"></i>
-              <b>Prenota</b>
+              <b>Prenota su WhatsApp</b>
             </a>
-            <a href="#menu" class="btn">
+            <a href="tel:+__PHONE_DIGITS__" class="btn">
+              <i class="icon telephone-fill" aria-hidden="true"></i>
+              <span>Chiama</span>
+            </a>
+            <a href="/menu/" class="btn">
               <i class="icon fork-knife"></i>
               <span>Scopri il Menu </span>
             </a>
@@ -293,7 +275,7 @@
         </div>
       </section>
 
-      <section id="about" aria-labelledby="about-heading">
+      <section class="section-about" id="about" aria-labelledby="about-heading">
         <h2 id="about-heading">Chi Siamo</h2>
         <article class="max-width">
           <p>
@@ -332,7 +314,7 @@
             tradizione, passione e amore per il buon cibo.
           </p>
         </article>
-        <ul class="grid grid-2-col-mobile" id="values">
+        <ul class="grid grid-2-col-mobile values-list" id="values">
           <li class="card">
             <i class="icon basket" aria-hidden="true"></i>
             <p class="content">Ingredienti freschi e autentici</p>
@@ -360,12 +342,12 @@
         </ul>
       </section>
 
-      <section id="menu" aria-labelledby="menu-heading">
+      <section class="section-menu" id="menu" aria-labelledby="menu-heading">
         <h2 id="menu-heading">Menu</h2>
         <div class="menu-items grid grid-2-col-mobile">
           <article class="card">
             <img
-              src="/assets/menu/antipasto.webp"
+              src="/assets/menu/teaser/antipasto.webp"
               class="lightbox"
               alt="Piatto di antipasto Yamas greco con feta, olive nere, polpette miste e involtini di foglie di vite (dolmades)"
               width="510"
@@ -382,7 +364,7 @@
           </article>
           <article class="card">
             <img
-              src="/assets/menu/moussaka.webp"
+              src="/assets/menu/teaser/moussaka.webp"
               class="lightbox"
               alt="Porzione di moussaka calda con strati di melanzane, carne macinata e una spessa copertura di besciamella dorata"
               width="720"
@@ -399,7 +381,7 @@
           </article>
           <article class="card">
             <img
-              src="/assets/menu/pita.webp"
+              src="/assets/menu/teaser/pita.webp"
               class="lightbox"
               alt="Pita greca ripiena di carne gyros, patatine fritte, pomodoro, cipolla e salsa tzatziki."
               width="720"
@@ -416,7 +398,7 @@
           </article>
           <article class="card">
             <img
-              src="/assets/menu/gyros.webp"
+              src="/assets/menu/teaser/gyros.webp"
               class="lightbox"
               alt="Piatto di Gyros con carne di maiale a fette, servito su una pita, accompagnato da patatine fritte, pomodoro, peperone, feta, cipolla e tzatziki"
               width="720"
@@ -434,11 +416,51 @@
           </article>
         </div>
         <section>
-          <a href="__SITE_URL__/menu/" class="btn" target="_blank" rel="noopener noreferrer">
+          <a href="/menu/" class="btn" target="_blank" rel="noopener noreferrer">
             <i class="icon external-link"></i>
             <span> Vedi il menu completo </span>
           </a>
         </section>
+      </section>
+
+      <section class="section-delivery" id="delivery" aria-labelledby="delivery-heading">
+        <h2 id="delivery-heading">Ordina a Domicilio</h2>
+        <p>
+          Preferisci mangiare a casa? Trovi YAMAS anche sulle principali app di consegna.
+          <a href="/ordina/">Scopri come ordinare</a>.
+        </p>
+        <ul class="delivery-list">
+          <li>
+            <a href="/ordina/glovo.html" class="delivery-card" aria-label="Ordina su Glovo">
+              <img src="/assets/delivery/glovo.svg" alt="" width="72" height="24" loading="lazy" />
+              <span class="delivery-cta">Ordina su Glovo</span>
+            </a>
+          </li>
+          <li>
+            <a href="/ordina/justeat.html" class="delivery-card" aria-label="Ordina su Just Eat">
+              <img
+                src="/assets/delivery/justeat.svg"
+                alt=""
+                width="98"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Just Eat</span>
+            </a>
+          </li>
+          <li>
+            <a href="/ordina/alfonsino.html" class="delivery-card" aria-label="Ordina su Alfonsino">
+              <img
+                src="/assets/delivery/alfonsino.svg"
+                alt=""
+                width="84"
+                height="24"
+                loading="lazy"
+              />
+              <span class="delivery-cta">Ordina su Alfonsino</span>
+            </a>
+          </li>
+        </ul>
       </section>
 
       <section id="gallery" aria-labelledby="gallery-heading">
@@ -454,7 +476,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Locale in pieno stile greco</figcaption>
+              <figcaption class="content">La sala con i tavoli blu</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -467,7 +489,9 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Interno accogliente con decorazioni greche</figcaption>
+              <figcaption class="content">
+                L'angolo con la barca a vela e l'insegna YAMAS
+              </figcaption>
             </figure>
           </li>
           <li class="card">
@@ -480,7 +504,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Atmosfera calda e familiare</figcaption>
+              <figcaption class="content">La sala vista dall'altro lato</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -493,7 +517,7 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Decorazioni attente al dettaglio</figcaption>
+              <figcaption class="content">L'insegna Mythos e le foto del mare</figcaption>
             </figure>
           </li>
           <li class="card">
@@ -506,7 +530,9 @@
                 height="720"
                 loading="lazy"
               />
-              <figcaption class="content">Dettagli delle decorazioni tipiche greche</figcaption>
+              <figcaption class="content">
+                Tavolo apparecchiato con tovaglie a motivo greco
+              </figcaption>
             </figure>
           </li>
         </ul>
@@ -515,18 +541,25 @@
       <section class="video-section max-width" aria-labelledby="video-heading">
         <h2 id="video-heading">Guarda il nostro video</h2>
         <div class="video-container">
-          <iframe
-            src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0"
-            loading="lazy"
-            frameborder="0"
-            allow="autoplay; fullscreen"
-            title="Video Yamas"
+          <button
+            type="button"
+            class="video-facade"
+            data-video-src="https://www.youtube-nocookie.com/embed/Tytfuyo0svc?controls=0&modestbranding=1&rel=0&autoplay=1"
+            data-video-title="Video Yamas"
           >
-          </iframe>
+            <svg class="video-play" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M8 5v14l11-7z" />
+            </svg>
+            <span class="sr-only">Riproduci il video di Yamas</span>
+          </button>
         </div>
+        <p class="video-note">
+          Il video viene caricato da YouTube (Google) solo dopo il tuo clic. Per i dettagli vedi la
+          <a href="/privacy.html">Politica di Riservatezza</a>.
+        </p>
       </section>
 
-      <section id="reviews" aria-labelledby="reviews-heading">
+      <section class="section-reviews" id="reviews" aria-labelledby="reviews-heading">
         <h2 id="reviews-heading">Cosa dicono i nostri clienti</h2>
         <ul class="flex">
           <li class="card" tabindex="0">
@@ -603,7 +636,7 @@
         </ul>
       </section>
 
-      <section id="contact" aria-labelledby="contact-heading">
+      <section class="section-contact" id="contact" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contatti</h2>
         <section>
           <h3>Orari di Apertura</h3>
@@ -695,39 +728,6 @@
         <div class="footer-col footer-brand">
           <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
           <p>Cucina Greca Autentica a San Vitaliano</p>
-        </div>
-
-        <div class="footer-col">
-          <h3>Contatti</h3>
-          <ul>
-            <li>
-              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
-                <i class="icon geo-alt-fill" aria-hidden="true"></i>
-                <span>__ADDRESS_STREET__, San Vitaliano NA</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+__PHONE_DIGITS__">
-                <i class="icon telephone-fill" aria-hidden="true"></i>
-                <span>__PHONE_DISPLAY__</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/__PHONE_DIGITS__"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
-              >
-                <i class="icon whatsapp" aria-hidden="true"></i>
-                <span>WhatsApp</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Orari &amp; Social</h3>
           <p>
             <i class="icon clock" aria-hidden="true"></i>
             <span class="sr-only">Orari:</span>
@@ -752,9 +752,62 @@
             </a>
           </span>
         </div>
+
+        <nav class="footer-sitemap" aria-label="Menu del sito">
+          <div class="footer-col">
+            <h3>Il locale</h3>
+            <ul>
+              <li><a href="/#about">Chi siamo</a></li>
+              <li><a href="/#gallery">Galleria</a></li>
+              <li><a href="/#reviews">Recensioni</a></li>
+              <li><a href="/dove-siamo.html">Dove siamo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Menù e ordini</h3>
+            <ul>
+              <li><a href="/menu/">Menù completo</a></li>
+              <li><a href="/ordina/">Ordina a domicilio</a></li>
+              <li><a href="/ordina/glovo.html">Glovo</a></li>
+              <li><a href="/ordina/justeat.html">Just Eat</a></li>
+              <li><a href="/ordina/alfonsino.html">Alfonsino</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li><a href="/contatti.html">Tutti i contatti</a></li>
+              <li>
+                <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                  <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                  <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+__PHONE_DIGITS__">
+                  <i class="icon telephone-fill" aria-hidden="true"></i>
+                  <span>__PHONE_DISPLAY__</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/__PHONE_DIGITS__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+                >
+                  <i class="icon whatsapp" aria-hidden="true"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      <nav id="footer-navigation" aria-label="Link legali">
+      <nav class="footer-navigation" id="footer-navigation" aria-label="Link legali">
         <ul>
           <li><a href="/privacy.html"> Politica di Riservatezza </a></li>
           <li><a href="/cookie.html"> Politica Cookie </a></li>
@@ -765,7 +818,7 @@
       </nav>
       <p>&copy; <span id="copyright-year">2026</span> __SITE_NAME__. Tutti i diritti riservati.</p>
 
-      <div id="bottom-navigation">
+      <div class="bottom-navigation" id="bottom-navigation">
         <nav aria-label="Navigazione principale">
           <ul>
             <li>
@@ -775,7 +828,7 @@
               </a>
             </li>
             <li>
-              <a href="__SITE_URL__/menu/" target="_blank" rel="noopener noreferrer">
+              <a href="/menu/">
                 <i class="icon fork-knife" aria-hidden="true"></i>
                 <span>Menù</span>
               </a>
@@ -786,9 +839,16 @@
                 <span>Prenota</span>
               </a>
             </li>
+            <li>
+              <a href="tel:+__PHONE_DIGITS__">
+                <i class="icon telephone-fill" aria-hidden="true"></i>
+                <span>Chiama</span>
+              </a>
+            </li>
           </ul>
         </nav>
       </div>
     </footer>
+    <script src="script.js" defer></script>
   </body>
 </html>

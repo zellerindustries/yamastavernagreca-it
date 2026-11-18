@@ -4,11 +4,18 @@
   "description": "Static site for YAMAS - Taverna Greca, a Greek restaurant in San Vitaliano, Italy.",
   "main": "index.html",
   "scripts": {
-    "build": "npx mz b",
-    "start": "npm run build && npx serve ./dist",
+    "build": "mz b --overwrite",
+    "start": "npm run build && mz serve ./dist",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "prepare": "husky || true"
+    "prepare": "husky || true",
+    "lint:html": "htmlhint \"src/pages/**/*.html\"",
+    "lint:css": "stylelint \"src/styles/**/*.css\"",
+    "lint:spelling": "cspell \"src/pages/**/*.html\" --no-progress",
+    "lint": "npm run lint:html && npm run lint:css && npm run lint:spelling",
+    "lint:rules": "node scripts/lint-rules.mjs",
+    "lint:a11y": "npm run build && node scripts/lint-a11y.mjs",
+    "lint:links": "npm run build && node scripts/lint-links.mjs"
   },
   "repository": {
     "type": "git",
@@ -26,22 +33,25 @@
   "private": true,
   "type": "commonjs",
   "engines": {
-    "node": ">=24"
+    "node": ">=26"
   },
   "bugs": {
     "url": "https://github.com/zeller-dev/yamas-taverna-greca/issues"
   },
   "homepage": "https://github.com/zeller-dev/yamas-taverna-greca#readme",
   "dependencies": {
-    "bootstrap-icons": "^1.13.1",
-    "minimaz-cli": "^0.5.2"
+    "@minimaz/sitekit": "^0.2.1",
+    "bootstrap-icons": "^1.13.1"
   },
   "devDependencies": {
+    "@axe-core/cli": "^4.13.0",
+    "@cspell/dict-it-it": "^3.1.6",
+    "cspell": "^10.3.4",
+    "htmlhint": "^1.9.2",
     "husky": "^9.1.7",
+    "linkinator": "^8.1.0",
     "prettier": "^3.9.5",
-    "serve": "^14.2.5"
-  },
-  "allowScripts": {
-    "esbuild@0.28.2": true
+    "stylelint": "^17.15.0",
+    "stylelint-config-standard": "^40.0.0"
   }
 }

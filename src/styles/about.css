@@ -1,0 +1,21 @@
+/* ==== ABOUT & VALUES ==== */
+.section-about article p {
+  max-width: 65ch;
+  text-align: start;
+  margin: auto auto var(--spacing-lg);
+}
+
+.values-list {
+  margin-top: var(--spacing-xl);
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.values-list li {
+  padding-top: var(--spacing-lg);
+}
+
+.values-list i.icon {
+  font-size: var(--font-size-xl);
+  color: var(--color-primary);
+}

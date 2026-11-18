@@ -1,0 +1,84 @@
+/* ==== PILLS ====
+   Small rounded labels for tags, filters and status. Brand label voice: small, medium weight,
+   uppercase and lightly tracked. Colours come from the palette tokens only; the default is the
+   Aegean-tint chip, variants swap the surface. Use on a <span>, or on <a>/<button> when clickable. */
+
+.pill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-sm);
+  white-space: nowrap;
+  color: var(--color-primary);
+  background: var(--color-tint);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+/* An icon keeps its size next to the label */
+.pill i {
+  flex: none;
+}
+
+/* ---- Variants ---- */
+.pill.solid {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+}
+
+/* Aegean text on gold, readable at this size */
+.pill.accent {
+  color: var(--color-primary);
+  background: var(--color-accent);
+}
+
+.pill.outline {
+  background: transparent;
+  border-color: var(--color-primary);
+}
+
+/* For the dark hero, footer and scrolled header */
+.pill.on-dark {
+  color: var(--color-on-scrim);
+  background: transparent;
+  border-color: var(--color-border-on-dark);
+}
+
+/* ---- Clickable pills (filters, links) ---- */
+a.pill,
+button.pill {
+  min-height: var(--tap-target);
+  padding-inline: var(--spacing-lg);
+  cursor: pointer;
+}
+
+a.pill[aria-current]:not([aria-current='false']),
+button.pill[aria-pressed='true'] {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+@media (hover: hover) {
+  a.pill:hover,
+  button.pill:hover {
+    color: var(--color-primary);
+    background: var(--color-accent);
+    border-color: var(--color-accent);
+  }
+}

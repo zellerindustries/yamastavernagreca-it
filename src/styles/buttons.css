@@ -1,0 +1,87 @@
+.btn-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md); /* at least 8px between touch targets */
+}
+
+.btn-wrapper.vertical {
+  flex-direction: column;
+}
+
+.btn-wrapper,
+.btn-wrapper .btn {
+  width: 100%;
+}
+
+.btn-wrapper .btn {
+  min-height: var(--control-height);
+}
+
+/* Light by design: filled, medium weight, small tracked caps, no border.
+   Hover and press only shift the tone of the same hue (see ui-buttons rule). */
+.btn {
+  padding: var(--spacing-md) var(--spacing-lg);
+  width: max-content;
+  min-height: var(--tap-target);
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--line-height-heading);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md);
+  margin: auto;
+  transition:
+    background-color var(--transition-base),
+    box-shadow var(--transition-base),
+    transform var(--transition-fast);
+}
+
+.btn span {
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* The icon keeps its size and sits next to the label instead of stretching or shrinking */
+.btn i {
+  flex: none;
+}
+
+.btn.cta {
+  background-color: var(--color-accent);
+  color: var(--color-primary);
+}
+
+.btn:focus-visible,
+.btn:active {
+  background-color: var(--color-primary-dark);
+}
+
+.btn.cta:focus-visible,
+.btn.cta:active {
+  background-color: var(--color-accent-soft);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Hover only where a pointer exists, so touch screens don't keep a stuck hover state */
+@media (hover: hover) {
+  .btn:hover {
+    background-color: var(--color-primary-dark);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .btn.cta:hover {
+    background-color: var(--color-accent-soft);
+  }
+}

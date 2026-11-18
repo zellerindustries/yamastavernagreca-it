@@ -5,15 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>YAMAS - Link in Bio</title>
     <meta
+      http-equiv="Content-Security-Policy"
+      content="
+  default-src 'self';
+  img-src 'self' data:;
+  style-src 'self';
+  font-src 'self';
+  script-src 'self';
+  connect-src 'self';
+  base-uri 'self';
+  form-action 'none';
+  object-src 'none';
+"
+    />
+    <meta
       name="description"
       content="YAMAS - Link in Bio: Prenota, scopri il menù e contattaci facilmente da San Vitaliano. Cucina greca autentica e piatti tradizionali."
     />
-    <meta
-      name="keywords"
-      content="YAMAS, taverna greca, link in bio, prenota ristorante, menù greco, San Vitaliano"
-    />
     <meta name="author" content="__SITE_NAME__" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="__ROBOTS__" />
     <link rel="canonical" href="__SITE_URL__/linkinbio.html" />
     <meta name="theme-color" content="#253873" />
 
@@ -94,10 +104,11 @@
   </head>
 
   <body>
-    <header id="site-header">
-      <div class="logo-wrapper">
+    <header class="site-header" id="site-header">
+      <a class="logo-wrapper" href="/" aria-label="YAMAS Taverna Greca, home">
         <img
           src="/assets/logo_top.svg"
+          class="logo-top"
           id="logo-top"
           width="200"
           height="30"
@@ -105,12 +116,14 @@
         />
         <img
           src="/assets/logo_bottom.svg"
+          class="logo-bottom"
           id="logo-bottom"
           width="200"
           height="22"
+          alt=""
           aria-hidden="true"
         />
-      </div>
+      </a>
       <div class="sr-only">
         <h1>__SITE_NAME__</h1>
         <p>Autentica cucina greca nel cuore di San Vitaliano</p>
@@ -130,7 +143,7 @@
             <i class="icon whatsapp" aria-hidden="true"></i>
             <span>Prenota</span>
           </a>
-          <a href="__SITE_URL__/menu/" class="btn" target="_blank" rel="noopener noreferrer">
+          <a href="/menu/" class="btn" target="_blank" rel="noopener noreferrer">
             <i class="icon external-link"></i>
             <span>Vedi menù</span>
           </a>
@@ -182,6 +195,65 @@
           </span>
         </div>
         <div>
+          <h3>Ordina a Domicilio</h3>
+          <ul class="delivery-list">
+            <li>
+              <a
+                href="__GLOVO_URL__"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="delivery-card"
+                aria-label="Ordina su Glovo"
+              >
+                <img
+                  src="/assets/delivery/glovo.svg"
+                  alt=""
+                  width="72"
+                  height="24"
+                  loading="lazy"
+                />
+                <span class="delivery-cta">Ordina su Glovo</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="__JUSTEAT_URL__"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="delivery-card"
+                aria-label="Ordina su Just Eat"
+              >
+                <img
+                  src="/assets/delivery/justeat.svg"
+                  alt=""
+                  width="98"
+                  height="24"
+                  loading="lazy"
+                />
+                <span class="delivery-cta">Ordina su Just Eat</span>
+              </a>
+            </li>
+            <li>
+              <a
+                href="__ALFONSINO_URL__"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="delivery-card"
+                aria-label="Ordina su Alfonsino"
+              >
+                <img
+                  src="/assets/delivery/alfonsino.svg"
+                  alt=""
+                  width="84"
+                  height="24"
+                  loading="lazy"
+                />
+                <span class="delivery-cta">Ordina su Alfonsino</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div>
           <h3>Social</h3>
           <span class="btn-wrapper vertical">
             <a
@@ -214,39 +286,6 @@
         <div class="footer-col footer-brand">
           <img src="/assets/logo_top.svg" alt="YAMAS Taverna Greca logo" width="140" height="21" />
           <p>Cucina Greca Autentica a San Vitaliano</p>
-        </div>
-
-        <div class="footer-col">
-          <h3>Contatti</h3>
-          <ul>
-            <li>
-              <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
-                <i class="icon geo-alt-fill" aria-hidden="true"></i>
-                <span>__ADDRESS_STREET__, San Vitaliano NA</span>
-              </a>
-            </li>
-            <li>
-              <a href="tel:+__PHONE_DIGITS__">
-                <i class="icon telephone-fill" aria-hidden="true"></i>
-                <span>__PHONE_DISPLAY__</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://wa.me/__PHONE_DIGITS__"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
-              >
-                <i class="icon whatsapp" aria-hidden="true"></i>
-                <span>WhatsApp</span>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h3>Orari &amp; Social</h3>
           <p>
             <i class="icon clock" aria-hidden="true"></i>
             <span class="sr-only">Orari:</span>
@@ -271,9 +310,62 @@
             </a>
           </span>
         </div>
+
+        <nav class="footer-sitemap" aria-label="Menu del sito">
+          <div class="footer-col">
+            <h3>Il locale</h3>
+            <ul>
+              <li><a href="/#about">Chi siamo</a></li>
+              <li><a href="/#gallery">Galleria</a></li>
+              <li><a href="/#reviews">Recensioni</a></li>
+              <li><a href="/dove-siamo.html">Dove siamo</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Menù e ordini</h3>
+            <ul>
+              <li><a href="/menu/">Menù completo</a></li>
+              <li><a href="/ordina/">Ordina a domicilio</a></li>
+              <li><a href="/ordina/glovo.html">Glovo</a></li>
+              <li><a href="/ordina/justeat.html">Just Eat</a></li>
+              <li><a href="/ordina/alfonsino.html">Alfonsino</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contatti</h3>
+            <ul>
+              <li><a href="/contatti.html">Tutti i contatti</a></li>
+              <li>
+                <a href="__MAPS_URL__" target="_blank" rel="noopener noreferrer">
+                  <i class="icon geo-alt-fill" aria-hidden="true"></i>
+                  <span>__ADDRESS_STREET__, San Vitaliano NA</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:+__PHONE_DIGITS__">
+                  <i class="icon telephone-fill" aria-hidden="true"></i>
+                  <span>__PHONE_DISPLAY__</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://wa.me/__PHONE_DIGITS__"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Scrivici su WhatsApp al numero __PHONE_DISPLAY__"
+                >
+                  <i class="icon whatsapp" aria-hidden="true"></i>
+                  <span>WhatsApp</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
 
-      <nav id="footer-navigation" aria-label="Link legali">
+      <nav class="footer-navigation" id="footer-navigation" aria-label="Link legali">
         <ul>
           <li><a href="/privacy.html"> Politica di Riservatezza </a></li>
           <li><a href="/cookie.html"> Politica Cookie </a></li>

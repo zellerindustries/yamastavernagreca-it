@@ -1,7 +1,6 @@
-export interface Translatable {
-  it: string;
-  en: string;
-}
+import type { Lang } from './languages';
+
+export type Translatable = Record<Lang, string>;
 
 export interface MenuItem {
   id: number;
@@ -28,30 +27,7 @@ export interface Menu {
   categories: Category[];
 }
 
-export interface NavLink {
-  text: Translatable;
-  href: string;
-}
-
-export interface FooterLink {
-  text: Translatable;
-  href: string;
-}
-
-export interface RapidAction {
-  name: Translatable;
-  type: 'phone' | 'email' | 'directions' | 'reserve';
-}
-
 export interface Restaurant {
   name: Translatable;
-  logoUrl: string;
   description?: Translatable;
-  address: string;
-  phone: string;
-  navLinks: NavLink[];
-  footerLinks: FooterLink[];
-  rapidActions: RapidAction[];
 }
-
-export type Lang = 'it' | 'en';
