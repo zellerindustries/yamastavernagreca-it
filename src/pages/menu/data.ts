@@ -596,7 +596,7 @@ export const DEMO_MENU: Menu = {
           id: 52,
           name: { it: 'Sfuso Greco (0,25 L)', en: 'House Greek Wine (0.25 L)' },
           description: { it: 'Rosso/Bianco 0,25 L', en: 'Red/White, 0.25 L' },
-          price: 4,
+          price: 3.5,
         },
         {
           id: 53,
@@ -702,7 +702,7 @@ export const DEMO_MENU: Menu = {
           id: 65,
           name: { it: 'Fix Hellas', en: 'Fix Hellas' },
           description: { it: 'Bottiglia 0,33 L', en: '0.33 L Bottle' },
-          price: 4,
+          price: 4.5,
           imageUrl: `${BASE}fix.webp`,
         },
       ],
